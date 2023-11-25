@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width">
+    <title>Birthday Card</title>
+    <!-- Fonts -->
+    <link href="https://fonts.google.com/specimen/Style+Script?query=styl" rel="stylesheet">
+    <link rel="stylesheet">
+    <style>
+        
+        body {
+            font-family: "Poppins", 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e81091;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            width: 400px;
+            height: 500px;
+            perspective: 1000px;
+        }
+        .outside {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+        .card:hover .outside {
+            transform: rotateY(180deg);
+        }
+        .front, .back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        .front {
+            background-color: #fff;
+        }
+        .back {
+            background-color: #ffd700;
+            transform: rotateY(180deg);
+            align-items:first baseline;
+            justify-content: left;
+            word-spacing: 3.7px;
+            
+        }
+        p {
+            font-size: 30px;
+            color: #333;
+        }
+        .img img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="outside">
+        <div class="front">
+            <p>Happy Birthday Miss Faith!</p>
+            <div class="img"><img src="https://media1.tenor.com/images/e7ab1ede1eea99b1de9a8f6eaf0582a9/tenor.gif?itemid=14669499"></div>
+        </div>
+        <div class="back">
+            <p>Hello, how are you? I've spent an hour or two making these program for my wellness activity for miss Fel, and i thought of a unique way to ease my mind and relax my body was to make you a program or website. Anyways, Happy birthday miss faith i wish you all the best in life</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
