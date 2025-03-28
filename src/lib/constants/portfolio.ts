@@ -26,7 +26,7 @@ export const ABOUT_CARDS = [
   {
     title: 'What I Do',
     copy:
-      'I ship practical systems with clean architecture, measurable performance, and usable interfaces, especially in computer vision, game logic, and domain-focused apps.',
+      'I ship systems with clean architecture, measurable performance, and usable interfaces, especially in computer vision, game logic, and domain-focused apps.',
     tone: 'accent',
     badge: 'MISSION',
   },
