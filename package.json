@@ -12,8 +12,7 @@
   "dependencies": {
     "pip": "^0.0.1",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "tech-stack-icons": "^3.5.8"
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.4.1",
