@@ -21,14 +21,14 @@ export const ABOUT_CARDS = [
   {
     title: 'Who I Am',
     copy:
-      'A product-minded developer who blends structured engineering with playful, memorable UI.',
+      'A Computer Science Undergraduate at University of the Philippines Visayas and the Founder of Popcorn Prophets organization',
     tone: 'primary',
     badge: 'PROFILE',
   },
   {
     title: 'What I Do',
     copy:
-      'Full-stack development, UI systems, and performance tuning for polished, production-ready builds.',
+      'I build practical, production-minded software across Python, Java, C/C++, and modern web stacks, with projects spanning computer vision safety systems, game architecture, and domain-focused tools like finance and logistics apps.',
     tone: 'accent',
     badge: 'MISSION',
   },
@@ -42,29 +42,29 @@ export const STAT_BLOCKS = [
 ] as const
 
 export const PROJECTS = [
+    {
+    name: 'Manobela',
+    summary:
+      'Manobela is a real-time driver monitoring system that uses computer vision to detect unsafe driving behaviors with only a mobile phone.',
+    stack: ['Python', 'FastAPI', 'OpenCV', 'Mediapipe', 'WebRTC','React', 'TypeScript', 'Expo', 'Nextjs', ],
+    tone: 'accent',
+    primaryCta: { label: 'View Repo', href: 'https://github.com/popcorn-prophets/manobela' },
+    secondaryCta: { label: 'Open GitHub', href: 'https://github.com/popcorn-prophets/manobela' },
+  },
   {
     name: 'Snakes-Blessings-and-Curses',
     summary:
       'Java-based OOP board game with custom mechanics inspired by Snakes and Ladders.',
-    stack: ['Java', 'OOP', 'Game Development'],
+    stack: ['Java', 'Maven',],
     tone: 'primary',
     primaryCta: { label: 'View Repo', href: 'https://github.com/dejely/Snakes-Blessings-and-Curses' },
     secondaryCta: { label: 'Open GitHub', href: 'https://github.com/dejely/Snakes-Blessings-and-Curses' },
   },
   {
-    name: 'vAppNew',
-    summary:
-      'Web application project with a larger codebase and active iteration cadence in 2025.',
-    stack: ['HTML', 'JavaScript', 'Web App'],
-    tone: 'accent',
-    primaryCta: { label: 'View Repo', href: 'https://github.com/dejely/vAppNew' },
-    secondaryCta: { label: 'Open GitHub', href: 'https://github.com/dejely/vAppNew' },
-  },
-  {
     name: 'Derio',
     summary:
       'Personal finance manager project focused on practical data handling and core product flows.',
-    stack: ['Python', 'Finance Tools', 'Application Logic'],
+    stack: ['Python', 'Finance Tools',],
     tone: 'success',
     primaryCta: { label: 'View Repo', href: 'https://github.com/dejely/Derio' },
     secondaryCta: { label: 'Open GitHub', href: 'https://github.com/dejely/Derio' },
