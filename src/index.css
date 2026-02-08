@@ -1,15 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Outfit:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  font-family: 'Outfit', 'Trebuchet MS', 'Gill Sans', sans-serif;
-  line-height: 1.5;
+  font-family: 'Pixelify Sans', 'Trebuchet MS', sans-serif;
+  line-height: 1.6;
   font-weight: 400;
-  color: #f2f7fb;
-  background-color: #090f14;
+  color: #ffffff;
+  background-color: #0f1218;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --pixel-bg: #0f1218;
+  --pixel-bg-light: #161b25;
+  --pixel-panel: #1f2734;
+  --pixel-surface: #233042;
+  --pixel-primary: #5aa6f2;
+  --pixel-accent: #ef5b78;
+  --pixel-success: #7ed26a;
+  --pixel-warning: #f0b43c;
+  --pixel-text: #ffffff;
+  --pixel-border: #0a0d12;
+  --pixel-border-light: #2c3b4c;
 }
 
 *,
@@ -18,20 +27,22 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: auto;
+}
+
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: #090f14;
-  color: #f2f7fb;
+  background: var(--pixel-bg);
+  color: var(--pixel-text);
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'Sora', 'Trebuchet MS', sans-serif;
-  letter-spacing: -0.015em;
+button,
+a {
+  font-family: inherit;
+  color: inherit;
 }
 
 #root {
