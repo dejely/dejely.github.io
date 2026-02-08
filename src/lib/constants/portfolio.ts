@@ -69,8 +69,8 @@ export const PROJECTS: PortfolioProject[] = [
     role: 'Role: Full-stack and DevOps',
     duration: 'Duration: Startup team project, 2025-2026',
     challenge: 'Key Challenge: Keeping frame processing responsive on mobile-constrained hardware',
-    primaryCta: { label: 'View Repo', href: 'https://github.com/dejely/manobela' },
-    secondaryCta: { label: 'Open GitHub', href: 'https://github.com/dejely/manobela' },
+    primaryCta: { label: 'View Repo', href: 'https://github.com/popcorn-prophets/manobela' },
+    secondaryCta: { label: 'Open GitHub', href: 'https://github.com/popcorn-prophets/manobela' },
   },
   {
     name: 'Snakes-Blessings-and-Curses',

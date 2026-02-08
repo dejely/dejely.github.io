@@ -20,7 +20,7 @@ export function PixelNav({ items, logo = '<DEV/>' }: PixelNavProps) {
 
     const element = document.querySelector(item.href)
     if (element instanceof HTMLElement) {
-      element.scrollIntoView({ behavior: 'auto', block: 'start' })
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }
 
