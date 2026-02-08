@@ -9,14 +9,15 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   --pixel-bg: #0f1218;
-  --pixel-bg-light: #161b25;
-  --pixel-panel: #1f2734;
-  --pixel-surface: #233042;
+  --pixel-bg-light: #131c2b;
+  --pixel-panel: #1b2535;
+  --pixel-surface: #223349;
   --pixel-primary: #5aa6f2;
   --pixel-accent: #ef5b78;
   --pixel-success: #7ed26a;
   --pixel-warning: #f0b43c;
   --pixel-text: #ffffff;
+  --pixel-text-muted: #c7d0dd;
   --pixel-border: #0a0d12;
   --pixel-border-light: #2c3b4c;
 }

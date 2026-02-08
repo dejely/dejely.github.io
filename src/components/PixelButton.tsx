@@ -1,10 +1,7 @@
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react'
 
-const VARIANTS = ['primary', 'secondary', 'accent', 'success'] as const
-const SIZES = ['sm', 'md', 'lg'] as const
-
-type Variant = (typeof VARIANTS)[number]
-type Size = (typeof SIZES)[number]
+type Variant = 'primary' | 'secondary' | 'accent' | 'success'
+type Size = 'sm' | 'md' | 'lg'
 
 type PixelButtonBase = {
   variant?: Variant
