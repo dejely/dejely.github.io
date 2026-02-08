@@ -151,4 +151,4 @@ export const CONTACT_LINKS: ContactLink[] = [
   },
 ] as const
 
-export const FOOTER_NOTE = '© 2026 Pixel Developer. Crafted with blocks and code.' as const
+export const FOOTER_NOTE = '© 2026 Pixel Developer. Crafted with Vite, blocks and code.' as const
