@@ -1,3 +1,4 @@
-export * from './HeroSection'
-export * from './ProjectCard'
-export * from './ProjectsSection'
+export * from './PixelButton'
+export * from './PixelCard'
+export * from './PixelNav'
+export * from './PixelSection'
