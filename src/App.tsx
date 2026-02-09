@@ -1,6 +1,6 @@
 import { Suspense, lazy } from 'react'
 import './App.css'
-import { PixelButton, PixelCard, PixelNav, PixelSection } from './components'
+import { HeroBackgroundScene, PixelButton, PixelCard, PixelNav, PixelSection } from './components'
 import {
   ABOUT_CARDS,
   CONTACT_LINKS,
@@ -36,6 +36,8 @@ function App() {
 
       <main className="pixel-main">
         <section id="hero" className="pixel-hero">
+          <HeroBackgroundScene />
+
           <div className="pixel-hero__inner pixel-fade-in">
             <div className="pixel-hero__icon" aria-hidden="true">
               <span className="pixel-text-heading pixel-hero__glyph">{'</>'}</span>
