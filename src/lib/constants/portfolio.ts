@@ -142,6 +142,7 @@ export type ContactLink = {
 }
 
 export const CONTACT_LINKS: ContactLink[] = [
+  { label: 'View CV', href: '/docs/dejel-cyrus-de-asis-cv.pdf', variant: 'accent' },
   { label: 'Email Me', href: 'mailto:deasisdejel08@gmail.com', variant: 'primary' },
   { label: 'GitHub', href: 'https://github.com/dejely', variant: 'secondary' },
   {

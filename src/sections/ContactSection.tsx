@@ -18,7 +18,8 @@ export default function ContactSection({ contactLinks, footerNote }: ContactSect
 
           <div className="pixel-contact__actions">
             {contactLinks.map((link) => {
-              const isExternal = link.href.startsWith('http')
+              const opensPdf = /\.pdf($|[?#])/i.test(link.href)
+              const openInNewTab = link.href.startsWith('http') || opensPdf
 
               return (
                 <PixelButton
@@ -26,10 +27,10 @@ export default function ContactSection({ contactLinks, footerNote }: ContactSect
                   variant={link.variant}
                   size="lg"
                   href={link.href}
-                  target={isExternal ? '_blank' : undefined}
-                  rel={isExternal ? 'noreferrer noopener' : undefined}
+                  target={openInNewTab ? '_blank' : undefined}
+                  rel={openInNewTab ? 'noreferrer noopener' : undefined}
                   aria-label={
-                    isExternal
+                    openInNewTab
                       ? `Open ${link.label} in a new tab`
                       : `Start ${link.label.toLowerCase()} conversation`
                   }
