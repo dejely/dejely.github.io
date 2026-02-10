@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 type NavItem = {
   label: string
@@ -13,6 +13,44 @@ type PixelNavProps = {
 export function PixelNav({ items, logo = '<DEV/>' }: PixelNavProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [active, setActive] = useState(items[0]?.label ?? '')
+
+  useEffect(() => {
+    const sectionItems = items
+      .map((item) => {
+        const section = document.querySelector(item.href)
+        return section instanceof HTMLElement ? { label: item.label, section } : null
+      })
+      .filter((entry): entry is { label: string; section: HTMLElement } => entry !== null)
+
+    if (sectionItems.length === 0) {
+      return
+    }
+
+    const updateActiveFromScroll = () => {
+      const marker = window.scrollY + window.innerHeight * 0.35
+      let current = sectionItems[0]
+
+      for (const entry of sectionItems) {
+        if (entry.section.offsetTop <= marker) {
+          current = entry
+        } else {
+          break
+        }
+      }
+
+      setActive(current.label)
+    }
+
+    updateActiveFromScroll()
+
+    window.addEventListener('scroll', updateActiveFromScroll, { passive: true })
+    window.addEventListener('resize', updateActiveFromScroll)
+
+    return () => {
+      window.removeEventListener('scroll', updateActiveFromScroll)
+      window.removeEventListener('resize', updateActiveFromScroll)
+    }
+  }, [items])
 
   const handleNavClick = (item: NavItem) => {
     setActive(item.label)
