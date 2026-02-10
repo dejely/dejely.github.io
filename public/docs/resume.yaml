@@ -1,0 +1,69 @@
+cv:
+  name: "Dejel Cyrus De Asis"
+  location: "Negros Occidental, Philippines"
+  email: "deasisdejel08@gmail.com"
+  social_networks:
+    - network: "LinkedIn"
+      username: "Dejel-Cyrus-De-Asis"
+    - network: "GitHub"
+      username: "dejely"
+  sections:
+    summary:
+      - "I build production-minded software across Python, Java, C/C++, and TypeScript, from real-time computer-vision systems to finance and logistics tools. Interested in Cybersecurity"
+    education:
+      - institution: "University of the Philippines"
+        area: "Computer Science"
+        degree: "BS"
+        location: "Miagao, Iloilo"
+        start_date: "2024-08-31"
+      - institution: "Dr. Vicente F. Gustilo Memorial National High School "
+        area: "STEM"
+        degree: "SHS"
+        location: "Cadiz, Negros Occidental"
+        start_date: "2022-12-31"
+        end_date: "2024-06-30"
+        highlights: 
+          - "Researched on a Semi-Autonomous Multi-Sensory Waste Segregation Robot for the 4 types of waste (Hazard, Recyclable, Biodegradable, Non-Biodegradable)."
+    certificates:
+      - name: '[NAISC Certificate](https://certificates.aisingapore.org/certificate-verification/36D9D57-36D9CF8-35E0DBC)'
+        location: "Singapore (Online)"
+        date: "2025"
+        highlights: 
+        - "AI LLM for AWS" 
+      - name: '[Introduction to Cloud 101](https://www.credly.com/badges/8dc5198b-69e0-46e7-b61f-6a9f401bb483/linked_in_profile)'
+        date: "2026"
+        highlights:
+        - "Trained on basic understanding of AWS Cloud infrastructure"
+    experience: 
+      - name: "CTF Player"
+        start_date: "2024"
+        highlights: 
+          - "Got 1st runner up on the 2025 HACK4GOV"
+          - "Experience in Network Analysis, Forensics, Cryptography, Web Exploitation, John the Ripper, and Kali/Debian Linux command tools."
+      - name: "National AI Student Challenge 2025 - AWS Regional LLM League"
+        start_date: "2025-01"
+        end_date: "2025-05"
+        highlights:
+          - "Learned AI for AWS LLM Implementation."
+    projects: 
+      - name: "Manobela"
+        start_date: "2025"
+        end_date: "2026"
+        highlights:
+        - "Real-time driver monitoring pipeline that processes mobile camera streams to detect drowsiness and distraction using computer-vision signals."
+        - "Utlized Azure Cloud to optimize computing and sending of tiny packets for computer vision"
+      - name: "Scan a Delegate"
+        start_date: "2024"
+        end_date: "2025"
+        highlights:
+        - "A decentralized application (dApp) for secure and transparent voting, utilizing blockchain technology."
+        - "Uses Sol Programming language and on the ETH test network Sepolia."
+      - name: "Derio"
+        date: "2024"
+        highlights: 
+        - "A ParArgs tool to keep track of budgeting from different sources. Implemented graphing of Income and Expenses"
+    Skills:
+      - label: "Software"
+        details: "AWS, Microsoft Azure Cloud, Expo, ,Autopsy, Wireshark"
+      - label: "Field Knowledge"
+        details: "Web Development, Mobile Development, Computer Vision, Penetration Testing, Block Chain Technology"
