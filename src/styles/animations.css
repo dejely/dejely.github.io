@@ -1,0 +1,266 @@
+@keyframes heroStarTwinkle {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes heroPilotPath {
+  0% {
+    left: 9%;
+  }
+  16% {
+    left: 34%;
+  }
+  24% {
+    left: 34%;
+  }
+  40% {
+    left: 11%;
+  }
+  48% {
+    left: 11%;
+  }
+  62% {
+    left: 29%;
+  }
+  72% {
+    left: 29%;
+  }
+  88% {
+    left: 12%;
+  }
+  100% {
+    left: 9%;
+  }
+}
+
+@keyframes heroSentinelPath {
+  0% {
+    right: 12%;
+  }
+  18% {
+    right: 29%;
+  }
+  30% {
+    right: 29%;
+  }
+  46% {
+    right: 13%;
+  }
+  58% {
+    right: 13%;
+  }
+  74% {
+    right: 30%;
+  }
+  86% {
+    right: 30%;
+  }
+  100% {
+    right: 12%;
+  }
+}
+
+@keyframes heroPilotFacing {
+  0%,
+  24% {
+    transform: scale(var(--hero-runner-scale)) scaleX(1);
+  }
+  25%,
+  48% {
+    transform: scale(var(--hero-runner-scale)) scaleX(-1);
+  }
+  49%,
+  72% {
+    transform: scale(var(--hero-runner-scale)) scaleX(1);
+  }
+  73%,
+  100% {
+    transform: scale(var(--hero-runner-scale)) scaleX(-1);
+  }
+}
+
+@keyframes heroSentinelFacing {
+  0%,
+  30% {
+    transform: scale(var(--hero-runner-scale)) scaleX(-1);
+  }
+  31%,
+  58% {
+    transform: scale(var(--hero-runner-scale)) scaleX(1);
+  }
+  59%,
+  86% {
+    transform: scale(var(--hero-runner-scale)) scaleX(-1);
+  }
+  87%,
+  100% {
+    transform: scale(var(--hero-runner-scale)) scaleX(1);
+  }
+}
+
+@keyframes heroPilotBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes heroSentinelBob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+}
+
+@keyframes heroPilotLegA {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+@keyframes heroPilotLegB {
+  0%,
+  100% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroPilotArmFront {
+  0%,
+  54% {
+    width: 8px;
+    transform: translateX(0);
+  }
+  56%,
+  64% {
+    width: 14px;
+    transform: translateX(2px);
+  }
+  66%,
+  100% {
+    width: 8px;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroSentinelArmFront {
+  0%,
+  70% {
+    width: 8px;
+    transform: translateX(0);
+  }
+  72%,
+  82% {
+    width: 13px;
+    transform: translateX(2px);
+  }
+  84%,
+  100% {
+    width: 8px;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroSentinelPulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.95;
+  }
+}
+
+@keyframes heroOrbArc {
+  0%,
+  55% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  57% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  61% {
+    opacity: 1;
+    transform: translate3d(calc(var(--hero-throw-distance) * 0.24), -24px, 0);
+  }
+  66% {
+    opacity: 1;
+    transform: translate3d(calc(var(--hero-throw-distance) * 0.5), -36px, 0);
+  }
+  70% {
+    opacity: 1;
+    transform: translate3d(calc(var(--hero-throw-distance) * 0.74), -21px, 0);
+  }
+  74% {
+    opacity: 1;
+    transform: translate3d(calc(var(--hero-throw-distance) * 0.92), -8px, 0);
+  }
+  76% {
+    opacity: 1;
+    transform: translate3d(var(--hero-throw-distance), 0, 0);
+  }
+  79%,
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--hero-throw-distance), 0, 0);
+  }
+}
+
+@keyframes pixelFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pixelBlink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-30%);
+  }
+  100% {
+    transform: translateY(30%);
+  }
+}
+
+@keyframes sectionSkeleton {
+  from {
+    background-position: -360px 0;
+  }
+  to {
+    background-position: 360px 0;
+  }
+}

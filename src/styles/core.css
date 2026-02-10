@@ -1,0 +1,43 @@
+.pixel-root {
+  min-height: 100vh;
+  background: var(--pixel-bg);
+  color: var(--pixel-text);
+}
+
+.pixel-texture {
+  background-image: repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.02),
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.02),
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  background-size: 4px 4px;
+}
+
+.pixel-main {
+  padding-top: 4.5rem;
+}
+
+.tone-primary {
+  --tone-color: var(--pixel-primary);
+}
+
+.tone-accent {
+  --tone-color: var(--pixel-accent);
+}
+
+.tone-success {
+  --tone-color: var(--pixel-success);
+}
+
+.tone-warning {
+  --tone-color: var(--pixel-warning);
+}

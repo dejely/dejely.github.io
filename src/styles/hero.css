@@ -1,0 +1,524 @@
+.pixel-hero {
+  --hero-ground-height: clamp(72px, 12vh, 108px);
+  --hero-gap-width: clamp(94px, 13vw, 178px);
+  --hero-loop: 11s;
+  --hero-scene-opacity: 0.52;
+  --hero-runner-scale: 1.45;
+  --hero-throw-distance: calc((var(--hero-gap-width) * 1.32) + 11vw);
+  min-height: calc(100vh - 4.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5.5rem 1.5rem 4.5rem;
+  border-bottom: 4px solid var(--pixel-border);
+  scroll-margin-top: 6rem;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.pixel-hero__scene {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: var(--hero-scene-opacity);
+  filter: saturate(0.88) brightness(0.92);
+}
+
+.pixel-hero__scene::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 9, 15, 0.58) 0%,
+    rgba(6, 9, 15, 0.4) 42%,
+    rgba(6, 9, 15, 0.62) 100%
+  );
+}
+
+.pixel-hero__world {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-bg__haze {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(45% 34% at 18% 28%, rgba(106, 147, 204, 0.18), transparent 68%),
+    radial-gradient(45% 30% at 79% 22%, rgba(66, 115, 174, 0.16), transparent 72%),
+    radial-gradient(70% 42% at 50% 100%, rgba(38, 70, 114, 0.18), transparent 76%);
+}
+
+.hero-bg__stars {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-bg__star {
+  position: absolute;
+  left: var(--star-x);
+  top: var(--star-y);
+  width: var(--star-size);
+  height: var(--star-size);
+  border: 1px solid rgba(11, 14, 20, 0.58);
+  background: rgba(210, 234, 255, 0.6);
+  animation: heroStarTwinkle 2.3s steps(2, end) infinite;
+  animation-delay: var(--star-delay);
+}
+
+.hero-bg__platform {
+  position: absolute;
+  bottom: 0;
+  height: var(--hero-ground-height);
+  border-top: 2px solid #000;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.14),
+      rgba(0, 0, 0, 0.14) 1px,
+      transparent 1px,
+      transparent 9px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.14),
+      rgba(0, 0, 0, 0.14) 1px,
+      transparent 1px,
+      transparent 9px
+    ),
+    #3d4f39;
+}
+
+.hero-bg__platform--left {
+  left: 0;
+  width: calc(50% - (var(--hero-gap-width) / 2));
+  border-right: 2px solid #000;
+}
+
+.hero-bg__platform--right {
+  right: 0;
+  width: calc(50% - (var(--hero-gap-width) / 2));
+  border-left: 2px solid #000;
+}
+
+.hero-bg__grass {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -12px;
+  height: 12px;
+  border-top: 1px solid #000;
+  background: repeating-linear-gradient(
+    90deg,
+    #5a8a53 0 9px,
+    #689d5e 9px 16px,
+    #4f7c49 16px 24px
+  );
+  clip-path: polygon(
+    0 100%,
+    3% 54%,
+    6% 100%,
+    10% 46%,
+    14% 100%,
+    18% 57%,
+    22% 100%,
+    26% 49%,
+    30% 100%,
+    34% 60%,
+    38% 100%,
+    42% 52%,
+    46% 100%,
+    50% 56%,
+    54% 100%,
+    58% 48%,
+    62% 100%,
+    66% 60%,
+    70% 100%,
+    74% 51%,
+    78% 100%,
+    82% 58%,
+    86% 100%,
+    90% 47%,
+    94% 100%,
+    97% 56%,
+    100% 100%
+  );
+}
+
+.hero-bg__void {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: var(--hero-gap-width);
+  height: var(--hero-ground-height);
+  border-top: 2px solid #000;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.02),
+      rgba(255, 255, 255, 0.02) 2px,
+      transparent 2px,
+      transparent 8px
+    ),
+    linear-gradient(180deg, rgba(8, 18, 30, 0.4), rgba(2, 6, 12, 0.86));
+}
+
+.hero-char {
+  position: absolute;
+  bottom: calc(var(--hero-ground-height) - 1px);
+  width: 40px;
+  height: 54px;
+  transform: scale(var(--hero-runner-scale));
+  transform-origin: center bottom;
+}
+
+.hero-char--pilot {
+  --char-shirt: #57a176;
+  --char-pants: #503a2b;
+  --char-skin: #f1c89f;
+  --char-hair: #af6b38;
+  left: 10%;
+  animation: heroPilotPath var(--hero-loop) linear infinite,
+    heroPilotFacing var(--hero-loop) steps(1, end) infinite;
+}
+
+.hero-char--sentinel {
+  --char-shirt: #4f9dd8;
+  --char-pants: #3e4a5f;
+  --char-skin: #cbd4e4;
+  --char-hair: #6882a8;
+  right: 12%;
+  animation: heroSentinelPath var(--hero-loop) linear infinite,
+    heroSentinelFacing var(--hero-loop) steps(1, end) infinite;
+}
+
+.hero-char__shadow {
+  position: absolute;
+  left: 8px;
+  bottom: -1px;
+  width: 24px;
+  height: 7px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(0, 0, 0, 0.68);
+}
+
+.hero-char__sprite {
+  position: absolute;
+  left: 5px;
+  bottom: 4px;
+  width: 30px;
+  height: 43px;
+  animation: heroPilotBounce 270ms steps(2, end) infinite;
+}
+
+.hero-char--sentinel .hero-char__sprite {
+  animation: heroSentinelBob 0.9s steps(3, end) infinite;
+}
+
+.hero-char__head,
+.hero-char__torso,
+.hero-char__arm,
+.hero-char__leg,
+.hero-char__antenna {
+  position: absolute;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+.hero-char__head {
+  top: 0;
+  left: 6px;
+  width: 18px;
+  height: 14px;
+  background: var(--char-skin);
+  box-shadow: inset -2px -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.hero-char__head::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 17px;
+  height: 3px;
+  border: 1px solid #000;
+  border-bottom: none;
+  background: color-mix(in oklab, var(--char-skin) 78%, #ffffff);
+}
+
+.hero-char__head::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 3px;
+  height: 13px;
+  border: 1px solid #000;
+  border-left: none;
+  background: color-mix(in oklab, var(--char-skin) 72%, #6d4f36);
+}
+
+.hero-char__hair {
+  position: absolute;
+  inset: 0 0 8px;
+  background: var(--char-hair);
+  border-bottom: 1px solid #000;
+}
+
+.hero-char__eye {
+  position: absolute;
+  top: 7px;
+  width: 2px;
+  height: 2px;
+  background: #111;
+}
+
+.hero-char__eye--left {
+  left: 4px;
+}
+
+.hero-char__eye--right {
+  right: 4px;
+}
+
+.hero-char__visor {
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  width: 10px;
+  height: 4px;
+  background: #8be6ff;
+  border: 1px solid #000;
+}
+
+.hero-char__torso {
+  top: 13px;
+  left: 4px;
+  width: 22px;
+  height: 16px;
+  background: var(--char-shirt);
+  box-shadow: inset -2px -1px 0 rgba(0, 0, 0, 0.18);
+}
+
+.hero-char__torso::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 21px;
+  height: 3px;
+  border: 1px solid #000;
+  border-bottom: none;
+  background: color-mix(in oklab, var(--char-shirt) 78%, #f4f8ff);
+}
+
+.hero-char__torso::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 3px;
+  height: 15px;
+  border: 1px solid #000;
+  border-left: none;
+  background: color-mix(in oklab, var(--char-shirt) 74%, #233244);
+}
+
+.hero-char__arm {
+  top: 16px;
+  width: 8px;
+  height: 7px;
+  background: color-mix(in oklab, var(--char-shirt) 90%, #dcecff);
+}
+
+.hero-char__arm--front {
+  right: -6px;
+  animation: heroPilotArmFront var(--hero-loop) steps(1, end) infinite;
+}
+
+.hero-char--sentinel .hero-char__arm--front {
+  animation: heroSentinelArmFront var(--hero-loop) steps(1, end) infinite;
+}
+
+.hero-char__arm--back {
+  left: -4px;
+  opacity: 0.8;
+}
+
+.hero-char__leg {
+  bottom: 0;
+  width: 8px;
+  height: 13px;
+  background: var(--char-pants);
+}
+
+.hero-char__leg::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 7px;
+  height: 2px;
+  border: 1px solid #000;
+  border-bottom: none;
+  background: color-mix(in oklab, var(--char-pants) 72%, #cfd8e8);
+}
+
+.hero-char__leg::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 3px;
+  height: 12px;
+  border: 1px solid #000;
+  border-left: none;
+  background: color-mix(in oklab, var(--char-pants) 72%, #171b24);
+}
+
+.hero-char__leg--left {
+  left: 6px;
+  animation: heroPilotLegA 220ms steps(2, end) infinite;
+}
+
+.hero-char__leg--right {
+  right: 6px;
+  animation: heroPilotLegB 220ms steps(2, end) infinite;
+}
+
+.hero-char--sentinel .hero-char__leg--left {
+  animation-duration: 270ms;
+}
+
+.hero-char--sentinel .hero-char__leg--right {
+  animation-duration: 270ms;
+}
+
+.hero-char__antenna {
+  left: 14px;
+  top: -6px;
+  width: 2px;
+  height: 6px;
+  background: #7db8e9;
+}
+
+.hero-char__antenna::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -4px;
+  width: 5px;
+  height: 4px;
+  border: 1px solid #000;
+  background: #8be6ff;
+  animation: heroSentinelPulse 1.2s steps(2, end) infinite;
+}
+
+.hero-bg__orb {
+  position: absolute;
+  left: calc(50% - (var(--hero-gap-width) / 2) - 12px);
+  bottom: calc(var(--hero-ground-height) + 56px);
+  width: 10px;
+  height: 10px;
+  border: 1px solid #000;
+  background: #7ad5ff;
+  box-shadow: 0 0 0 2px rgba(122, 213, 255, 0.16);
+  animation: heroOrbArc var(--hero-loop) linear infinite;
+}
+
+.hero-bg__orb::after {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 3px;
+  width: 6px;
+  height: 2px;
+  background: rgba(169, 224, 255, 0.45);
+  box-shadow: -6px 2px 0 rgba(169, 224, 255, 0.24), -12px 4px 0 rgba(169, 224, 255, 0.18);
+}
+
+.pixel-hero__inner {
+  max-width: 720px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.pixel-hero__icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 2rem;
+  background: var(--pixel-surface);
+  border: 4px solid #000;
+  box-shadow: 0 6px 0 var(--pixel-border), 0 6px 0 3px #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pixel-hero__glyph {
+  font-size: 1rem;
+}
+
+.pixel-eyebrow {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.35rem 0.7rem;
+  background: var(--pixel-bg-light);
+  border: 2px solid var(--pixel-border);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+}
+
+.pixel-hero__title {
+  font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+  margin: 0 0 1rem;
+}
+
+.pixel-hero__copy {
+  font-size: 0.95rem;
+  max-width: 60ch;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+.pixel-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.pixel-hero__pixels {
+  margin-top: 2.4rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.pixel-block {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #000;
+  background: var(--pixel-primary);
+  animation: pixelBlink 1.6s steps(2) infinite;
+}
+
+.pixel-block--accent {
+  background: var(--pixel-accent);
+  animation-delay: 0.2s;
+}
+
+.pixel-block--success {
+  background: var(--pixel-success);
+  animation-delay: 0.4s;
+}

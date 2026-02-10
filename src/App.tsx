@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react'
-import './App.css'
+import './styles'
 import { HeroBackgroundScene, PixelButton, PixelCard, PixelNav, PixelSection } from './components'
 import {
   ABOUT_CARDS,

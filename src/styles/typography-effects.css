@@ -1,0 +1,74 @@
+.pixel-text {
+  font-family: 'Pixelify Sans', cursive;
+  color: var(--pixel-text);
+  text-shadow: 0 1px 0 rgb(0 0 0 / 65%);
+  image-rendering: pixelated;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pixel-text-heading {
+  font-family: 'Press Start 2P', cursive;
+  color: var(--pixel-text);
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000, 0 0 8px #000;
+  image-rendering: pixelated;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+.pixel-text-label {
+  font-family: 'Press Start 2P', cursive;
+  color: var(--pixel-text);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  image-rendering: pixelated;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pixel-text-small {
+  font-family: 'Pixelify Sans', cursive;
+  color: var(--pixel-text);
+  text-shadow: 0 1px 0 rgb(0 0 0 / 65%);
+  image-rendering: pixelated;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.section-skeleton {
+  height: 180px;
+  border: 2px solid #000;
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.11) 48%,
+      rgba(255, 255, 255, 0.05) 100%
+    ),
+    var(--pixel-panel);
+  box-shadow: 0 4px 0 var(--pixel-border), 0 4px 0 2px #000;
+  animation: sectionSkeleton 1.2s steps(6) infinite;
+}
+
+.pixel-fade-in {
+  animation: pixelFadeIn 0.35s steps(4) forwards;
+}
+
+.pixel-scanline {
+  position: relative;
+  overflow: hidden;
+}
+
+.pixel-scanline::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 6px,
+    rgba(255, 255, 255, 0.04) 6px,
+    rgba(255, 255, 255, 0.04) 7px
+  );
+  pointer-events: none;
+  animation: scanline 8s steps(8) infinite;
+}
