@@ -5,9 +5,8 @@ type ProjectsSectionProps = {
   projects: readonly PortfolioProject[]
 }
 
-function getProjectMoniker(name: string) {
-  const clean = name.replace(/[^A-Za-z0-9]/g, '')
-  return clean.slice(0, 3).toUpperCase() || 'PRJ'
+function getArticleHref(path: string) {
+  return `${import.meta.env.BASE_URL}${path}`.replace(/([^:]\/)\/+/g, '$1')
 }
 
 export default function ProjectsSection({ projects }: ProjectsSectionProps) {
@@ -22,15 +21,6 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
           </div>
 
           <div className="project-bar featured-project__bar" />
-          <div className={`project-thumb project-thumb--featured tone-${featuredProject.tone}`} aria-hidden="true">
-            <span className="project-thumb__grid" />
-            <span className="project-thumb__tile project-thumb__tile--a" />
-            <span className="project-thumb__tile project-thumb__tile--b" />
-            <span className="project-thumb__tile project-thumb__tile--c" />
-            <span className="pixel-text-small project-thumb__code">
-              {getProjectMoniker(featuredProject.name)}
-            </span>
-          </div>
           <h3 className="pixel-text-heading featured-project__title">{featuredProject.name}</h3>
           <p className="pixel-text featured-project__copy">{featuredProject.summary}</p>
 
@@ -55,6 +45,14 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
           </div>
 
           <div className="project-actions">
+            <PixelButton
+              variant="success"
+              size="md"
+              href={getArticleHref(featuredProject.articleHref)}
+              aria-label={`View article for ${featuredProject.name}`}
+            >
+              View
+            </PixelButton>
             <PixelButton
               variant="primary"
               size="md"
@@ -83,13 +81,6 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
         {otherProjects.map((project) => (
           <PixelCard key={project.name} className={`project-card tone-${project.tone} pixel-fade-in`}>
             <div className="project-bar" />
-            <div className={`project-thumb tone-${project.tone}`} aria-hidden="true">
-              <span className="project-thumb__grid" />
-              <span className="project-thumb__tile project-thumb__tile--a" />
-              <span className="project-thumb__tile project-thumb__tile--b" />
-              <span className="project-thumb__tile project-thumb__tile--c" />
-              <span className="pixel-text-small project-thumb__code">{getProjectMoniker(project.name)}</span>
-            </div>
             <h3 className="pixel-text-heading project-title">{project.name}</h3>
             <p className="pixel-text project-copy">{project.summary}</p>
 
@@ -102,6 +93,14 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
             </div>
 
             <div className="project-actions">
+              <PixelButton
+                variant="success"
+                size="sm"
+                href={getArticleHref(project.articleHref)}
+                aria-label={`View article for ${project.name}`}
+              >
+                View
+              </PixelButton>
               <PixelButton
                 variant="primary"
                 size="sm"

@@ -22,6 +22,40 @@ type PixelButtonAsLink = PixelButtonBase &
   }
 
 type PixelButtonProps = PixelButtonAsButton | PixelButtonAsLink
+const PAGE_TRANSITION_MS = 220
+
+function getInternalNavigationHref(
+  href: string,
+  target: AnchorHTMLAttributes<HTMLAnchorElement>['target'],
+  download: AnchorHTMLAttributes<HTMLAnchorElement>['download'],
+) {
+  if (typeof window === 'undefined') {
+    return null
+  }
+
+  if (download || (target && target !== '_self')) {
+    return null
+  }
+
+  if (
+    href.startsWith('#') ||
+    href.startsWith('mailto:') ||
+    href.startsWith('tel:') ||
+    href.startsWith('javascript:')
+  ) {
+    return null
+  }
+
+  try {
+    const url = new URL(href, window.location.href)
+    if (url.origin !== window.location.origin) {
+      return null
+    }
+    return url.href
+  } catch {
+    return null
+  }
+}
 
 export function PixelButton({
   variant = 'primary',
@@ -56,7 +90,27 @@ export function PixelButton({
             event.preventDefault()
             return
           }
+
           onClick?.(event)
+          if (event.defaultPrevented) {
+            return
+          }
+
+          if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) {
+            return
+          }
+
+          const targetHref = getInternalNavigationHref(href, rest.target, rest.download)
+          const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+          if (!targetHref || reduceMotion) {
+            return
+          }
+
+          event.preventDefault()
+          document.documentElement.classList.add('page-leaving')
+          window.setTimeout(() => {
+            window.location.assign(targetHref)
+          }, PAGE_TRANSITION_MS)
         }}
         {...rest}
       >

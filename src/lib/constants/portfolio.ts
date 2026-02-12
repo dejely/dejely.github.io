@@ -46,9 +46,7 @@ export type PortfolioProject = {
   summary: string
   stack: string[]
   tone: ProjectTone
-  role?: string
-  duration?: string
-  challenge?: string
+  articleHref: string
   primaryCta: {
     label: string
     href: string
@@ -57,6 +55,9 @@ export type PortfolioProject = {
     label: string
     href: string
   }
+  role?: string
+  duration?: string
+  challenge?: string
 }
 
 export const PROJECTS: PortfolioProject[] = [
@@ -66,11 +67,12 @@ export const PROJECTS: PortfolioProject[] = [
       'Real-time driver monitoring pipeline that processes mobile camera streams to detect drowsiness and distraction using computer-vision signals.',
     stack: ['Python', 'FastAPI', 'OpenCV', 'Mediapipe', 'WebRTC', 'React', 'TypeScript'],
     tone: 'accent',
+    articleHref: 'projects/manobela/index.html',
+    primaryCta: { label: 'View Repo', href: 'https://github.com/popcorn-prophets/manobela' },
+    secondaryCta: { label: 'Open GitHub', href: 'https://github.com/popcorn-prophets/manobela' },
     role: 'Role: Full-stack and DevOps',
     duration: 'Duration: Startup team project, 2025-2026',
     challenge: 'Key Challenge: Keeping frame processing responsive on mobile-constrained hardware',
-    primaryCta: { label: 'View Repo', href: 'https://github.com/popcorn-prophets/manobela' },
-    secondaryCta: { label: 'Open GitHub', href: 'https://github.com/popcorn-prophets/manobela' },
   },
   {
     name: 'Snakes-Blessings-and-Curses',
@@ -78,9 +80,7 @@ export const PROJECTS: PortfolioProject[] = [
       'Java OOP board-game engine with extendable rules and event-based tile effects for multiple gameplay variants.',
     stack: ['Java', 'Maven', 'OOP', 'Game Logic'],
     tone: 'primary',
-    role: 'Role: Lead Developer',
-    duration: 'Duration: Semester project',
-    challenge: 'Key Challenge: Designing reusable mechanics without hard-coding board behavior',
+    articleHref: 'projects/snakes-blessings-and-curses/index.html',
     primaryCta: {
       label: 'View Repo',
       href: 'https://github.com/dejely/Snakes-Blessings-and-Curses',
@@ -89,6 +89,9 @@ export const PROJECTS: PortfolioProject[] = [
       label: 'Open GitHub',
       href: 'https://github.com/dejely/Snakes-Blessings-and-Curses',
     },
+    role: 'Role: Lead Developer',
+    duration: 'Duration: Semester project',
+    challenge: 'Key Challenge: Designing reusable mechanics without hard-coding board behavior',
   },
   {
     name: 'Derio',
@@ -96,11 +99,12 @@ export const PROJECTS: PortfolioProject[] = [
       'Personal finance manager that structures transactions, budgets, and monthly summaries into decision-ready views.',
     stack: ['Python', 'Data Modeling', 'Finance Tools'],
     tone: 'success',
+    articleHref: 'projects/derio/index.html',
+    primaryCta: { label: 'View Repo', href: 'https://github.com/dejely/Derio' },
+    secondaryCta: { label: 'Open GitHub', href: 'https://github.com/dejely/Derio' },
     role: 'Role: Full-stack Developer',
     duration: 'Duration: Independent build',
     challenge: 'Key Challenge: Keeping data flow simple while supporting realistic finance scenarios',
-    primaryCta: { label: 'View Repo', href: 'https://github.com/dejely/Derio' },
-    secondaryCta: { label: 'Open GitHub', href: 'https://github.com/dejely/Derio' },
   },
   {
     name: 'Polaris',
@@ -108,11 +112,12 @@ export const PROJECTS: PortfolioProject[] = [
       'Logistics prototype that models shipment flows and supply-chain checkpoints with a domain-oriented structure.',
     stack: ['Python', 'Logistics', 'Supply Chain'],
     tone: 'warning',
+    articleHref: 'projects/polaris/index.html',
+    primaryCta: { label: 'View Repo', href: 'https://github.com/dejely/Polaris' },
+    secondaryCta: { label: 'Open GitHub', href: 'https://github.com/dejely/Polaris' },
     role: 'Role: Backend and Data Logic Developer',
     duration: 'Duration: Coursework prototype',
     challenge: 'Key Challenge: Mapping domain terminology into usable system entities and workflows',
-    primaryCta: { label: 'View Repo', href: 'https://github.com/dejely/Polaris' },
-    secondaryCta: { label: 'Open GitHub', href: 'https://github.com/dejely/Polaris' },
   },
 ] as const
 

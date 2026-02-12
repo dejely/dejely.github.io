@@ -1,0 +1,205 @@
+:root {
+  --bg: #0f1218;
+  --panel: #1b2535;
+  --surface: #223349;
+  --text: #f3f6fc;
+  --muted: #c7d0dd;
+  --accent: #7ed26a;
+  --border: #0a0d12;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Press Start 2P", "VT323", "Courier New", monospace;
+}
+
+.article-layout {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: articlePageEnter 260ms ease forwards;
+}
+
+.article-card {
+  width: min(860px, 100%);
+  border: 2px solid var(--border);
+  background: var(--panel);
+  box-shadow: 0 4px 0 var(--border), 0 4px 0 2px #000;
+  padding: clamp(1rem, 2.5vw, 2rem);
+}
+
+.article-header {
+  margin-bottom: 1.2rem;
+}
+
+.article-title {
+  margin: 0;
+  font-size: clamp(1rem, 2.3vw, 1.45rem);
+  line-height: 1.5;
+}
+
+.article-subtitle {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 0.72rem;
+}
+
+.article-section {
+  margin-top: 1.2rem;
+}
+
+.article-section h2 {
+  margin: 0 0 0.7rem;
+  font-size: 0.76rem;
+}
+
+.article-section p,
+.article-section li {
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 0.65rem;
+}
+
+.article-section ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.article-hero-media {
+  margin: 0 0 1.25rem;
+}
+
+.article-hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid #000;
+  background: #0a0d12;
+  box-shadow: 0 4px 0 var(--border), 0 4px 0 2px #000;
+}
+
+.manobela-gallery {
+  margin-top: 0.9rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.manobela-gallery__item {
+  margin: 0;
+  border: 2px solid #000;
+  background: #0d1119;
+  box-shadow: 0 4px 0 var(--border), 0 4px 0 2px #000;
+  padding: 0.55rem;
+}
+
+.manobela-gallery__item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #05070a;
+}
+
+.manobela-gallery__item figcaption {
+  margin-top: 0.52rem;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 0.58rem;
+}
+
+.manobela-gallery__item--wide {
+  grid-column: 1 / -1;
+}
+
+.article-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.4rem;
+  padding: 0.6rem 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.62rem;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #000;
+  background: var(--accent);
+  box-shadow: 0 4px 0 #3b6f2f, 0 4px 0 2px #000;
+}
+
+.article-back:hover {
+  transform: translateY(-2px);
+}
+
+body {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+html.page-leaving body {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+@keyframes articlePageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .article-card {
+    padding: 1rem;
+  }
+
+  .article-hero-media {
+    margin-bottom: 1rem;
+  }
+
+  .manobela-gallery {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+
+  .manobela-gallery__item {
+    padding: 0.45rem;
+  }
+
+  .manobela-gallery__item figcaption {
+    font-size: 0.56rem;
+  }
+
+  .article-subtitle,
+  .article-section p,
+  .article-section li {
+    font-size: 0.6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .article-layout,
+  body {
+    animation: none;
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}

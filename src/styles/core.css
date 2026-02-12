@@ -2,6 +2,10 @@
   min-height: 100vh;
   background: var(--pixel-bg);
   color: var(--pixel-text);
+  opacity: 1;
+  transform: translateY(0);
+  animation: pageEnter 260ms ease both;
+  transition: opacity 220ms ease, transform 220ms ease;
 }
 
 .pixel-texture {
@@ -40,4 +44,27 @@
 
 .tone-warning {
   --tone-color: var(--pixel-warning);
+}
+
+html.page-leaving .pixel-root {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pixel-root {
+    animation: none;
+    transition: none;
+  }
 }
