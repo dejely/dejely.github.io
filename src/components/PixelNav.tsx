@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 type NavItem = {
   label: string
@@ -13,20 +13,45 @@ type PixelNavProps = {
 export function PixelNav({ items, logo = '<DEV/>' }: PixelNavProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [active, setActive] = useState(items[0]?.label ?? '')
+  const scrollLockRef = useRef<{
+    label: string
+    section: HTMLElement
+    expiresAt: number
+  } | null>(null)
 
   useEffect(() => {
-    const sectionItems = items
+    const getSectionItems = () =>
+      items
       .map((item) => {
         const section = document.querySelector(item.href)
         return section instanceof HTMLElement ? { label: item.label, section } : null
       })
       .filter((entry): entry is { label: string; section: HTMLElement } => entry !== null)
 
-    if (sectionItems.length === 0) {
-      return
-    }
-
     const updateActiveFromScroll = () => {
+      const sectionItems = getSectionItems()
+      if (sectionItems.length === 0) {
+        return
+      }
+
+      const lock = scrollLockRef.current
+      if (lock) {
+        const marker = window.innerHeight * 0.35
+        const top = lock.section.getBoundingClientRect().top
+        const reachedTarget = top <= marker + 12
+        const expired = Date.now() >= lock.expiresAt
+
+        if (!reachedTarget && !expired) {
+          return
+        }
+
+        scrollLockRef.current = null
+        if (reachedTarget) {
+          setActive(lock.label)
+          return
+        }
+      }
+
       const marker = window.scrollY + window.innerHeight * 0.35
       let current = sectionItems[0]
 
@@ -45,10 +70,12 @@ export function PixelNav({ items, logo = '<DEV/>' }: PixelNavProps) {
 
     window.addEventListener('scroll', updateActiveFromScroll, { passive: true })
     window.addEventListener('resize', updateActiveFromScroll)
+    window.addEventListener('hashchange', updateActiveFromScroll)
 
     return () => {
       window.removeEventListener('scroll', updateActiveFromScroll)
       window.removeEventListener('resize', updateActiveFromScroll)
+      window.removeEventListener('hashchange', updateActiveFromScroll)
     }
   }, [items])
 
@@ -56,10 +83,28 @@ export function PixelNav({ items, logo = '<DEV/>' }: PixelNavProps) {
     setActive(item.label)
     setIsOpen(false)
 
-    const element = document.querySelector(item.href)
-    if (element instanceof HTMLElement) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    const scrollToSection = (attempt = 0) => {
+      const element = document.querySelector(item.href)
+      if (element instanceof HTMLElement) {
+        const distance = Math.abs(element.getBoundingClientRect().top)
+        const lockMs = Math.min(1800, Math.max(650, Math.round(distance * 0.9)))
+
+        scrollLockRef.current = {
+          label: item.label,
+          section: element,
+          expiresAt: Date.now() + lockMs,
+        }
+
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        return
+      }
+
+      if (attempt < 8) {
+        window.setTimeout(() => scrollToSection(attempt + 1), 60)
+      }
     }
+
+    scrollToSection()
   }
 
   return (
