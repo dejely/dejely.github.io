@@ -18,7 +18,8 @@ body {
   padding: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Press Start 2P", "VT323", "Courier New", monospace;
+  font-family: "VT323", "Courier New", monospace;
+  font-size: 20px;
 }
 
 .article-layout {
@@ -32,11 +33,11 @@ body {
 }
 
 .article-card {
-  width: min(860px, 100%);
+  width: min(960px, 100%);
   border: 2px solid var(--border);
   background: var(--panel);
   box-shadow: 0 4px 0 var(--border), 0 4px 0 2px #000;
-  padding: clamp(1rem, 2.5vw, 2rem);
+  padding: clamp(1.25rem, 2.8vw, 2.5rem);
 }
 
 .article-header {
@@ -45,36 +46,40 @@ body {
 
 .article-title {
   margin: 0;
-  font-size: clamp(1rem, 2.3vw, 1.45rem);
-  line-height: 1.5;
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: clamp(1.35rem, 2.9vw, 2.1rem);
+  line-height: 1.35;
 }
 
 .article-subtitle {
   margin: 0.9rem 0 0;
   color: var(--muted);
-  line-height: 1.8;
-  font-size: 0.72rem;
+  line-height: 1.6;
+  font-size: clamp(1.1rem, 1.75vw, 1.35rem);
+  max-width: 42rem;
 }
 
 .article-section {
-  margin-top: 1.2rem;
+  margin-top: 1.5rem;
 }
 
 .article-section h2 {
   margin: 0 0 0.7rem;
-  font-size: 0.76rem;
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+  line-height: 1.5;
 }
 
 .article-section p,
 .article-section li {
   color: var(--muted);
-  line-height: 1.75;
-  font-size: 0.65rem;
+  line-height: 1.6;
+  font-size: clamp(1rem, 1.65vw, 1.2rem);
 }
 
 .article-section ul {
   margin: 0;
-  padding-left: 1rem;
+  padding-left: 1.25rem;
 }
 
 .article-hero-media {
@@ -115,8 +120,21 @@ body {
 .manobela-gallery__item figcaption {
   margin-top: 0.52rem;
   color: var(--muted);
-  line-height: 1.65;
-  font-size: 0.58rem;
+  line-height: 1.5;
+  font-size: clamp(0.95rem, 1.4vw, 1.08rem);
+}
+
+.article-link {
+  color: var(--accent);
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: clamp(0.78rem, 1.1vw, 0.92rem);
+  line-height: 1.7;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.22em;
+}
+
+.article-link:hover {
+  color: #aaf08f;
 }
 
 .manobela-gallery__item--wide {
@@ -131,7 +149,8 @@ body {
   padding: 0.6rem 1.05rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-size: 0.62rem;
+  font-family: "Press Start 2P", "Courier New", monospace;
+  font-size: 0.74rem;
   color: #fff;
   text-decoration: none;
   border: 2px solid #000;
@@ -183,14 +202,9 @@ html.page-leaving body {
     padding: 0.45rem;
   }
 
-  .manobela-gallery__item figcaption {
-    font-size: 0.56rem;
-  }
-
-  .article-subtitle,
-  .article-section p,
-  .article-section li {
-    font-size: 0.6rem;
+  html,
+  body {
+    font-size: 18px;
   }
 }
 

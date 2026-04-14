@@ -69,10 +69,23 @@ export const PROJECTS: PortfolioProject[] = [
     tone: 'accent',
     articleHref: 'projects/manobela/index.html',
     primaryCta: { label: 'View Repo', href: 'https://github.com/popcorn-prophets/manobela' },
-    secondaryCta: { label: 'Open GitHub', href: 'https://github.com/popcorn-prophets/manobela' },
+    secondaryCta: { label: 'Open Website', href: 'https://manobela.dev' },
     role: 'Role: Full-stack and DevOps',
     duration: 'Duration: Startup team project, 2025-2026',
     challenge: 'Key Challenge: Keeping frame processing responsive on mobile-constrained hardware',
+  },
+  {
+    name: 'Project HERMES',
+    summary:
+      'Hazard and Emergency Reporting, Monitoring, and Evaluation System A real-time disaster communication control center that turns chat messages into actionable incident intelligence. ',
+    stack: ['Python', 'Typescript', 'Supabase'],
+    tone: 'warning',
+    articleHref: 'projects/hermes/index.html',
+    primaryCta: { label: 'View Repo', href: 'https://github.com/popcorn-prophets/project-hermes' },
+    secondaryCta: { label: 'Open Website', href: 'https://github.com/popcorn-prophets/project-hermes' },
+    role: 'Role: Backend, Applied Role Based Access Control (RBAC)',
+    duration: 'Duration: 3 weeks',
+    challenge: 'Key Challenge: Mapping domain terminology into usable system entities and workflows',
   },
   {
     name: 'Snakes-Blessings-and-Curses',
@@ -106,19 +119,7 @@ export const PROJECTS: PortfolioProject[] = [
     duration: 'Duration: Independent build',
     challenge: 'Key Challenge: Keeping data flow simple while supporting realistic finance scenarios',
   },
-  {
-    name: 'Polaris',
-    summary:
-      'Logistics prototype that models shipment flows and supply-chain checkpoints with a domain-oriented structure.',
-    stack: ['Python', 'Logistics', 'Supply Chain'],
-    tone: 'warning',
-    articleHref: 'projects/polaris/index.html',
-    primaryCta: { label: 'View Repo', href: 'https://github.com/dejely/Polaris' },
-    secondaryCta: { label: 'Open GitHub', href: 'https://github.com/dejely/Polaris' },
-    role: 'Role: Backend and Data Logic Developer',
-    duration: 'Duration: Coursework prototype',
-    challenge: 'Key Challenge: Mapping domain terminology into usable system entities and workflows',
-  },
+
 ] as const
 
 export type TechStackItem = {
@@ -128,16 +129,16 @@ export type TechStackItem = {
 }
 
 export const TECH_STACK: TechStackItem[] = [
-  { label: 'Docker', iconSrc: '/tech-icons/docker.svg' },
-  { label: 'AWS', iconSrc: '/tech-icons/aws.svg' },
+  { label: 'Python', iconSrc: '/tech-icons/python.svg' },
   { label: 'C', iconSrc: '/tech-icons/c.svg' },
   { label: 'C++', iconSrc: '/tech-icons/cpp.svg' },
-  { label: 'Microsoft Azure Cloud', iconSrc: '/tech-icons/azure.svg' },
-  { label: 'Firebase', iconSrc: '/tech-icons/firebase.svg' },
   { label: 'Java', iconSrc: '/tech-icons/java.svg' },
-  { label: 'Python', iconSrc: '/tech-icons/python.svg' },
-  { label: 'MongoDB', iconSrc: '/tech-icons/mongodb.svg' },
-  { label: 'Kali Linux', iconSrc: '/tech-icons/linux.svg' },
+  { label: 'React', iconSrc: '/tech-icons/react.svg' },
+  { label: 'Docker', iconSrc: '/tech-icons/docker.svg' },
+  { label: 'Microsoft Azure Cloud', iconSrc: '/tech-icons/azure.svg' },
+  { label: 'AWS', iconSrc: '/tech-icons/aws.svg' },
+  { label: 'Supabase', iconSrc: '/tech-icons/supabase-icon.svg' },
+  { label: 'Firebase', iconSrc: '/tech-icons/firebase.svg' },
 ] as const
 
 export type ContactLink = {
