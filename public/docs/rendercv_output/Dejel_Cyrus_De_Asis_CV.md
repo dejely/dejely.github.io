@@ -91,17 +91,19 @@ Jan 2025
 
 ## **[Introduction to Cloud 101](https://www.credly.com/badges/8dc5198b-69e0-46e7-b61f-6a9f401bb483/linked_in_profile)**
 
-Jan 2026
-
 - Gained foundational knowledge of AWS Cloud infrastructure, cloud services, and cloud computing concepts.
 
 
 
 ## **[Introduction to AWS Security](https://www.credly.com/badges/b215a3f2-99bd-4a5e-b3c9-cffeaf025bdb/linked_in_profile)**
 
-Jan 2026
-
 - Trained on basic AWS cloud security, including IAM and SIEM tools.
+
+
+
+## **[Software Architecture & System Design Foundations](https://www.linkedin.com/posts/dejel-cyrus-de-asis-9567172b0_im-happy-to-share-that-ive-obtained-a-new-activity-7459197931393368064-QHMg?utm_source=share&utm_medium=member_desktop&rcm=ACoAAErbWZIB_EGM2r85zRMA7_PSOjcokZk88Hw)**
+
+- Trained on System and Software Architecture.
 
 
 

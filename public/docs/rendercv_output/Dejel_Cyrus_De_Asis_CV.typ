@@ -78,7 +78,7 @@
   date: datetime(
     year: 2026,
     month: 5,
-    day: 9,
+    day: 10,
   ),
 )
 
@@ -216,8 +216,6 @@ Champion and award-winning hackathon\/CTF participant, with achievements in Mano
 
   ],
   [
-    Jan 2026
-
   ],
 )
 
@@ -229,8 +227,17 @@ Champion and award-winning hackathon\/CTF participant, with achievements in Mano
 
   ],
   [
-    Jan 2026
+  ],
+)
 
+#regular-entry(
+  [
+    #strong[#link("https://www.linkedin.com/posts/dejel-cyrus-de-asis-9567172b0_im-happy-to-share-that-ive-obtained-a-new-activity-7459197931393368064-QHMg?utm_source=share&utm_medium=member_desktop&rcm=ACoAAErbWZIB_EGM2r85zRMA7_PSOjcokZk88Hw")[Software Architecture & System Design Foundations]]
+
+    - Trained on System and Software Architecture.
+
+  ],
+  [
   ],
 )
 
