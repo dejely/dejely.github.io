@@ -78,7 +78,7 @@
   date: datetime(
     year: 2026,
     month: 5,
-    day: 10,
+    day: 11,
   ),
 )
 
@@ -95,15 +95,13 @@
 
 == Summary
 
-Computer Science student at the University of the Philippines focused on building practical software systems, dashboards, automation workflows, and real-time applications for real-world operations.
+Computer Science student at the University of the Philippines building full-stack, AI-assisted, and real-time software systems focused on operational workflows, monitoring platforms, and automation.
 
-Experienced in developing web and mobile applications using React, TypeScript, JavaScript, Node.js, Firebase, Supabase, PostgreSQL, Expo, AWS, and Microsoft Azure.
+Experienced with React, TypeScript, Node.js, PostgreSQL, Supabase, Expo, and cloud-assisted architectures using AWS and Microsoft Azure.
 
-Uses tools such as Git, GitHub, Linux, VS Code, Docker basics, custom API webhooks, OpenAI, Claude, Gemini, and Codex to build, automate, test, document, and improve software workflows.
+Built projects involving computer vision, cybersecurity, blockchain systems, dashboards, and mobile-to-cloud communication pipelines.
 
-Applies cybersecurity, computer vision, cloud computing, AI\/LLM workflows, and QA-style thinking to create systems with clear logic, reliable data handling, and practical usability.
-
-Champion and award-winning hackathon\/CTF participant, with achievements in Manobela Hackathon and Hack4Gov.
+Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based development, API integration, cybersecurity labs, and systems-oriented software engineering.
 
 == Achievements
 
@@ -111,9 +109,9 @@ Champion and award-winning hackathon\/CTF participant, with achievements in Mano
   [
     #strong[Manobela Hackathon]
 
-    - Champion for developing Manobela, a real-time driver monitoring system focused on detecting drowsiness and distraction through computer-vision signals.
+    - Champion for developing Manobela, a real-time driver monitoring system focused on drowsiness and distraction detection using computer-vision signals.
 
-    - Contributed to the design and implementation of a mobile-to-cloud monitoring pipeline using lightweight data transmission and cloud-assisted processing.
+    - Designed and implemented a mobile-to-cloud monitoring pipeline using lightweight telemetry transmission and cloud-assisted processing.
 
   ],
   [
@@ -126,7 +124,7 @@ Champion and award-winning hackathon\/CTF participant, with achievements in Mano
   [
     #strong[Hack4Gov]
 
-    - 1st \/ awardee in Hack4Gov 2025.
+    - Awardee and top-performing participant in Hack4Gov 2025 cybersecurity competition.
 
     - Competed in cybersecurity challenges involving network analysis, digital forensics, cryptography, web exploitation, and Linux-based investigation workflows.
 
@@ -175,21 +173,19 @@ Champion and award-winning hackathon\/CTF participant, with achievements in Mano
 
 == Skills
 
-#strong[Programming Languages:] Python, Java, C, C++, TypeScript, JavaScript, Solidity, SQL
+#strong[Languages:] Python, TypeScript, JavaScript, Java, C\/C++, SQL, Solidity
 
-#strong[Web and Mobile Development:] React, Expo, Node.js, Firebase, Supabase, PostgreSQL, REST APIs, HTML, CSS
+#strong[Frontend:] React, Expo, HTML, CSS
 
-#strong[Automation:] custom API webhooks, CI\/CD workflow automation, Google Workspace APIs
+#strong[Backend & Databases:] Node.js, PostgreSQL, Supabase, Firebase, REST APIs
 
-#strong[AI Integrations:] OpenAI, Claude API, Gemini, LLM workflows, Codex
+#strong[Cloud & DevOps:] AWS, Microsoft Azure, Docker, GitHub Actions
 
-#strong[Cloud and Infrastructure:] AWS, Microsoft Azure Cloud, Firebase, Supabase, PostgreSQL
+#strong[Cybersecurity:] Wireshark, Burp Suite, Nmap, Gobuster, Kali Linux, Autopsy, John the Ripper
 
-#strong[Cybersecurity Tools:] Kali Linux, Debian Linux, Wireshark, Autopsy, John the Ripper, Nmap, Gobuster, Burp Suite
+#strong[AI & Automation:] OpenAI API, Claude API, Gemini API, Codex, Prompt Engineering, Workflow Automation
 
-#strong[Development Tools:] Git, GitHub, Linux command line, VS Code, Docker basics, API testing tools
-
-#strong[Field Knowledge:] Web development, mobile development, computer vision, cybersecurity, penetration testing fundamentals, blockchain technology, cloud computing, AI\/LLM implementation, automation workflows, dashboard development
+#strong[Tools:] Git, GitHub, Linux, VS Code, API Testing
 
 == Certificates
 
@@ -212,7 +208,7 @@ Champion and award-winning hackathon\/CTF participant, with achievements in Mano
   [
     #strong[#link("https://www.credly.com/badges/8dc5198b-69e0-46e7-b61f-6a9f401bb483/linked_in_profile")[Introduction to Cloud 101]]
 
-    - Gained foundational knowledge of AWS Cloud infrastructure, cloud services, and cloud computing concepts.
+    - Completed foundational training in AWS Cloud infrastructure, cloud services, and cloud computing concepts.
 
   ],
   [
@@ -223,7 +219,7 @@ Champion and award-winning hackathon\/CTF participant, with achievements in Mano
   [
     #strong[#link("https://www.credly.com/badges/b215a3f2-99bd-4a5e-b3c9-cffeaf025bdb/linked_in_profile")[Introduction to AWS Security]]
 
-    - Trained on basic AWS cloud security, including IAM and SIEM tools.
+    - Completed foundational training in AWS cloud security, including IAM and SIEM concepts.
 
   ],
   [
@@ -234,7 +230,7 @@ Champion and award-winning hackathon\/CTF participant, with achievements in Mano
   [
     #strong[#link("https://www.linkedin.com/posts/dejel-cyrus-de-asis-9567172b0_im-happy-to-share-that-ive-obtained-a-new-activity-7459197931393368064-QHMg?utm_source=share&utm_medium=member_desktop&rcm=ACoAAErbWZIB_EGM2r85zRMA7_PSOjcokZk88Hw")[Software Architecture & System Design Foundations]]
 
-    - Trained on System and Software Architecture.
+    - Completed training in software architecture and system design foundations.
 
   ],
   [
@@ -245,11 +241,30 @@ Champion and award-winning hackathon\/CTF participant, with achievements in Mano
 
 #regular-entry(
   [
+    #strong[Independent Software Developer]
+
+    - Built web, mobile, and systems-oriented projects using React, TypeScript, JavaScript, Python, Java, C\/C++, Expo, Supabase, PostgreSQL, Firebase, and cloud platforms.
+
+    - Designed projects involving computer vision, blockchain voting, budgeting tools, AI\/LLM implementation, cybersecurity, automation, dashboards, and full-stack development.
+
+    - Worked with Git, GitHub, Linux environments, API integration, database design, debugging, and technical documentation.
+
+  ],
+  [
+    Jan 2024 – present
+
+    2 years 5 months
+
+  ],
+)
+
+#regular-entry(
+  [
     #strong[CTF Player and Cybersecurity Learner]
 
     - Participated in cybersecurity competitions and hands-on labs involving network analysis, digital forensics, cryptography, web exploitation, and Linux-based security workflows.
 
-    - Used tools such as Wireshark, Autopsy, John the Ripper, Kali Linux, Debian Linux, Nmap, Gobuster, Burp Suite, and command-line utilities for investigation and security testing.
+    - Used Wireshark, Autopsy, John the Ripper, Kali Linux, Debian Linux, Nmap, Gobuster, Burp Suite, and command-line utilities for investigation and security testing.
 
     - Developed practical understanding of vulnerability discovery, responsible testing, and defensive security concepts.
 
@@ -266,7 +281,7 @@ Champion and award-winning hackathon\/CTF participant, with achievements in Mano
   [
     #strong[National AI Student Challenge 2025 - AWS Regional LLM League]
 
-    - Learned how large language models can be implemented, deployed, and integrated using AWS-based tools and cloud infrastructure.
+    - Implemented and deployed LLM-supported workflows using AWS-based tools and cloud infrastructure.
 
     - Built foundational knowledge in AI systems, prompt-based applications, and cloud-supported LLM workflows.
 
@@ -279,50 +294,19 @@ Champion and award-winning hackathon\/CTF participant, with achievements in Mano
   ],
 )
 
-#regular-entry(
-  [
-    #strong[Software Developer \/ Project Builder]
-
-    - Built web, mobile, and systems-oriented projects using React, TypeScript, JavaScript, Python, Java, C\/C++, Expo, Supabase, PostgreSQL, Firebase, and cloud platforms.
-
-    - Worked on projects involving computer vision, blockchain voting, budgeting tools, AI\/LLM implementation, cybersecurity, automation, dashboards, and full-stack development.
-
-    - Comfortable working with Git, GitHub, Linux environments, API integration, database design, debugging, and project documentation.
-
-  ],
-  [
-    Jan 2024 – present
-
-    2 years 5 months
-
-  ],
-)
-
-== Value Proposition
-
-#strong[Custom Software Systems:] Builds practical web and mobile systems such as dashboards, reporting tools, monitoring platforms, finance tools, and workflow-based applications tailored to specific users or organizations.
-
-#strong[Internal Tools and Dashboards:] Develops custom dashboards and data-staging interfaces using React, JavaScript, TypeScript, Node.js, Firebase, Supabase, and PostgreSQL to help organize information and improve operational workflows.
-
-#strong[AI and Automation Workflows:] Uses LLM tools, API integrations, webhooks, moltworker, and Codex to explore automation for data processing, reporting, communication workflows, and repetitive operational tasks.
-
-#strong[Real-Time and Cloud-Assisted Systems:] Works on projects involving real-time monitoring, mobile-to-cloud communication, computer vision, and cloud-assisted processing using tools such as Expo, AWS, Microsoft Azure, and Supabase.
-
-#strong[Security-Aware Development:] Applies cybersecurity experience from CTFs and security labs to build with stronger awareness of data handling, access control, testing, and system reliability.
-
-#strong[Reliable Data and System Logic:] Uses structured validation, QA-style testing, and Software framework workflows to improve accuracy, consistency, and reliability across software systems.
-
 == Projects
 
 #regular-entry(
   [
-    #strong[Manobela]
+    #strong[#link("https://manobela.vercel.app")[Manobela]]
 
-    - Developed a real-time driver monitoring pipeline that processes mobile camera streams to detect drowsiness and distraction using computer-vision signals.
+    - Developed a real-time driver monitoring pipeline processing facial landmark telemetry at approximately 15 FPS using computer-vision signals.
 
-    - Utilized Microsoft Azure Cloud to optimize cloud-assisted computation and lightweight data transmission for computer-vision monitoring.
+    - Built lightweight mobile-to-cloud communication workflows to reduce bandwidth usage and device-side processing overhead.
 
-    - Designed the system with a focus on road safety, real-time feedback, and scalable mobile-to-cloud processing.
+    - Integrated Microsoft Azure cloud-assisted computation for scalable real-time monitoring and analytics.
+
+    - Implemented drowsiness and distraction detection using facial landmark analysis and real-time feedback systems.
 
   ],
   [
@@ -333,13 +317,13 @@ Champion and award-winning hackathon\/CTF participant, with achievements in Mano
 
 #regular-entry(
   [
-    #strong[HERMES]
+    #strong[#link("https://project-hermes-drrm.vercel.app")[HERMES]]
 
-    - Built HERMES, a Hazard and Emergency Reporting, Monitoring, and Evaluation System for real-time disaster communication and response coordination.
+    - Built a Hazard and Emergency Reporting, Monitoring, and Evaluation System for real-time disaster communication workflows.
 
-    - Designed the system as a communication control center that helps turn incoming reports or chat-based messages into organized emergency monitoring and evaluation workflows.
+    - Designed structured reporting pipelines capable of organizing incoming chat-based emergency reports into centralized monitoring dashboards.
 
-    - Built around no-signal\/no-telco subscription in mind. Able to transmit data to the database using Meta Messenger platform.
+    - Implemented low-connectivity communication support using Meta Messenger integration for areas with limited telco infrastructure.
 
   ],
   [
@@ -350,13 +334,13 @@ Champion and award-winning hackathon\/CTF participant, with achievements in Mano
 
 #regular-entry(
   [
-    #strong[Scan a Delegate]
+    #strong[#link("https://github.com/dejely/Scan-a-Delegate")[Scan a Delegate]]
 
-    - Built a decentralized application for secure and transparent voting using blockchain technology.
+    - Developed a blockchain-based voting platform focused on transparency and tamper-resistant vote tracking.
 
-    - Used Solidity smart contracts and deployed\/testing concepts on the Ethereum Sepolia test network.
+    - Implemented Solidity smart contracts and deployed testing workflows on the Ethereum Sepolia test network.
 
-    - Explored blockchain-based identity, voting transparency, and tamper-resistant record keeping.
+    - Explored decentralized identity verification and transparent election record management concepts.
 
   ],
   [
@@ -367,13 +351,13 @@ Champion and award-winning hackathon\/CTF participant, with achievements in Mano
 
 #regular-entry(
   [
-    #strong[Derio]
+    #strong[#link("https://github.com/dejely/Derio")[Derio]]
 
-    - Created a budgeting and finance-tracking tool for monitoring income and expenses from multiple sources.
+    - Built a budgeting and finance-tracking application for monitoring multi-source income and expenses.
 
-    - Implemented graphing features to visualize financial activity and spending patterns.
+    - Implemented graphical analytics and financial visualization features for spending analysis.
 
-    - Focused on making personal finance tracking easier through structured records and visual summaries.
+    - Focused on structured financial record management and user-friendly reporting workflows.
 
   ],
   [
