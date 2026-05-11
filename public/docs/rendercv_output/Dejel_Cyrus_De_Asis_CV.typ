@@ -135,6 +135,61 @@ Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based 
   ],
 )
 
+== Projects
+
+#regular-entry(
+  [
+    #strong[#link("https://manobela.vercel.app")[Manobela]]
+
+    - Developed a real-time driver monitoring pipeline processing facial landmark telemetry at approximately 15 FPS using computer-vision signals.
+
+    - Built lightweight mobile-to-cloud communication workflows to reduce bandwidth usage and device-side processing overhead.
+
+    - Integrated Microsoft Azure cloud-assisted computation for scalable real-time monitoring and analytics.
+
+    - Implemented drowsiness and distraction detection using facial landmark analysis and real-time feedback systems.
+
+  ],
+  [
+    Jan 2025 – Jan 2026
+
+  ],
+)
+
+#regular-entry(
+  [
+    #strong[#link("https://project-hermes-drrm.vercel.app")[HERMES]]
+
+    - Built a Hazard and Emergency Reporting, Monitoring, and Evaluation System for real-time disaster communication workflows.
+
+    - Designed structured reporting pipelines capable of organizing incoming chat-based emergency reports into centralized monitoring dashboards.
+
+    - Implemented low-connectivity communication support using Meta Messenger integration for areas with limited telco infrastructure.
+
+  ],
+  [
+    Jan 2026
+
+  ],
+)
+
+#regular-entry(
+  [
+    #strong[#link("https://github.com/dejely/Scan-a-Delegate")[Scan a Delegate]]
+
+    - Developed a blockchain-based voting platform focused on transparency and tamper-resistant vote tracking.
+
+    - Implemented Solidity smart contracts and deployed testing workflows on the Ethereum Sepolia test network.
+
+    - Explored decentralized identity verification and transparent election record management concepts.
+
+  ],
+  [
+    Jan 2024 – Jan 2025
+
+  ],
+)
+
 == Education
 
 #education-entry(
@@ -290,78 +345,6 @@ Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based 
     Jan 2025 – May 2025
 
     5 months
-
-  ],
-)
-
-== Projects
-
-#regular-entry(
-  [
-    #strong[#link("https://manobela.vercel.app")[Manobela]]
-
-    - Developed a real-time driver monitoring pipeline processing facial landmark telemetry at approximately 15 FPS using computer-vision signals.
-
-    - Built lightweight mobile-to-cloud communication workflows to reduce bandwidth usage and device-side processing overhead.
-
-    - Integrated Microsoft Azure cloud-assisted computation for scalable real-time monitoring and analytics.
-
-    - Implemented drowsiness and distraction detection using facial landmark analysis and real-time feedback systems.
-
-  ],
-  [
-    Jan 2025 – Jan 2026
-
-  ],
-)
-
-#regular-entry(
-  [
-    #strong[#link("https://project-hermes-drrm.vercel.app")[HERMES]]
-
-    - Built a Hazard and Emergency Reporting, Monitoring, and Evaluation System for real-time disaster communication workflows.
-
-    - Designed structured reporting pipelines capable of organizing incoming chat-based emergency reports into centralized monitoring dashboards.
-
-    - Implemented low-connectivity communication support using Meta Messenger integration for areas with limited telco infrastructure.
-
-  ],
-  [
-    Jan 2026
-
-  ],
-)
-
-#regular-entry(
-  [
-    #strong[#link("https://github.com/dejely/Scan-a-Delegate")[Scan a Delegate]]
-
-    - Developed a blockchain-based voting platform focused on transparency and tamper-resistant vote tracking.
-
-    - Implemented Solidity smart contracts and deployed testing workflows on the Ethereum Sepolia test network.
-
-    - Explored decentralized identity verification and transparent election record management concepts.
-
-  ],
-  [
-    Jan 2024 – Jan 2025
-
-  ],
-)
-
-#regular-entry(
-  [
-    #strong[#link("https://github.com/dejely/Derio")[Derio]]
-
-    - Built a budgeting and finance-tracking application for monitoring multi-source income and expenses.
-
-    - Implemented graphical analytics and financial visualization features for spending analysis.
-
-    - Focused on structured financial record management and user-friendly reporting workflows.
-
-  ],
-  [
-    Jan 2024
 
   ],
 )

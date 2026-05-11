@@ -36,6 +36,45 @@ Jan 2025
 
 
 
+# Projects
+## **[Manobela](https://manobela.vercel.app)**
+
+Jan 2025 – Jan 2026
+
+- Developed a real-time driver monitoring pipeline processing facial landmark telemetry at approximately 15 FPS using computer-vision signals.
+
+- Built lightweight mobile-to-cloud communication workflows to reduce bandwidth usage and device-side processing overhead.
+
+- Integrated Microsoft Azure cloud-assisted computation for scalable real-time monitoring and analytics.
+
+- Implemented drowsiness and distraction detection using facial landmark analysis and real-time feedback systems.
+
+
+
+## **[HERMES](https://project-hermes-drrm.vercel.app)**
+
+Jan 2026
+
+- Built a Hazard and Emergency Reporting, Monitoring, and Evaluation System for real-time disaster communication workflows.
+
+- Designed structured reporting pipelines capable of organizing incoming chat-based emergency reports into centralized monitoring dashboards.
+
+- Implemented low-connectivity communication support using Meta Messenger integration for areas with limited telco infrastructure.
+
+
+
+## **[Scan a Delegate](https://github.com/dejely/Scan-a-Delegate)**
+
+Jan 2024 – Jan 2025
+
+- Developed a blockchain-based voting platform focused on transparency and tamper-resistant vote tracking.
+
+- Implemented Solidity smart contracts and deployed testing workflows on the Ethereum Sepolia test network.
+
+- Explored decentralized identity verification and transparent election record management concepts.
+
+
+
 # Education
 ## **University of the Philippines**, Computer Science
 
@@ -147,56 +186,5 @@ Jan 2025 – May 2025
 - Implemented and deployed LLM-supported workflows using AWS-based tools and cloud infrastructure.
 
 - Built foundational knowledge in AI systems, prompt-based applications, and cloud-supported LLM workflows.
-
-
-
-# Projects
-## **[Manobela](https://manobela.vercel.app)**
-
-Jan 2025 – Jan 2026
-
-- Developed a real-time driver monitoring pipeline processing facial landmark telemetry at approximately 15 FPS using computer-vision signals.
-
-- Built lightweight mobile-to-cloud communication workflows to reduce bandwidth usage and device-side processing overhead.
-
-- Integrated Microsoft Azure cloud-assisted computation for scalable real-time monitoring and analytics.
-
-- Implemented drowsiness and distraction detection using facial landmark analysis and real-time feedback systems.
-
-
-
-## **[HERMES](https://project-hermes-drrm.vercel.app)**
-
-Jan 2026
-
-- Built a Hazard and Emergency Reporting, Monitoring, and Evaluation System for real-time disaster communication workflows.
-
-- Designed structured reporting pipelines capable of organizing incoming chat-based emergency reports into centralized monitoring dashboards.
-
-- Implemented low-connectivity communication support using Meta Messenger integration for areas with limited telco infrastructure.
-
-
-
-## **[Scan a Delegate](https://github.com/dejely/Scan-a-Delegate)**
-
-Jan 2024 – Jan 2025
-
-- Developed a blockchain-based voting platform focused on transparency and tamper-resistant vote tracking.
-
-- Implemented Solidity smart contracts and deployed testing workflows on the Ethereum Sepolia test network.
-
-- Explored decentralized identity verification and transparent election record management concepts.
-
-
-
-## **[Derio](https://github.com/dejely/Derio)**
-
-Jan 2024
-
-- Built a budgeting and finance-tracking application for monitoring multi-source income and expenses.
-
-- Implemented graphical analytics and financial visualization features for spending analysis.
-
-- Focused on structured financial record management and user-friendly reporting workflows.
 
 
