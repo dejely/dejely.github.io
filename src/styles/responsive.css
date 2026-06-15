@@ -35,7 +35,9 @@
     --hero-ground-height: clamp(50px, 8vh, 72px);
     --hero-scene-opacity: 0.4;
     --hero-runner-scale: 1;
-    --hero-throw-distance: calc((var(--hero-gap-width) * 1.2) + 8vw);
+    --hero-block-flight: clamp(96px, 20vw, 190px);
+    --hero-build-width: clamp(118px, 20vw, 190px);
+    --hero-build-bottom: calc(var(--hero-ground-height) + 6px);
     min-height: calc(100svh - 4.2rem);
     padding: 5.2rem 1rem 3.8rem;
   }
@@ -111,7 +113,6 @@
     --hero-ground-height: 38px;
     --hero-scene-opacity: 0.3;
     --hero-runner-scale: 0.72;
-    --hero-throw-distance: calc((var(--hero-gap-width) * 1.16) + 5vw);
     min-height: calc(100svh - 4rem);
     padding: 4.7rem 0.85rem 3rem;
   }
@@ -176,6 +177,37 @@
 
   .hero-bg__haze {
     opacity: 0.85;
+  }
+
+  .hero-build {
+    height: 50px;
+  }
+
+  .hero-build__terminal {
+    width: 62px;
+    height: 26px;
+    bottom: 20px;
+  }
+
+  .hero-build__terminal-bar {
+    top: 5px;
+    width: 46px;
+  }
+
+  .hero-build__terminal-line {
+    top: 14px;
+    width: 28px;
+  }
+
+  .hero-build__terminal-line--wide {
+    top: 20px;
+    width: 40px;
+  }
+
+  .hero-code-block {
+    width: 22px;
+    height: 17px;
+    font-size: 0.3rem;
   }
 
   .pixel-section {
@@ -337,6 +369,9 @@
   }
 
   .pixel-hero {
+    --hero-block-flight: clamp(72px, 25vw, 104px);
+    --hero-build-width: clamp(92px, 38vw, 126px);
+    --hero-build-bottom: calc(var(--hero-ground-height) + 4px);
     padding-inline: 0.65rem;
   }
 
@@ -376,8 +411,34 @@
   .hero-char__arm--front,
   .hero-char__leg,
   .hero-char__antenna::after,
-  .hero-bg__orb {
+  .hero-code-block,
+  .hero-build__beam,
+  .hero-build__segment,
+  .hero-build__terminal,
+  .hero-build__spark,
+  .hero-data-stream__pixel {
     animation: none;
+  }
+
+  .hero-code-block,
+  .hero-build__spark,
+  .hero-data-stream__pixel {
+    opacity: 0;
+  }
+
+  .hero-build__beam,
+  .hero-build__segment,
+  .hero-build__terminal {
+    opacity: 1;
+  }
+
+  .hero-build__beam,
+  .hero-build__segment {
+    transform: none;
+  }
+
+  .hero-build__terminal {
+    transform: translateX(-50%);
   }
 
   .pixel-hero__scene {
