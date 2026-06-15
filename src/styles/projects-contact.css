@@ -17,6 +17,35 @@
   );
 }
 
+.pixel-grid--pinned-projects {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: stretch;
+  margin-bottom: 1.2rem;
+}
+
+.pixel-grid--pinned-projects .featured-project {
+  margin-bottom: 0;
+}
+
+.pinned-project {
+  display: flex;
+  flex-direction: column;
+}
+
+.pinned-project .project-actions {
+  margin-top: auto;
+}
+
+.project-section-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.4rem;
+}
+
+.all-projects-panel {
+  margin-top: 1.4rem;
+}
+
 .project-title {
   margin: 0 0 0.6rem;
   font-size: 1rem;

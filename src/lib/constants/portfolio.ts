@@ -46,6 +46,7 @@ export type PortfolioProject = {
   summary: string
   stack: string[]
   tone: ProjectTone
+  pinned: boolean
   articleHref: string
   primaryCta: {
     label: string
@@ -67,6 +68,7 @@ export const PROJECTS: PortfolioProject[] = [
       'Real-time driver monitoring pipeline that processes mobile camera streams to detect drowsiness and distraction using computer-vision signals.',
     stack: ['Python', 'FastAPI', 'OpenCV', 'Mediapipe', 'WebRTC', 'React', 'TypeScript'],
     tone: 'accent',
+    pinned: true,
     articleHref: 'projects/manobela/index.html',
     primaryCta: { label: 'View Repo', href: 'https://github.com/popcorn-prophets/manobela' },
     secondaryCta: { label: 'Open Website', href: 'https://manobela.dev' },
@@ -80,6 +82,7 @@ export const PROJECTS: PortfolioProject[] = [
       'Hazard and Emergency Reporting, Monitoring, and Evaluation System A real-time disaster communication control center that turns chat messages into actionable incident intelligence. ',
     stack: ['Python', 'Typescript', 'Supabase'],
     tone: 'warning',
+    pinned: true,
     articleHref: 'projects/hermes/index.html',
     primaryCta: { label: 'View Repo', href: 'https://github.com/popcorn-prophets/project-hermes' },
     secondaryCta: { label: 'Open Website', href: 'https://github.com/popcorn-prophets/project-hermes' },
@@ -93,6 +96,7 @@ export const PROJECTS: PortfolioProject[] = [
       'Java OOP board-game engine with extendable rules and event-based tile effects for multiple gameplay variants.',
     stack: ['Java', 'Maven', 'OOP', 'Game Logic'],
     tone: 'primary',
+    pinned: false,
     articleHref: 'projects/snakes-blessings-and-curses/index.html',
     primaryCta: {
       label: 'View Repo',
@@ -112,6 +116,7 @@ export const PROJECTS: PortfolioProject[] = [
       'Personal finance manager that structures transactions, budgets, and monthly summaries into decision-ready views.',
     stack: ['Python', 'Data Modeling', 'Finance Tools'],
     tone: 'success',
+    pinned: false,
     articleHref: 'projects/derio/index.html',
     primaryCta: { label: 'View Repo', href: 'https://github.com/dejely/Derio' },
     secondaryCta: { label: 'Open GitHub', href: 'https://github.com/dejely/Derio' },
