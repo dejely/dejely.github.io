@@ -1,3 +1,4 @@
+export * from './CustomCursor'
 export * from './PixelButton'
 export * from './PixelCard'
 export * from './HeroBackgroundScene'
