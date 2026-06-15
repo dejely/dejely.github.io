@@ -1,4 +1,5 @@
 import './core.css'
+import './cursor.css'
 import './nav.css'
 import './hero.css'
 import './sections.css'

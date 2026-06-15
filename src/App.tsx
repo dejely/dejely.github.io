@@ -1,6 +1,13 @@
 import { Suspense, lazy } from 'react'
 import './styles'
-import { HeroBackgroundScene, PixelButton, PixelCard, PixelNav, PixelSection } from './components'
+import {
+  CustomCursor,
+  HeroBackgroundScene,
+  PixelButton,
+  PixelCard,
+  PixelNav,
+  PixelSection,
+} from './components'
 import {
   ABOUT_CARDS,
   CONTACT_LINKS,
@@ -32,6 +39,7 @@ function SectionSkeleton({ title, variant = 'base' }: SectionSkeletonProps) {
 function App() {
   return (
     <div className="pixel-root pixel-texture">
+      <CustomCursor />
       <PixelNav items={NAV_ITEMS} />
 
       <main className="pixel-main">
