@@ -66,6 +66,10 @@
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 
+  .pixel-grid--pinned-projects {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
   .tech-stack {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
@@ -196,6 +200,7 @@
   }
 
   .pixel-grid--cards,
+  .pixel-grid--pinned-projects,
   .pixel-grid--projects {
     grid-template-columns: 1fr;
   }
@@ -242,6 +247,10 @@
   }
 
   .project-actions .pixel-button {
+    width: 100%;
+  }
+
+  .project-section-controls .pixel-button {
     width: 100%;
   }
 
