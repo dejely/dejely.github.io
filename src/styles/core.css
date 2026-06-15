@@ -26,10 +26,6 @@
   background-size: 4px 4px;
 }
 
-.pixel-main {
-  padding-top: 4.5rem;
-}
-
 .tone-primary {
   --tone-color: var(--pixel-primary);
 }

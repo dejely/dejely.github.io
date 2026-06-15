@@ -1,8 +1,4 @@
 @media (max-width: 900px) {
-  .pixel-main {
-    padding-top: 4.2rem;
-  }
-
   .pixel-nav__inner {
     padding: 0.75rem 1rem;
   }
@@ -31,6 +27,7 @@
   }
 
   .pixel-hero {
+    --hero-nav-height: 4.2rem;
     --hero-gap-width: clamp(72px, 11vw, 108px);
     --hero-ground-height: clamp(50px, 8vh, 72px);
     --hero-scene-opacity: 0.4;
@@ -38,12 +35,13 @@
     --hero-block-flight: clamp(96px, 20vw, 190px);
     --hero-build-width: clamp(118px, 20vw, 190px);
     --hero-build-bottom: calc(var(--hero-ground-height) + 6px);
-    min-height: calc(100svh - 4.2rem);
-    padding: 5.2rem 1rem 3.8rem;
+    min-height: calc(100svh - var(--hero-nav-height));
+    padding: 2.8rem 1rem 5rem;
   }
 
   .pixel-hero__inner {
     max-width: 640px;
+    transform: translateY(-0.75rem);
   }
 
   .pixel-hero__title {
@@ -78,10 +76,6 @@
 }
 
 @media (max-width: 600px) {
-  .pixel-main {
-    padding-top: 4rem;
-  }
-
   .pixel-nav {
     border-bottom-width: 3px;
   }
@@ -109,16 +103,18 @@
   }
 
   .pixel-hero {
+    --hero-nav-height: 4rem;
     --hero-gap-width: 56px;
     --hero-ground-height: 38px;
     --hero-scene-opacity: 0.3;
     --hero-runner-scale: 0.72;
-    min-height: calc(100svh - 4rem);
-    padding: 4.7rem 0.85rem 3rem;
+    min-height: calc(100svh - var(--hero-nav-height));
+    padding: 2.2rem 0.85rem 3.4rem;
   }
 
   .pixel-hero__inner {
     max-width: 100%;
+    transform: translateY(-0.35rem);
   }
 
   .pixel-hero__icon {
