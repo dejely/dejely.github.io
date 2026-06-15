@@ -13,6 +13,26 @@ const STAR_POINTS = [
   { x: '91%', y: '18%', delay: '1.1s' },
 ] as const
 
+const CODE_BLOCKS = [
+  { side: 'left', label: '{}', delay: '0s', y: '0px', color: 'var(--pixel-primary)' },
+  { side: 'right', label: '<>', delay: '1.25s', y: '-8px', color: 'var(--pixel-accent)' },
+  { side: 'left', label: '01', delay: '2.5s', y: '8px', color: 'var(--pixel-success)' },
+  { side: 'right', label: '//', delay: '3.75s', y: '2px', color: 'var(--pixel-warning)' },
+  { side: 'left', label: '=>', delay: '5s', y: '-5px', color: 'var(--pixel-primary)' },
+  { side: 'right', label: '++', delay: '6.25s', y: '7px', color: 'var(--pixel-success)' },
+] as const
+
+const DATA_PIXELS = [
+  { x: '18%', y: '48%', delay: '0.2s', color: 'var(--pixel-primary)' },
+  { x: '29%', y: '38%', delay: '1.6s', color: 'var(--pixel-success)' },
+  { x: '41%', y: '54%', delay: '2.7s', color: 'var(--pixel-warning)' },
+  { x: '59%', y: '40%', delay: '0.9s', color: 'var(--pixel-accent)' },
+  { x: '70%', y: '52%', delay: '2.1s', color: 'var(--pixel-primary)' },
+  { x: '82%', y: '42%', delay: '3.2s', color: 'var(--pixel-success)' },
+] as const
+
+const BUILD_SEGMENTS = ['primary', 'accent', 'success', 'warning', 'primary'] as const
+
 export function HeroBackgroundScene() {
   return (
     <div className="pixel-hero__scene" aria-hidden="true">
@@ -44,6 +64,61 @@ export function HeroBackgroundScene() {
         </div>
         <div className="hero-bg__void" />
 
+        <div className="hero-data-stream">
+          {DATA_PIXELS.map((pixel) => (
+            <span
+              key={`${pixel.x}-${pixel.y}`}
+              className="hero-data-stream__pixel"
+              style={
+                {
+                  '--data-x': pixel.x,
+                  '--data-y': pixel.y,
+                  '--data-delay': pixel.delay,
+                  '--data-color': pixel.color,
+                } as CSSProperties
+              }
+            />
+          ))}
+        </div>
+
+        <div className="hero-build">
+          <span className="hero-build__beam" />
+          <div className="hero-build__segments">
+            {BUILD_SEGMENTS.map((tone, index) => (
+              <span
+                key={`${tone}-${index}`}
+                className={`hero-build__segment hero-build__segment--${tone}`}
+                style={{ '--segment-delay': `${index * 0.22}s` } as CSSProperties}
+              />
+            ))}
+          </div>
+          <div className="hero-build__terminal">
+            <span className="hero-build__terminal-bar" />
+            <span className="hero-build__terminal-line hero-build__terminal-line--wide" />
+            <span className="hero-build__terminal-line" />
+          </div>
+          <span className="hero-build__spark hero-build__spark--left" />
+          <span className="hero-build__spark hero-build__spark--right" />
+        </div>
+
+        <div className="hero-code-blocks">
+          {CODE_BLOCKS.map((block) => (
+            <span
+              key={`${block.side}-${block.label}-${block.delay}`}
+              className={`hero-code-block hero-code-block--from-${block.side}`}
+              style={
+                {
+                  '--block-delay': block.delay,
+                  '--block-y': block.y,
+                  '--block-color': block.color,
+                } as CSSProperties
+              }
+            >
+              {block.label}
+            </span>
+          ))}
+        </div>
+
         <div className="hero-char hero-char--pilot">
           <span className="hero-char__shadow" />
           <span className="hero-char__sprite">
@@ -74,8 +149,6 @@ export function HeroBackgroundScene() {
             <span className="hero-char__antenna" />
           </span>
         </div>
-
-        <span className="hero-bg__orb" />
       </div>
     </div>
   )

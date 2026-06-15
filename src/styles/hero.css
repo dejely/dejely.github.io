@@ -4,7 +4,9 @@
   --hero-loop: 11s;
   --hero-scene-opacity: 0.52;
   --hero-runner-scale: 1.45;
-  --hero-throw-distance: calc((var(--hero-gap-width) * 1.32) + 11vw);
+  --hero-block-flight: clamp(128px, 22vw, 292px);
+  --hero-build-width: clamp(138px, 20vw, 246px);
+  --hero-build-bottom: calc(var(--hero-ground-height) + clamp(2px, 1vh, 10px));
   min-height: calc(100vh - 4.5rem);
   display: flex;
   align-items: center;
@@ -170,6 +172,206 @@
       transparent 8px
     ),
     linear-gradient(180deg, rgba(8, 18, 30, 0.4), rgba(2, 6, 12, 0.86));
+}
+
+.hero-data-stream {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-data-stream__pixel {
+  position: absolute;
+  left: var(--data-x);
+  top: var(--data-y);
+  width: 8px;
+  height: 8px;
+  border: 1px solid #000;
+  background: var(--data-color);
+  opacity: 0;
+  box-shadow: 0 0 0 2px color-mix(in oklab, var(--data-color) 20%, transparent);
+  animation: heroDataPulse 5.2s steps(4, end) infinite;
+  animation-delay: var(--data-delay);
+  will-change: transform, opacity;
+}
+
+.hero-build {
+  position: absolute;
+  left: 50%;
+  bottom: var(--hero-build-bottom);
+  z-index: 2;
+  width: var(--hero-build-width);
+  height: 58px;
+  transform: translateX(-50%);
+}
+
+.hero-build__beam {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 13px;
+  height: 8px;
+  border: 2px solid #000;
+  background: linear-gradient(
+    90deg,
+    rgba(90, 166, 242, 0.18),
+    rgba(126, 210, 106, 0.4),
+    rgba(239, 91, 120, 0.24)
+  );
+  box-shadow: 0 0 0 2px rgba(90, 166, 242, 0.1);
+  animation: heroBuildBeam var(--hero-loop) steps(6, end) infinite;
+}
+
+.hero-build__segments {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 3px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+
+.hero-build__segment {
+  height: 14px;
+  border: 2px solid #000;
+  background: var(--pixel-primary);
+  opacity: 0.55;
+  transform: translateY(4px);
+  animation: heroBuildSegment var(--hero-loop) steps(1, end) infinite;
+  animation-delay: var(--segment-delay);
+  will-change: transform, opacity;
+}
+
+.hero-build__segment--accent {
+  background: var(--pixel-accent);
+}
+
+.hero-build__segment--success {
+  background: var(--pixel-success);
+}
+
+.hero-build__segment--warning {
+  background: var(--pixel-warning);
+}
+
+.hero-build__terminal {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  width: 74px;
+  height: 30px;
+  transform: translateX(-50%);
+  border: 2px solid #000;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px,
+      transparent 7px
+    ),
+    rgba(20, 34, 52, 0.92);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.44), 0 0 0 2px rgba(90, 166, 242, 0.12);
+  animation: heroTerminalWake var(--hero-loop) steps(4, end) infinite;
+}
+
+.hero-build__terminal-bar,
+.hero-build__terminal-line {
+  position: absolute;
+  left: 7px;
+  height: 3px;
+  border: 1px solid #000;
+  background: var(--pixel-success);
+}
+
+.hero-build__terminal-bar {
+  top: 6px;
+  width: 56px;
+  background: var(--pixel-primary);
+}
+
+.hero-build__terminal-line {
+  top: 16px;
+  width: 32px;
+}
+
+.hero-build__terminal-line--wide {
+  top: 23px;
+  width: 48px;
+  background: var(--pixel-warning);
+}
+
+.hero-build__spark {
+  position: absolute;
+  bottom: 16px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #000;
+  background: var(--pixel-warning);
+  opacity: 0;
+  animation: heroBuildSpark var(--hero-loop) steps(2, end) infinite;
+  will-change: transform, opacity;
+}
+
+.hero-build__spark--left {
+  left: 13%;
+}
+
+.hero-build__spark--right {
+  right: 13%;
+  animation-delay: 0.5s;
+}
+
+.hero-code-blocks {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+}
+
+.hero-code-block {
+  position: absolute;
+  bottom: calc(var(--hero-build-bottom) + 12px);
+  left: calc(50% - var(--hero-block-flight) - 14px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 19px;
+  border: 2px solid #000;
+  background: var(--block-color);
+  color: #07101c;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.34rem;
+  line-height: 1;
+  opacity: 0;
+  box-shadow: 0 0 0 2px color-mix(in oklab, var(--block-color) 24%, transparent);
+  animation: heroCodeBlockLeft var(--hero-loop) linear infinite;
+  animation-delay: var(--block-delay);
+  will-change: transform, opacity;
+}
+
+.hero-code-block::after {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 7px;
+  width: 7px;
+  height: 3px;
+  background: color-mix(in oklab, var(--block-color) 58%, transparent);
+  box-shadow: -7px 3px 0 color-mix(in oklab, var(--block-color) 32%, transparent);
+}
+
+.hero-code-block--from-right {
+  left: auto;
+  right: calc(50% - var(--hero-block-flight) - 14px);
+  animation-name: heroCodeBlockRight;
+}
+
+.hero-code-block--from-right::after {
+  left: auto;
+  right: -9px;
+  box-shadow: 7px 3px 0 color-mix(in oklab, var(--block-color) 32%, transparent);
 }
 
 .hero-char {
@@ -421,29 +623,6 @@
   border: 1px solid #000;
   background: #8be6ff;
   animation: heroSentinelPulse 1.2s steps(2, end) infinite;
-}
-
-.hero-bg__orb {
-  position: absolute;
-  left: calc(50% - (var(--hero-gap-width) / 2) - 12px);
-  bottom: calc(var(--hero-ground-height) + 56px);
-  width: 10px;
-  height: 10px;
-  border: 1px solid #000;
-  background: #7ad5ff;
-  box-shadow: 0 0 0 2px rgba(122, 213, 255, 0.16);
-  animation: heroOrbArc var(--hero-loop) linear infinite;
-}
-
-.hero-bg__orb::after {
-  content: '';
-  position: absolute;
-  left: -7px;
-  top: 3px;
-  width: 6px;
-  height: 2px;
-  background: rgba(169, 224, 255, 0.45);
-  box-shadow: -6px 2px 0 rgba(169, 224, 255, 0.24), -12px 4px 0 rgba(169, 224, 255, 0.18);
 }
 
 .pixel-hero__inner {
