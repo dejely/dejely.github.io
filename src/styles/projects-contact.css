@@ -46,6 +46,10 @@
   margin-top: 1.4rem;
 }
 
+.all-projects-panel .pixel-fade-in {
+  animation: pixelFadeIn 160ms ease-out both;
+}
+
 .project-title {
   margin: 0 0 0.6rem;
   font-size: 1rem;
