@@ -11,8 +11,19 @@ export type Achievement = {
 
 export const ACHIEVEMENTS: readonly Achievement[] = [
   {
+    name: 'Quantum Computing and Cybersecurity Hackathon',
+    year: 2026,
+    result: 'Champion',
+    category: 'CTF',
+    highlights: [
+      "Won 1st place in the Philippines' first quantum-themed cybersecurity CTF competition.",
+      'Solved challenges involving quantum computing concepts, cryptography, cybersecurity, and circuit-based problem solving.',
+    ],
+    tone: 'accent',
+  },
+  {
     name: 'Manobela Hackathon',
-    year: 2025,
+    year: 2026,
     result: 'Champion',
     category: 'Hackathon',
     highlights: [
