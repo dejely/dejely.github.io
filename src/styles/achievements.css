@@ -3,6 +3,91 @@
   flex-direction: column;
 }
 
+.home-achievements__intro {
+  max-width: 58ch;
+  margin: -1rem auto 2rem;
+  color: var(--pixel-text-muted);
+  line-height: 1.7;
+  text-align: center;
+}
+
+.home-achievements__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.home-achievement-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-color: color-mix(
+    in oklab,
+    var(--tone-color, var(--pixel-border-light)) 24%,
+    var(--pixel-border)
+  );
+}
+
+.home-achievement-card__bar {
+  height: 10px;
+  margin-bottom: 1rem;
+  border: 2px solid #000;
+  background: color-mix(
+    in oklab,
+    var(--tone-color, var(--pixel-surface)) 48%,
+    var(--pixel-surface)
+  );
+}
+
+.home-achievement-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.home-achievement-card__result,
+.home-achievement-card__detail {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.65rem;
+  padding: 0.26rem 0.5rem;
+  border: 2px solid #000;
+}
+
+.home-achievement-card__result {
+  background: color-mix(
+    in oklab,
+    var(--tone-color, var(--pixel-surface)) 44%,
+    var(--pixel-surface)
+  );
+  font-size: 0.52rem;
+}
+
+.home-achievement-card__detail {
+  background: var(--pixel-bg-light);
+  color: var(--pixel-text-muted);
+  font-size: 0.65rem;
+}
+
+.home-achievement-card__title {
+  margin: 0 0 0.85rem;
+  font-size: 0.95rem;
+}
+
+.home-achievement-card__copy {
+  margin: 0;
+  color: var(--pixel-text-muted);
+  line-height: 1.65;
+}
+
+.home-achievements__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.8rem;
+}
+
 .achievements-header {
   border-bottom: 4px solid var(--pixel-border);
   background: var(--pixel-bg);
@@ -185,6 +270,34 @@
 }
 
 @media (max-width: 600px) {
+  .home-achievements__intro {
+    margin: -0.5rem auto 1.5rem;
+    font-size: 0.83rem;
+    line-height: 1.58;
+  }
+
+  .home-achievements__grid {
+    grid-template-columns: 1fr;
+    gap: 0.95rem;
+  }
+
+  .home-achievement-card__title {
+    font-size: 0.86rem;
+  }
+
+  .home-achievement-card__copy {
+    font-size: 0.82rem;
+    line-height: 1.55;
+  }
+
+  .home-achievements__actions {
+    margin-top: 1.35rem;
+  }
+
+  .home-achievements__actions .pixel-button {
+    width: 100%;
+  }
+
   .achievements-header {
     border-bottom-width: 3px;
   }

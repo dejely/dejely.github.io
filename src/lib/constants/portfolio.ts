@@ -2,7 +2,7 @@ export const NAV_ITEMS = [
   { label: 'Home', href: '#hero', kind: 'section' },
   { label: 'About', href: '#about', kind: 'section' },
   { label: 'Projects', href: '#projects', kind: 'section' },
-  { label: 'Achievements', href: '/achievements/', kind: 'page' },
+  { label: 'Achievements', href: '#achievements', kind: 'section' },
   { label: 'Tech Stack', href: '#tech-stack', kind: 'section' },
   { label: 'Contact', href: '#contact', kind: 'section' },
 ] as const

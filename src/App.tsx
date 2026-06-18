@@ -9,6 +9,7 @@ import {
   PixelSection,
 } from './components'
 import {
+  ACHIEVEMENTS,
   ABOUT_CARDS,
   CONTACT_LINKS,
   FOOTER_NOTE,
@@ -20,6 +21,7 @@ import {
 } from './lib/constants'
 
 const ProjectsSection = lazy(() => import('./sections/ProjectsSection'))
+const AchievementsSection = lazy(() => import('./sections/AchievementsSection'))
 const TechStackSection = lazy(() => import('./sections/TechStackSection'))
 const ContactSection = lazy(() => import('./sections/ContactSection'))
 
@@ -113,7 +115,11 @@ function App() {
           <ProjectsSection projects={PROJECTS} />
         </Suspense>
 
-        <Suspense fallback={<SectionSkeleton title="Tech Stack" variant="alt" />}>
+        <Suspense fallback={<SectionSkeleton title="Achievements" variant="alt" />}>
+          <AchievementsSection achievements={ACHIEVEMENTS} />
+        </Suspense>
+
+        <Suspense fallback={<SectionSkeleton title="Tech Stack" />}>
           <TechStackSection techStack={TECH_STACK} />
         </Suspense>
 
