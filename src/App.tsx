@@ -38,7 +38,11 @@ function SectionSkeleton({ title, variant = 'base' }: SectionSkeletonProps) {
   )
 }
 
-function App() {
+type AppProps = {
+  animateIntro?: boolean
+}
+
+function App({ animateIntro = true }: AppProps) {
   return (
     <div className="pixel-root pixel-texture">
       <CustomCursor />
@@ -48,7 +52,9 @@ function App() {
         <section id="hero" className="pixel-hero">
           <HeroBackgroundScene />
 
-          <div className="pixel-hero__inner pixel-fade-in">
+          <div
+            className={`pixel-hero__inner${animateIntro ? ' pixel-fade-in' : ''}`}
+          >
             <div className="pixel-hero__icon" aria-hidden="true">
               <span className="pixel-text-heading pixel-hero__glyph">{'</>'}</span>
             </div>

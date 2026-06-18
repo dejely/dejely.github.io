@@ -30,7 +30,7 @@ export default function PortfolioRouter() {
   const [pathname, setPathname] = useState(() =>
     normalizeClientPath(window.location.pathname),
   )
-  const [transitionId, setTransitionId] = useState(0)
+  const [hasNavigated, setHasNavigated] = useState(false)
 
   useEffect(() => {
     updatePageMetadata(pathname)
@@ -39,7 +39,7 @@ export default function PortfolioRouter() {
   useEffect(() => {
     const showRoute = (nextPathname: string) => {
       setPathname(normalizeClientPath(nextPathname))
-      setTransitionId((currentId) => currentId + 1)
+      setHasNavigated(true)
       window.scrollTo({ top: 0, behavior: 'auto' })
     }
 
@@ -70,15 +70,11 @@ export default function PortfolioRouter() {
 
   return (
     <div className="portfolio-router">
-      {pathname === '/achievements/' ? <AchievementsApp /> : <App />}
-      {transitionId > 0 ? (
-        <div
-          key={transitionId}
-          className="route-transition-overlay"
-          aria-hidden="true"
-          onAnimationEnd={() => setTransitionId(0)}
-        />
-      ) : null}
+      {pathname === '/achievements/' ? (
+        <AchievementsApp animateIntro={!hasNavigated} />
+      ) : (
+        <App animateIntro={!hasNavigated} />
+      )}
     </div>
   )
 }

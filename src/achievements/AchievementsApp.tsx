@@ -16,7 +16,13 @@ function groupAchievementsByYear(achievements: readonly Achievement[]) {
   return [...grouped.entries()].sort(([yearA], [yearB]) => yearB - yearA)
 }
 
-export default function AchievementsApp() {
+type AchievementsAppProps = {
+  animateIntro?: boolean
+}
+
+export default function AchievementsApp({
+  animateIntro = true,
+}: AchievementsAppProps) {
   const achievementsByYear = groupAchievementsByYear(ACHIEVEMENTS)
   const handleHomeClick = (event: MouseEvent<HTMLAnchorElement>) => {
     if (
@@ -55,7 +61,9 @@ export default function AchievementsApp() {
       </header>
 
       <main className="achievements-main">
-        <section className="achievements-intro pixel-fade-in">
+        <section
+          className={`achievements-intro${animateIntro ? ' pixel-fade-in' : ''}`}
+        >
           <p className="pixel-text-label achievements-intro__eyebrow">Progress Log</p>
           <h1 className="pixel-text-heading achievements-intro__title">Achievements</h1>
           <p className="pixel-text achievements-intro__copy">
