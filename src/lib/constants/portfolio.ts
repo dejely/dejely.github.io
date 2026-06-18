@@ -34,7 +34,7 @@ export const ABOUT_CARDS = [
 
 export const STAT_BLOCKS = [
   { label: 'Years', value: '5+', tone: 'primary' },
-  { label: 'Projects', value: '6+', tone: 'success' },
+  { label: 'Projects', value: '13+', tone: 'success' },
   { label: 'Domains', value: '5', tone: 'accent' },
   { label: 'Ideas', value: '∞', tone: 'warning' },
 ] as const
@@ -52,7 +52,7 @@ export type PortfolioProject = {
     label: string
     href: string
   }
-  secondaryCta: {
+  secondaryCta?: {
     label: string
     href: string
   }
@@ -124,7 +124,107 @@ export const PROJECTS: PortfolioProject[] = [
     duration: 'Duration: Independent build',
     challenge: 'Key Challenge: Keeping data flow simple while supporting realistic finance scenarios',
   },
-
+  {
+    name: 'privmotion',
+    summary:
+      'Privacy-preserving motion analytics that converts visual input into anonymized skeletons, silhouettes, depth surrogates, and kinematic features.',
+    stack: ['Python', 'OpenCV', 'YOLO Pose', 'C++', 'CMake'],
+    tone: 'accent',
+    pinned: false,
+    articleHref: 'projects/privmotion/index.html',
+    primaryCta: { label: 'View Repo', href: 'https://github.com/dejely/privmotion' },
+  },
+  {
+    name: 'quirky-mcp',
+    summary:
+      'MCP server for creating, validating, explaining, and linking Quirk quantum-circuit JSON through reusable tools.',
+    stack: ['TypeScript', 'MCP SDK', 'Zod', 'Vitest', 'Quirk'],
+    tone: 'primary',
+    pinned: false,
+    articleHref: 'projects/quirky-mcp/index.html',
+    primaryCta: { label: 'View Repo', href: 'https://github.com/dejely/quirky-mcp' },
+  },
+  {
+    name: 'Aniguess',
+    summary:
+      'Anime comparison game with series, character, and popularity modes backed by scores, streaks, achievements, and leaderboards.',
+    stack: ['React', 'TypeScript', 'Supabase', 'Express', 'Jikan API', 'Vite'],
+    tone: 'warning',
+    pinned: false,
+    articleHref: 'projects/aniguess/index.html',
+    primaryCta: { label: 'View Repo', href: 'https://github.com/dejely/Aniguess' },
+    secondaryCta: { label: 'Open Website', href: 'https://aniguesser.vercel.app' },
+  },
+  {
+    name: 'pagbutlakUPV',
+    summary:
+      'Official publication website for Pagbutlak UPV with editorial content, CMS administration, search, SEO, and forms.',
+    stack: ['Next.js', 'TypeScript', 'Payload CMS', 'PostgreSQL', 'React'],
+    tone: 'success',
+    pinned: false,
+    articleHref: 'projects/pagbutlak-upv/index.html',
+    primaryCta: { label: 'View Repo', href: 'https://github.com/dejely/pagbutlakUPV' },
+    secondaryCta: { label: 'Open Website', href: 'https://pagbutlak.vercel.app' },
+  },
+  {
+    name: 'K-Easy',
+    summary:
+      'Boolean simplification tool that generates truth tables, K-maps, Quine-McCluskey steps, SOP/POS expressions, and Verilog.',
+    stack: ['React', 'TypeScript', 'Python', 'FastAPI', 'Verilog'],
+    tone: 'primary',
+    pinned: false,
+    articleHref: 'projects/k-easy/index.html',
+    primaryCta: { label: 'View Repo', href: 'https://github.com/dejely/K-Easy' },
+    secondaryCta: { label: 'Open Website', href: 'https://k-easy.vercel.app' },
+  },
+  {
+    name: 'StackPilot',
+    summary:
+      'Tauri desktop dashboard for managing Apache, MariaDB, PHP-FPM, service logs, and local PHP project previews.',
+    stack: ['React', 'TypeScript', 'Tauri', 'Rust', 'systemd', 'PHP'],
+    tone: 'accent',
+    pinned: false,
+    articleHref: 'projects/stackpilot/index.html',
+    primaryCta: { label: 'View Repo', href: 'https://github.com/dejely/StackPilot' },
+    secondaryCta: {
+      label: 'Latest Release',
+      href: 'https://github.com/dejely/StackPilot/releases/tag/v0.3.1',
+    },
+  },
+  {
+    name: 'Memoraid',
+    summary:
+      'Offline-first mobile study app with flashcards, tests, notes import, progress tracking, and local SQLite persistence.',
+    stack: ['Expo', 'React Native', 'TypeScript', 'SQLite', 'Zustand', 'TanStack Query'],
+    tone: 'warning',
+    pinned: false,
+    articleHref: 'projects/memoraid/index.html',
+    primaryCta: { label: 'View Repo', href: 'https://github.com/dejely/Memoraid' },
+    secondaryCta: {
+      label: 'Latest Release',
+      href: 'https://github.com/dejely/Memoraid/releases/tag/v1.0.3',
+    },
+  },
+  {
+    name: 'Polaris',
+    summary:
+      'Layered crop-supply monitoring engine that tracks LGU shortages and oversupply to identify redistribution opportunities.',
+    stack: ['Python', 'SQLite', 'CLI', 'Priority Queues'],
+    tone: 'success',
+    pinned: false,
+    articleHref: 'projects/polaris/index.html',
+    primaryCta: { label: 'View Repo', href: 'https://github.com/dejely/Polaris' },
+  },
+  {
+    name: 'LMS-Extract',
+    summary:
+      'Authorized Moodle CLI for discovering courses, previewing and downloading files, browser login, and duplicate prevention.',
+    stack: ['Python', 'Typer', 'HTTPX', 'BeautifulSoup', 'Playwright'],
+    tone: 'primary',
+    pinned: false,
+    articleHref: 'projects/lms-extract/index.html',
+    primaryCta: { label: 'View Repo', href: 'https://github.com/dejely/LMS-Extract' },
+  },
 ] as const
 
 export type TechStackItem = {

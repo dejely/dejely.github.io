@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StackPilot | Project Article</title>
+    <link rel="stylesheet" href="../article.css" />
+  </head>
+  <body>
+    <main class="article-layout">
+      <article class="article-card">
+        <header class="article-header">
+          <h1 class="article-title">StackPilot</h1>
+          <p class="article-subtitle">
+            A native control panel for local Apache, MariaDB, PHP-FPM, and PHP project workflows.
+          </p>
+        </header>
+
+        <section class="article-section">
+          <h2>Overview</h2>
+          <p>
+            StackPilot replaces repeated terminal commands with a compact desktop dashboard for managing a local PHP
+            development stack. It is designed around Linux systemd workflows while also providing project-level preview
+            servers and a Windows/XAMPP compatibility mode.
+          </p>
+        </section>
+
+        <section class="article-section">
+          <h2>Key Capabilities</h2>
+          <ul>
+            <li>Polls and displays Apache, MariaDB, and PHP-FPM service status.</li>
+            <li>Starts, stops, and restarts services through authorized system commands.</li>
+            <li>Surfaces recent service logs from journalctl.</li>
+            <li>Runs per-project PHP preview servers on available local ports.</li>
+            <li>Provides distro presets, editable service units, themes, and phpMyAdmin shortcuts.</li>
+            <li>Builds Linux AppImage and Windows installer release artifacts.</li>
+          </ul>
+        </section>
+
+        <section class="article-section">
+          <h2>Technical Approach</h2>
+          <p>
+            The React interface communicates with a Tauri 2 backend written in Rust. Backend commands wrap systemctl,
+            journalctl, pkexec, filesystem opening, and managed PHP child processes. Saved configuration keeps project
+            roots, service unit names, distro presets, and interface preferences consistent between sessions.
+          </p>
+        </section>
+
+        <section class="article-section">
+          <h2>Stack</h2>
+          <p>React, TypeScript, Vite, Tauri 2, Rust, systemd, PHP, and GitHub Actions.</p>
+        </section>
+
+        <section class="article-section">
+          <h2>Project Links</h2>
+          <p>
+            <a
+              class="article-link"
+              href="https://github.com/dejely/StackPilot/releases/tag/v0.3.1"
+              target="_blank"
+              rel="noreferrer noopener"
+              >Download the latest StackPilot release</a
+            >
+          </p>
+          <p>
+            <a class="article-link" href="https://github.com/dejely/StackPilot" target="_blank" rel="noreferrer noopener"
+              >View the StackPilot repository</a
+            >
+          </p>
+        </section>
+
+        <a class="article-back" href="../../#projects">Back to Projects</a>
+      </article>
+    </main>
+    <script src="../page-transition.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,342 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: <DEV/>
+      - generic [ref=e7]:
+        - button "Home" [ref=e8]
+        - button "About" [ref=e9]
+        - button "Projects" [ref=e10]
+        - button "Tech Stack" [ref=e11]
+        - button "Contact" [ref=e12]
+  - main [ref=e13]:
+    - generic [ref=e14]:
+      - generic:
+        - generic:
+          - generic:
+            - generic: "{}"
+            - generic: <>
+            - generic: "01"
+            - generic: //
+            - generic: =>
+            - generic: ++
+      - generic [ref=e15]:
+        - generic [ref=e17]: </>
+        - paragraph [ref=e18]: Applied Software Engineer
+        - heading "Scalable Systems, Playful Interfaces." [level=1] [ref=e19]
+        - paragraph [ref=e20]: I build production-minded software across Python, Java, C/C++, and TypeScript, from real-time computer-vision systems to finance and logistics tools.
+        - generic [ref=e21]:
+          - link "Jump to projects section" [ref=e22]:
+            - /url: "#projects"
+            - text: View Projects
+          - link "Jump to contact section" [ref=e23]:
+            - /url: "#contact"
+            - text: Get in Touch
+    - generic [ref=e29]:
+      - heading "About" [level=2] [ref=e30]
+      - generic [ref=e31]:
+        - generic [ref=e33]:
+          - generic [ref=e34]: PROFILE
+          - heading "Who I Am" [level=3] [ref=e35]
+          - paragraph [ref=e36]: Computer Science undergraduate at the University of the Philippines Visayas and founder of Popcorn Prophets.
+        - generic [ref=e38]:
+          - generic [ref=e39]: MISSION
+          - heading "What I Do" [level=3] [ref=e40]
+          - paragraph [ref=e41]: I ship systems with clean architecture, measurable performance, and usable interfaces, especially in computer vision, game logic, and domain-focused apps.
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: 5+
+          - generic [ref=e47]: Years
+        - generic [ref=e48]:
+          - generic [ref=e49]: 13+
+          - generic [ref=e50]: Projects
+        - generic [ref=e51]:
+          - generic [ref=e52]: "5"
+          - generic [ref=e53]: Domains
+        - generic [ref=e54]:
+          - generic [ref=e55]: ∞
+          - generic [ref=e56]: Ideas
+    - generic [ref=e70]:
+      - heading "Projects" [level=2] [ref=e71]
+      - generic [ref=e72]:
+        - generic [ref=e73]:
+          - generic [ref=e75]: Pinned Project
+          - heading "Manobela" [level=3] [ref=e77]
+          - paragraph [ref=e78]: Real-time driver monitoring pipeline that processes mobile camera streams to detect drowsiness and distraction using computer-vision signals.
+          - generic [ref=e79]:
+            - paragraph [ref=e80]: "Role: Full-stack and DevOps"
+            - paragraph [ref=e81]: "Duration: Startup team project, 2025-2026"
+            - paragraph [ref=e82]: "Key Challenge: Keeping frame processing responsive on mobile-constrained hardware"
+          - generic [ref=e83]:
+            - generic [ref=e84]: Python
+            - generic [ref=e85]: FastAPI
+            - generic [ref=e86]: OpenCV
+            - generic [ref=e87]: Mediapipe
+            - generic [ref=e88]: WebRTC
+            - generic [ref=e89]: React
+            - generic [ref=e90]: TypeScript
+          - generic [ref=e91]:
+            - link "View article for Manobela" [ref=e92]:
+              - /url: /projects/manobela/index.html
+              - text: View
+            - link "Open Manobela repository" [ref=e93]:
+              - /url: https://github.com/popcorn-prophets/manobela
+              - text: View Repo
+            - link "Open Website for Manobela" [ref=e94]:
+              - /url: https://manobela.dev
+              - text: Open Website
+        - generic [ref=e95]:
+          - generic [ref=e97]: Pinned Project
+          - heading "Project HERMES" [level=3] [ref=e99]
+          - paragraph [ref=e100]: Hazard and Emergency Reporting, Monitoring, and Evaluation System A real-time disaster communication control center that turns chat messages into actionable incident intelligence.
+          - generic [ref=e101]:
+            - paragraph [ref=e102]: "Role: Backend, Applied Role Based Access Control (RBAC)"
+            - paragraph [ref=e103]: "Duration: 3 weeks"
+            - paragraph [ref=e104]: "Key Challenge: Mapping domain terminology into usable system entities and workflows"
+          - generic [ref=e105]:
+            - generic [ref=e106]: Python
+            - generic [ref=e107]: Typescript
+            - generic [ref=e108]: Supabase
+          - generic [ref=e109]:
+            - link "View article for Project HERMES" [ref=e110]:
+              - /url: /projects/hermes/index.html
+              - text: View
+            - link "Open Project HERMES repository" [ref=e111]:
+              - /url: https://github.com/popcorn-prophets/project-hermes
+              - text: View Repo
+            - link "Open Website for Project HERMES" [ref=e112]:
+              - /url: https://github.com/popcorn-prophets/project-hermes
+              - text: Open Website
+      - generic [ref=e113]:
+        - button "Show pinned only" [expanded] [ref=e162]
+        - group "Project view" [ref=e163]:
+          - button "Focus" [ref=e164]
+          - button "Grid" [active] [pressed] [ref=e165]
+        - generic [ref=e166]: 11 projects
+      - generic [ref=e167]:
+        - generic [ref=e371]:
+          - heading "Snakes-Blessings-and-Curses" [level=3] [ref=e373]
+          - paragraph [ref=e374]: Java OOP board-game engine with extendable rules and event-based tile effects for multiple gameplay variants.
+          - generic [ref=e375]:
+            - generic [ref=e376]: Java
+            - generic [ref=e377]: Maven
+            - generic [ref=e378]: OOP
+            - generic [ref=e379]: Game Logic
+          - generic [ref=e380]:
+            - link "View article for Snakes-Blessings-and-Curses" [ref=e381]:
+              - /url: /projects/snakes-blessings-and-curses/index.html
+              - text: View
+            - link "Open Snakes-Blessings-and-Curses repository" [ref=e382]:
+              - /url: https://github.com/dejely/Snakes-Blessings-and-Curses
+              - text: View Repo
+            - link "Open GitHub for Snakes-Blessings-and-Curses" [ref=e383]:
+              - /url: https://github.com/dejely/Snakes-Blessings-and-Curses
+              - text: Open GitHub
+        - generic [ref=e384]:
+          - heading "Derio" [level=3] [ref=e386]
+          - paragraph [ref=e387]: Personal finance manager that structures transactions, budgets, and monthly summaries into decision-ready views.
+          - generic [ref=e388]:
+            - generic [ref=e389]: Python
+            - generic [ref=e390]: Data Modeling
+            - generic [ref=e391]: Finance Tools
+          - generic [ref=e392]:
+            - link "View article for Derio" [ref=e393]:
+              - /url: /projects/derio/index.html
+              - text: View
+            - link "Open Derio repository" [ref=e394]:
+              - /url: https://github.com/dejely/Derio
+              - text: View Repo
+            - link "Open GitHub for Derio" [ref=e395]:
+              - /url: https://github.com/dejely/Derio
+              - text: Open GitHub
+        - generic [ref=e396]:
+          - heading "privmotion" [level=3] [ref=e398]
+          - paragraph [ref=e399]: Privacy-preserving motion analytics that converts visual input into anonymized skeletons, silhouettes, depth surrogates, and kinematic features.
+          - generic [ref=e400]:
+            - generic [ref=e401]: Python
+            - generic [ref=e402]: OpenCV
+            - generic [ref=e403]: YOLO Pose
+            - generic [ref=e404]: C++
+            - generic [ref=e405]: CMake
+          - generic [ref=e406]:
+            - link "View article for privmotion" [ref=e407]:
+              - /url: /projects/privmotion/index.html
+              - text: View
+            - link "Open privmotion repository" [ref=e408]:
+              - /url: https://github.com/dejely/privmotion
+              - text: View Repo
+        - generic [ref=e409]:
+          - heading "quirky-mcp" [level=3] [ref=e411]
+          - paragraph [ref=e412]: MCP server for creating, validating, explaining, and linking Quirk quantum-circuit JSON through reusable tools.
+          - generic [ref=e413]:
+            - generic [ref=e414]: TypeScript
+            - generic [ref=e415]: MCP SDK
+            - generic [ref=e416]: Zod
+            - generic [ref=e417]: Vitest
+            - generic [ref=e418]: Quirk
+          - generic [ref=e419]:
+            - link "View article for quirky-mcp" [ref=e420]:
+              - /url: /projects/quirky-mcp/index.html
+              - text: View
+            - link "Open quirky-mcp repository" [ref=e421]:
+              - /url: https://github.com/dejely/quirky-mcp
+              - text: View Repo
+        - generic [ref=e422]:
+          - heading "Aniguess" [level=3] [ref=e424]
+          - paragraph [ref=e425]: Anime comparison game with series, character, and popularity modes backed by scores, streaks, achievements, and leaderboards.
+          - generic [ref=e426]:
+            - generic [ref=e427]: React
+            - generic [ref=e428]: TypeScript
+            - generic [ref=e429]: Supabase
+            - generic [ref=e430]: Express
+            - generic [ref=e431]: Jikan API
+            - generic [ref=e432]: Vite
+          - generic [ref=e433]:
+            - link "View article for Aniguess" [ref=e434]:
+              - /url: /projects/aniguess/index.html
+              - text: View
+            - link "Open Aniguess repository" [ref=e435]:
+              - /url: https://github.com/dejely/Aniguess
+              - text: View Repo
+            - link "Open Website for Aniguess" [ref=e436]:
+              - /url: https://aniguesser.vercel.app
+              - text: Open Website
+        - generic [ref=e437]:
+          - heading "pagbutlakUPV" [level=3] [ref=e439]
+          - paragraph [ref=e440]: Official publication website for Pagbutlak UPV with editorial content, CMS administration, search, SEO, and forms.
+          - generic [ref=e441]:
+            - generic [ref=e442]: Next.js
+            - generic [ref=e443]: TypeScript
+            - generic [ref=e444]: Payload CMS
+            - generic [ref=e445]: PostgreSQL
+            - generic [ref=e446]: React
+          - generic [ref=e447]:
+            - link "View article for pagbutlakUPV" [ref=e448]:
+              - /url: /projects/pagbutlak-upv/index.html
+              - text: View
+            - link "Open pagbutlakUPV repository" [ref=e449]:
+              - /url: https://github.com/dejely/pagbutlakUPV
+              - text: View Repo
+            - link "Open Website for pagbutlakUPV" [ref=e450]:
+              - /url: https://pagbutlak.vercel.app
+              - text: Open Website
+        - generic [ref=e451]:
+          - heading "K-Easy" [level=3] [ref=e453]
+          - paragraph [ref=e454]: Boolean simplification tool that generates truth tables, K-maps, Quine-McCluskey steps, SOP/POS expressions, and Verilog.
+          - generic [ref=e455]:
+            - generic [ref=e456]: React
+            - generic [ref=e457]: TypeScript
+            - generic [ref=e458]: Python
+            - generic [ref=e459]: FastAPI
+            - generic [ref=e460]: Verilog
+          - generic [ref=e461]:
+            - link "View article for K-Easy" [ref=e462]:
+              - /url: /projects/k-easy/index.html
+              - text: View
+            - link "Open K-Easy repository" [ref=e463]:
+              - /url: https://github.com/dejely/K-Easy
+              - text: View Repo
+            - link "Open Website for K-Easy" [ref=e464]:
+              - /url: https://k-easy.vercel.app
+              - text: Open Website
+        - generic [ref=e465]:
+          - heading "StackPilot" [level=3] [ref=e467]
+          - paragraph [ref=e468]: Tauri desktop dashboard for managing Apache, MariaDB, PHP-FPM, service logs, and local PHP project previews.
+          - generic [ref=e469]:
+            - generic [ref=e470]: React
+            - generic [ref=e471]: TypeScript
+            - generic [ref=e472]: Tauri
+            - generic [ref=e473]: Rust
+            - generic [ref=e474]: systemd
+            - generic [ref=e475]: PHP
+          - generic [ref=e476]:
+            - link "View article for StackPilot" [ref=e477]:
+              - /url: /projects/stackpilot/index.html
+              - text: View
+            - link "Open StackPilot repository" [ref=e478]:
+              - /url: https://github.com/dejely/StackPilot
+              - text: View Repo
+            - link "Latest Release for StackPilot" [ref=e479]:
+              - /url: https://github.com/dejely/StackPilot/releases/tag/v0.3.1
+              - text: Latest Release
+        - generic [ref=e480]:
+          - heading "Memoraid" [level=3] [ref=e482]
+          - paragraph [ref=e483]: Offline-first mobile study app with flashcards, tests, notes import, progress tracking, and local SQLite persistence.
+          - generic [ref=e484]:
+            - generic [ref=e485]: Expo
+            - generic [ref=e486]: React Native
+            - generic [ref=e487]: TypeScript
+            - generic [ref=e488]: SQLite
+            - generic [ref=e489]: Zustand
+            - generic [ref=e490]: TanStack Query
+          - generic [ref=e491]:
+            - link "View article for Memoraid" [ref=e492]:
+              - /url: /projects/memoraid/index.html
+              - text: View
+            - link "Open Memoraid repository" [ref=e493]:
+              - /url: https://github.com/dejely/Memoraid
+              - text: View Repo
+            - link "Latest Release for Memoraid" [ref=e494]:
+              - /url: https://github.com/dejely/Memoraid/releases/tag/v1.0.3
+              - text: Latest Release
+        - generic [ref=e495]:
+          - heading "Polaris" [level=3] [ref=e497]
+          - paragraph [ref=e498]: Layered crop-supply monitoring engine that tracks LGU shortages and oversupply to identify redistribution opportunities.
+          - generic [ref=e499]:
+            - generic [ref=e500]: Python
+            - generic [ref=e501]: SQLite
+            - generic [ref=e502]: CLI
+            - generic [ref=e503]: Priority Queues
+          - generic [ref=e504]:
+            - link "View article for Polaris" [ref=e505]:
+              - /url: /projects/polaris/index.html
+              - text: View
+            - link "Open Polaris repository" [ref=e506]:
+              - /url: https://github.com/dejely/Polaris
+              - text: View Repo
+        - generic [ref=e507]:
+          - heading "LMS-Extract" [level=3] [ref=e509]
+          - paragraph [ref=e510]: Authorized Moodle CLI for discovering courses, previewing and downloading files, browser login, and duplicate prevention.
+          - generic [ref=e511]:
+            - generic [ref=e512]: Python
+            - generic [ref=e513]: Typer
+            - generic [ref=e514]: HTTPX
+            - generic [ref=e515]: BeautifulSoup
+            - generic [ref=e516]: Playwright
+          - generic [ref=e517]:
+            - link "View article for LMS-Extract" [ref=e518]:
+              - /url: /projects/lms-extract/index.html
+              - text: View
+            - link "Open LMS-Extract repository" [ref=e519]:
+              - /url: https://github.com/dejely/LMS-Extract
+              - text: View Repo
+    - generic [ref=e116]:
+      - heading "Tech Stack" [level=2] [ref=e117]
+      - generic [ref=e118]:
+        - generic [ref=e121]: Python
+        - generic [ref=e124]: C
+        - generic [ref=e127]: C++
+        - generic [ref=e130]: Java
+        - generic [ref=e133]: React
+        - generic [ref=e136]: Docker
+        - generic [ref=e139]: Microsoft Azure Cloud
+        - generic [ref=e142]: AWS
+        - generic [ref=e145]: Supabase
+        - generic [ref=e148]: Firebase
+    - generic [ref=e150]:
+      - heading "Connect" [level=2] [ref=e151]
+      - generic [ref=e153]:
+        - paragraph [ref=e154]: Ready to build something bold and blocky? Let's craft a standout digital experience together.
+        - generic [ref=e155]:
+          - link "Open View CV in a new tab" [ref=e156]:
+            - /url: /docs/dejel-cyrus-de-asis-cv.pdf
+            - text: View CV
+          - link "Start email me conversation" [ref=e157]:
+            - /url: mailto:deasisdejel08@gmail.com
+            - text: Email Me
+          - link "Open GitHub in a new tab" [ref=e158]:
+            - /url: https://github.com/dejely
+            - text: GitHub
+          - link "Open LinkedIn in a new tab" [ref=e159]:
+            - /url: https://www.linkedin.com/in/dejel-cyrus-de-asis-9567172b0
+            - text: LinkedIn
+        - paragraph [ref=e161]: © 2026 Pixel Developer. Crafted with Vite, blocks and code.
