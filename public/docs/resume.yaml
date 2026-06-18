@@ -1,0 +1,132 @@
+cv:
+  name: "Dejel Cyrus De Asis"
+  location: "Negros Occidental, Philippines"
+  email: "deasisdejel08@gmail.com"
+
+  social_networks:
+    - network: "LinkedIn"
+      username: "Dejel-Cyrus-De-Asis"
+    - network: "GitHub"
+      username: "dejely"
+
+  sections:
+    summary:
+      - "Computer Science student at the University of the Philippines building full-stack, AI-assisted, and real-time software systems focused on operational workflows, monitoring platforms, and automation."
+      - "contributed to improving digital safety in UPV by responsibly auditing exposed web systems, documenting security risks, and reporting findings to help protect student data and other platforms."
+      - "Built open source projects involving computer vision, cybersecurity, blockchain systems, dashboards, and mobile-to-cloud communication pipelines."
+      - "Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based development, API integration, cybersecurity labs, and systems-oriented software engineering."
+
+    achievements:
+      - name: "Manobela Hackathon"
+        date: "2025"
+        highlights:
+          - "Champion for developing Manobela, a real-time driver monitoring system focused on drowsiness and distraction detection using computer-vision signals."
+          - "Designed and implemented a mobile-to-cloud monitoring pipeline using lightweight telemetry transmission and cloud-assisted processing."
+
+      - name: "Hack4Gov"
+        date: "2025"
+        highlights:
+          - "1st runner-up and top-performing participant in Hack4Gov 2025 cybersecurity competition."
+          - "Competed in cybersecurity challenges involving network analysis, digital forensics, cryptography, web exploitation, and Linux-based investigation workflows."
+    projects:
+      - name: "[Manobela](https://manobela.vercel.app)"
+        url: "https://manobela.vercel.app"
+        technologies: "Expo, React Native, Python, FastAPI, MediaPipe, Microsoft Azure"
+        highlights:
+          - "Developed a real-time driver monitoring pipeline processing facial landmark telemetry at approximately 15 FPS using computer-vision signals."
+          - "Built lightweight mobile-to-cloud communication workflows to reduce bandwidth usage and device-side processing overhead."
+          - "Integrated Microsoft Azure cloud-assisted computation for scalable real-time monitoring and analytics."
+          - "Implemented drowsiness and distraction detection using facial landmark analysis and real-time feedback systems."
+
+      - name: "[HERMES](https://project-hermes-drrm.vercel.app)"
+        technologies: "React, Supabase, PostgreSQL, Meta Messenger API"
+        highlights:
+          - "Built a Hazard and Emergency Reporting, Monitoring, and Evaluation System for real-time disaster communication workflows."
+          - "Designed structured reporting pipelines capable of organizing incoming chat-based emergency reports into centralized monitoring dashboards."
+          - "Implemented low-connectivity communication support using Meta Messenger integration for areas with limited telco infrastructure."
+
+      - name: "[Scan a Delegate](https://github.com/dejely/Scan-a-Delegate)"
+        technologies: "Solidity, Ethereum Sepolia, Web3, JavaScript"
+        highlights:
+          - "Developed a blockchain-based voting platform focused on transparency and tamper-resistant vote tracking."
+          - "Implemented Solidity smart contracts and deployed testing workflows on the Ethereum Sepolia test network."
+          - "Explored decentralized identity verification and transparent election record management concepts."
+          
+    education:
+      - institution: "University of the Philippines"
+        area: "Computer Science"
+        degree: "BS"
+        location: "Miagao, Iloilo"
+        start_date: "2024-08-31"
+
+      - institution: "Dr. Vicente F. Gustilo Memorial National High School"
+        area: "Science, Technology, Engineering, and Mathematics"
+        degree: "SHS"
+        location: "Cadiz, Negros Occidental"
+        start_date: "2022-12-31"
+        end_date: "2024-06-30"
+        highlights:
+          - "Conducted research on a semi-autonomous multi-sensory waste segregation robot capable of classifying hazardous, recyclable, biodegradable, and non-biodegradable waste."
+
+    skills:
+      - label: "Languages"
+        details: "Python, TypeScript, JavaScript, Java, C/C++, SQL, Solidity"
+
+      - label: "Frontend"
+        details: "React, Expo, HTML, CSS"
+
+      - label: "Backend & Databases"
+        details: "Node.js, PostgreSQL, Supabase, Firebase, REST APIs"
+
+      - label: "Cloud & DevOps"
+        details: "AWS, Microsoft Azure, Docker, GitHub Actions"
+
+      - label: "Cybersecurity"
+        details: "Wireshark, Burp Suite, Nmap, Gobuster, Kali Linux, Autopsy, John the Ripper"
+
+      - label: "Tools"
+        details: "Git, GitHub, Linux, VS Code, API Testing"
+
+    certificates:
+      - name: "[NAISC Certificate](https://certificates.aisingapore.org/certificate-verification/36D9D57-36D9CF8-35E0DBC)"
+        location: "Singapore (Online)"
+        date: "2025"
+        highlights:
+          - "Completed training related to AI, LLMs, and AWS-based implementation."
+
+      - name: "[Introduction to Cloud 101](https://www.credly.com/badges/8dc5198b-69e0-46e7-b61f-6a9f401bb483/linked_in_profile)"
+        highlights:
+          - "Completed foundational training in AWS Cloud infrastructure, cloud services, and cloud computing concepts."
+
+      - name: "[Introduction to AWS Security](https://www.credly.com/badges/b215a3f2-99bd-4a5e-b3c9-cffeaf025bdb/linked_in_profile)"
+        highlights:
+          - "Completed foundational training in AWS cloud security, including IAM and SIEM concepts."
+
+      - name: "[ISC2 Candidate](https://www.credly.com/badges/e55b29ad-0b10-498a-8e92-db6f7b4f8df9/linked_in_profile)"
+        highlights:
+          - "Pursuing a cybersecurity Certificate to a COMPTIA Security+ transition certification"
+
+      - name: "[Software Architecture & System Design Foundations](https://www.linkedin.com/posts/dejel-cyrus-de-asis-9567172b0_im-happy-to-share-that-ive-obtained-a-new-activity-7459197931393368064-QHMg?utm_source=share&utm_medium=member_desktop&rcm=ACoAAErbWZIB_EGM2r85zRMA7_PSOjcokZk88Hw)"
+        highlights:
+          - "Completed training in software architecture and system design foundations."
+
+    experience:
+      - name: "Independent Software Developer"
+        start_date: "2018"
+        highlights:
+          - "Built web, mobile, and systems-oriented projects using React, TypeScript, JavaScript, Python, Java, C/C++, Expo, Supabase, PostgreSQL, Firebase, and cloud platforms."
+          - "Designed projects involving computer vision, blockchain voting, budgeting tools, AI/LLM implementation, cybersecurity, automation, dashboards, and full-stack development."
+          - "Worked with Git, GitHub, Linux environments, API integration, database design, debugging, and technical documentation."
+
+      - name: "CTF Player and Cybersecurity Learner"
+        start_date: "2024"
+        highlights:
+          - "Participated in cybersecurity competitions and hands-on labs involving network analysis, digital forensics, cryptography, web exploitation, and Linux-based security workflows."
+          - "Conducted authorized reconnaissance and responsible security assessment activities under the guidance/permission, documenting exposed risks and reporting findings through proper channels to help improve the security of web systems."
+          - "Developed practical understanding of vulnerability discovery, responsible testing, and defensive security concepts."
+
+      - name: "National AI Student Challenge 2025 - AWS Regional LLM League"
+        highlights:
+          - "Implemented and deployed LLM-supported workflows using AWS-based tools and cloud infrastructure."
+          - "Built foundational knowledge in AI systems, prompt-based applications, and cloud-supported LLM workflows."
+

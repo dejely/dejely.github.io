@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>privmotion | Project Article</title>
+    <link rel="stylesheet" href="../article.css" />
+  </head>
+  <body>
+    <main class="article-layout">
+      <article class="article-card">
+        <header class="article-header">
+          <h1 class="article-title">privmotion</h1>
+          <p class="article-subtitle">
+            Privacy-preserving motion analytics for videos, RGB-D streams, images, and frame folders.
+          </p>
+        </header>
+
+        <section class="article-section">
+          <h2>Overview</h2>
+          <p>
+            privmotion turns identity-bearing visual input into inspectable motion artifacts while avoiding raw RGB
+            retention by default. It is designed as a research prototype for studying kinematics without making source
+            footage the primary output.
+          </p>
+        </section>
+
+        <section class="article-section">
+          <h2>Key Capabilities</h2>
+          <ul>
+            <li>Exports skeleton keypoints, silhouettes, depth-like surrogates, and motion features.</li>
+            <li>Supports image files, videos, RGB-D streams, and directories of frames.</li>
+            <li>Provides YOLO-Pose support with a deterministic prototype fallback.</li>
+            <li>Builds previews and benchmark reports from anonymized outputs.</li>
+            <li>Includes optional feature encryption, access policies, and audit records.</li>
+          </ul>
+        </section>
+
+        <section class="article-section">
+          <h2>Technical Approach</h2>
+          <p>
+            The Python pipeline processes RGB frames in memory, writes machine-readable kinematic outputs, and records
+            backend and retention metadata for validation. An OpenCV-style C++ and CMake scaffold defines a path toward
+            a future native module.
+          </p>
+          <p>
+            This is a research prototype, not an official OpenCV module or a production privacy guarantee. Its
+            HIPAA-oriented aggregate mode supports qualified expert review but does not independently certify HIPAA
+            de-identification.
+          </p>
+        </section>
+
+        <section class="article-section">
+          <h2>Stack</h2>
+          <p>Python, OpenCV, YOLO Pose, NumPy, C++, CMake, pytest, and imageio.</p>
+        </section>
+
+        <section class="article-section">
+          <h2>Project Links</h2>
+          <p>
+            <a class="article-link" href="https://github.com/dejely/privmotion" target="_blank" rel="noreferrer noopener"
+              >View the privmotion repository</a
+            >
+          </p>
+        </section>
+
+        <a class="article-back" href="../../#projects">Back to Projects</a>
+      </article>
+    </main>
+    <script src="../page-transition.js" defer></script>
+  </body>
+</html>

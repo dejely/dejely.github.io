@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polaris | Project Article</title>
+    <link rel="stylesheet" href="../article.css" />
+  </head>
+  <body>
+    <main class="article-layout">
+      <article class="article-card">
+        <header class="article-header">
+          <h1 class="article-title">Polaris</h1>
+          <p class="article-subtitle">
+            Structured crop-supply monitoring and redistribution planning for local government units.
+          </p>
+        </header>
+
+        <section class="article-section">
+          <h2>Overview</h2>
+          <p>
+            Polaris tracks crop supply against ideal targets for each LGU. Positive balances identify oversupply,
+            negative balances identify shortages, and the resulting priorities help surface transfer opportunities
+            between areas.
+          </p>
+        </section>
+
+        <section class="article-section">
+          <h2>Key Capabilities</h2>
+          <ul>
+            <li>Adds or updates per-LGU crop supply records.</li>
+            <li>Lists current balances and identifies the most critical shortage.</li>
+            <li>Matches crop oversupply with shortage locations.</li>
+            <li>Persists records through a SQLite repository.</li>
+            <li>Supports both command-line and programmatic service usage.</li>
+          </ul>
+        </section>
+
+        <section class="article-section">
+          <h2>Technical Approach</h2>
+          <p>
+            The Python package separates domain rules, application orchestration, CLI entrypoints, and persistence.
+            Priority-based indexing keeps shortage and oversupply decisions explicit, while compatibility facades
+            preserve previous imports as the project moves toward a cleaner layered architecture.
+          </p>
+        </section>
+
+        <section class="article-section">
+          <h2>Stack</h2>
+          <p>Python, SQLite, command-line interfaces, priority queues, layered architecture, and pytest.</p>
+        </section>
+
+        <section class="article-section">
+          <h2>Project Links</h2>
+          <p>
+            <a class="article-link" href="https://github.com/dejely/Polaris" target="_blank" rel="noreferrer noopener"
+              >View the Polaris repository</a
+            >
+          </p>
+        </section>
+
+        <a class="article-back" href="../../#projects">Back to Projects</a>
+      </article>
+    </main>
+    <script src="../page-transition.js" defer></script>
+  </body>
+</html>

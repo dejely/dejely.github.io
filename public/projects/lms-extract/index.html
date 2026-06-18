@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LMS-Extract | Project Article</title>
+    <link rel="stylesheet" href="../article.css" />
+  </head>
+  <body>
+    <main class="article-layout">
+      <article class="article-card">
+        <header class="article-header">
+          <h1 class="article-title">LMS-Extract</h1>
+          <p class="article-subtitle">
+            An authorized Moodle downloader that organizes course resources into a reusable local library.
+          </p>
+        </header>
+
+        <section class="article-section">
+          <h2>Overview</h2>
+          <p>
+            LMS-Extract discovers courses and topics available to an authenticated Moodle account, previews planned
+            downloads, and saves accessible files into readable course and topic folders. It is intended for personal
+            organization and repeatable backups of materials the user is already allowed to access.
+          </p>
+        </section>
+
+        <section class="article-section">
+          <h2>Key Capabilities</h2>
+          <ul>
+            <li>Lists enrolled courses and topics with flexible course-name matching.</li>
+            <li>Provides dry-run previews before downloading individual courses or all courses.</li>
+            <li>Supports academic-year filters for bulk operations.</li>
+            <li>Tracks completed files in a manifest and skips existing duplicates.</li>
+            <li>Migrates matching files from older numeric course folders.</li>
+            <li>Supports browser-cookie login when SSO, MFA, or JavaScript blocks normal HTTP login.</li>
+          </ul>
+        </section>
+
+        <section class="article-section">
+          <h2>Technical Approach</h2>
+          <p>
+            A Typer CLI coordinates HTTPX sessions, BeautifulSoup parsing, local manifests, and filesystem operations.
+            Playwright provides an explicit browser-authentication fallback without bypassing LMS permissions, account
+            enrollment, CAPTCHA, MFA, or other access controls.
+          </p>
+        </section>
+
+        <section class="article-section">
+          <h2>Stack</h2>
+          <p>Python, Typer, HTTPX, BeautifulSoup, Playwright, Rich, python-dotenv, and pytest.</p>
+        </section>
+
+        <section class="article-section">
+          <h2>Project Links</h2>
+          <p>
+            <a class="article-link" href="https://github.com/dejely/LMS-Extract" target="_blank" rel="noreferrer noopener"
+              >View the LMS-Extract repository</a
+            >
+          </p>
+        </section>
+
+        <a class="article-back" href="../../#projects">Back to Projects</a>
+      </article>
+    </main>
+    <script src="../page-transition.js" defer></script>
+  </body>
+</html>

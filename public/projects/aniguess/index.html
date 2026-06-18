@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aniguess | Project Article</title>
+    <link rel="stylesheet" href="../article.css" />
+  </head>
+  <body>
+    <main class="article-layout">
+      <article class="article-card">
+        <header class="article-header">
+          <h1 class="article-title">Aniguess</h1>
+          <p class="article-subtitle">
+            A fast anime comparison game built around MyAnimeList ratings and favorite counts.
+          </p>
+        </header>
+
+        <section class="article-section">
+          <h2>Overview</h2>
+          <p>
+            Aniguess presents two anime series or characters and asks the player to choose which has the higher rating
+            or favorite count. Correct guesses build score and streaks, while the surrounding account system keeps
+            longer-term progress visible.
+          </p>
+        </section>
+
+        <section class="article-section">
+          <h2>Key Capabilities</h2>
+          <ul>
+            <li>Series Rating, Series Faves, and Character Faves game modes.</li>
+            <li>Live anime and character data sourced through Jikan and MAL-oriented APIs.</li>
+            <li>Persistent best scores, streaks, achievements, and leaderboard entries.</li>
+            <li>Login, registration, guest-player support, settings, and help screens.</li>
+            <li>Responsive result feedback and automatic progression between rounds.</li>
+          </ul>
+        </section>
+
+        <section class="article-section">
+          <h2>Technical Approach</h2>
+          <p>
+            The React frontend separates anime, character, game, achievement, leaderboard, and user features into
+            focused modules. Supabase provides authentication and persisted player data, while an Express proxy and
+            direct Jikan integrations support external anime data flows.
+          </p>
+        </section>
+
+        <section class="article-section">
+          <h2>Stack</h2>
+          <p>React, TypeScript, Vite, Supabase, Express, PostgreSQL, and the Jikan API.</p>
+        </section>
+
+        <section class="article-section">
+          <h2>Project Links</h2>
+          <p>
+            <a class="article-link" href="https://aniguesser.vercel.app" target="_blank" rel="noreferrer noopener"
+              >Play Aniguess</a
+            >
+          </p>
+          <p>
+            <a class="article-link" href="https://github.com/dejely/Aniguess" target="_blank" rel="noreferrer noopener"
+              >View the Aniguess repository</a
+            >
+          </p>
+        </section>
+
+        <a class="article-back" href="../../#projects">Back to Projects</a>
+      </article>
+    </main>
+    <script src="../page-transition.js" defer></script>
+  </body>
+</html>

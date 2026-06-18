@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memoraid | Project Article</title>
+    <link rel="stylesheet" href="../article.css" />
+  </head>
+  <body>
+    <main class="article-layout">
+      <article class="article-card">
+        <header class="article-header">
+          <h1 class="article-title">Memoraid</h1>
+          <p class="article-subtitle">
+            An offline-first mobile study app for flashcards, tests, notes import, and progress tracking.
+          </p>
+        </header>
+
+        <section class="article-section">
+          <h2>Overview</h2>
+          <p>
+            Memoraid is a personal-use Quizlet-style app built for native mobile study sessions. Sets, cards, history,
+            review state, and test results remain available locally, allowing the core experience to work without a
+            required cloud account.
+          </p>
+        </section>
+
+        <section class="article-section">
+          <h2>Key Capabilities</h2>
+          <ul>
+            <li>Create and organize study sets with descriptions, tags, and cards.</li>
+            <li>Study with flip, swipe, shuffle, easy/hard marking, progress, and session resume.</li>
+            <li>Generate multiple-choice, true/false, and written-response tests.</li>
+            <li>Import notes from pasted text and local text files.</li>
+            <li>Track recent activity, due cards, test scores, and review statistics.</li>
+            <li>Support light, dark, and system themes with persisted preferences.</li>
+          </ul>
+        </section>
+
+        <section class="article-section">
+          <h2>Technical Approach</h2>
+          <p>
+            The Expo application stores decks, cards, sessions, test attempts, questions, and review statistics in a
+            versioned SQLite schema. Feature modules isolate dashboard, import, study, and testing flows, while service
+            interfaces reserve clean extension points for future AI generation and cloud synchronization.
+          </p>
+        </section>
+
+        <section class="article-section">
+          <h2>Stack</h2>
+          <p>
+            Expo, React Native, TypeScript, Expo Router, SQLite, Zustand, TanStack Query, NativeWind, and Secure Store.
+          </p>
+        </section>
+
+        <section class="article-section">
+          <h2>Project Links</h2>
+          <p>
+            <a
+              class="article-link"
+              href="https://github.com/dejely/Memoraid/releases/tag/v1.0.3"
+              target="_blank"
+              rel="noreferrer noopener"
+              >Download the latest Memoraid release</a
+            >
+          </p>
+          <p>
+            <a class="article-link" href="https://github.com/dejely/Memoraid" target="_blank" rel="noreferrer noopener"
+              >View the Memoraid repository</a
+            >
+          </p>
+        </section>
+
+        <a class="article-back" href="../../#projects">Back to Projects</a>
+      </article>
+    </main>
+    <script src="../page-transition.js" defer></script>
+  </body>
+</html>

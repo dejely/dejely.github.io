@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K-Easy | Project Article</title>
+    <link rel="stylesheet" href="../article.css" />
+  </head>
+  <body>
+    <main class="article-layout">
+      <article class="article-card">
+        <header class="article-header">
+          <h1 class="article-title">K-Easy</h1>
+          <p class="article-subtitle">
+            A browser-based Boolean simplification and Verilog generation tool.
+          </p>
+        </header>
+
+        <section class="article-section">
+          <h2>Overview</h2>
+          <p>
+            K-Easy turns minterms and optional don't-care terms into a complete, inspectable Boolean solution. Instead
+            of returning only a final expression, it exposes the truth table, Karnaugh map, tabulation process, selected
+            implicants, and generated hardware description.
+          </p>
+        </section>
+
+        <section class="article-section">
+          <h2>Key Capabilities</h2>
+          <ul>
+            <li>Supports Boolean functions with two to four variables.</li>
+            <li>Generates truth tables and Gray-code Karnaugh maps.</li>
+            <li>Shows Quine-McCluskey combination rounds and prime implicants.</li>
+            <li>Produces simplified SOP and POS expressions.</li>
+            <li>Generates a combinational Verilog module from the solved expression.</li>
+            <li>Includes built-in multiplexer and full-adder examples.</li>
+          </ul>
+        </section>
+
+        <section class="article-section">
+          <h2>Technical Approach</h2>
+          <p>
+            A typed solver layer handles parsing, validation, minimization, grouping, and Verilog generation separately
+            from the React interface. This keeps the algorithm testable while allowing the UI to present each
+            intermediate step as a learning and verification aid. A Python FastAPI service supports the deployed
+            application architecture.
+          </p>
+        </section>
+
+        <section class="article-section">
+          <h2>Stack</h2>
+          <p>React, TypeScript, Vite, Python, FastAPI, Tailwind CSS, and Verilog.</p>
+        </section>
+
+        <section class="article-section">
+          <h2>Project Links</h2>
+          <p>
+            <a class="article-link" href="https://k-easy.vercel.app" target="_blank" rel="noreferrer noopener"
+              >Open K-Easy</a
+            >
+          </p>
+          <p>
+            <a class="article-link" href="https://github.com/dejely/K-Easy" target="_blank" rel="noreferrer noopener"
+              >View the K-Easy repository</a
+            >
+          </p>
+        </section>
+
+        <a class="article-back" href="../../#projects">Back to Projects</a>
+      </article>
+    </main>
+    <script src="../page-transition.js" defer></script>
+  </body>
+</html>
