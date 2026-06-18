@@ -2,10 +2,10 @@
   min-height: 100vh;
   background: var(--pixel-bg);
   color: var(--pixel-text);
-  opacity: 1;
-  transform: translateY(0);
-  animation: pageEnter 260ms ease both;
-  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.portfolio-router {
+  min-height: 100vh;
 }
 
 .pixel-texture {
@@ -42,25 +42,49 @@
   --tone-color: var(--pixel-warning);
 }
 
-html.page-leaving .pixel-root {
+.route-transition-overlay {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 20000;
+  width: clamp(180px, 38vw, 520px);
+  pointer-events: none;
   opacity: 0;
-  transform: translateY(8px);
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.08) 0,
+      rgba(255, 255, 255, 0.08) 2px,
+      transparent 2px,
+      transparent 7px
+    ),
+    linear-gradient(
+      90deg,
+      transparent,
+      color-mix(in oklab, var(--pixel-primary) 74%, var(--pixel-bg)),
+      color-mix(in oklab, var(--pixel-accent) 68%, var(--pixel-bg)),
+      transparent
+    );
+  will-change: transform, opacity;
+  animation: routeOverlaySweep 180ms steps(5, end) both;
 }
 
-@keyframes pageEnter {
-  from {
+@keyframes routeOverlaySweep {
+  0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translate3d(-110%, 0, 0);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  20% {
+    opacity: 0.78;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(280vw, 0, 0);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .pixel-root {
+  .route-transition-overlay {
     animation: none;
-    transition: none;
+    display: none;
   }
 }

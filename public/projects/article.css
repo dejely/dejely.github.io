@@ -27,9 +27,6 @@ body {
   display: grid;
   place-items: center;
   padding: 2rem 1rem;
-  opacity: 0;
-  transform: translateY(10px);
-  animation: articlePageEnter 260ms ease forwards;
 }
 
 .article-card {
@@ -162,25 +159,37 @@ body {
   transform: translateY(-2px);
 }
 
-body {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 220ms ease, transform 220ms ease;
-}
-
-html.page-leaving body {
+.article-route-overlay {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 10000;
+  width: clamp(180px, 38vw, 520px);
+  pointer-events: none;
   opacity: 0;
-  transform: translateY(8px);
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.08) 0,
+      rgba(255, 255, 255, 0.08) 2px,
+      transparent 2px,
+      transparent 7px
+    ),
+    linear-gradient(90deg, transparent, #5aa6f2, #ef5b78, transparent);
+  will-change: transform, opacity;
+  animation: articleRouteOverlaySweep 180ms steps(5, end) both;
 }
 
-@keyframes articlePageEnter {
-  from {
+@keyframes articleRouteOverlaySweep {
+  0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translate3d(-110%, 0, 0);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  20% {
+    opacity: 0.78;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(280vw, 0, 0);
   }
 }
 
@@ -210,10 +219,11 @@ html.page-leaving body {
 
 @media (prefers-reduced-motion: reduce) {
   .article-layout,
-  body {
+  .article-route-overlay {
     animation: none;
-    transition: none;
-    opacity: 1;
-    transform: none;
+  }
+
+  .article-route-overlay {
+    display: none;
   }
 }

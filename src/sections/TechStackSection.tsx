@@ -7,7 +7,7 @@ type TechStackSectionProps = {
 
 export default function TechStackSection({ techStack }: TechStackSectionProps) {
   return (
-    <PixelSection id="tech-stack" title="Tech Stack" variant="alt">
+    <PixelSection id="tech-stack" title="Tech Stack">
       <div className="tech-stack">
         {techStack.map((item) => (
           <div key={item.label} className="tech-stack__item">

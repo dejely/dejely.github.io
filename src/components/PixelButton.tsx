@@ -1,4 +1,8 @@
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react'
+import {
+  navigateClientSide,
+  navigateDocumentWithOverlay,
+} from '../lib/clientNavigation'
 
 type Variant = 'primary' | 'secondary' | 'accent' | 'success'
 type Size = 'sm' | 'md' | 'lg'
@@ -22,7 +26,6 @@ type PixelButtonAsLink = PixelButtonBase &
   }
 
 type PixelButtonProps = PixelButtonAsButton | PixelButtonAsLink
-const PAGE_TRANSITION_MS = 220
 
 function getInternalNavigationHref(
   href: string,
@@ -101,16 +104,18 @@ export function PixelButton({
           }
 
           const targetHref = getInternalNavigationHref(href, rest.target, rest.download)
-          const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-          if (!targetHref || reduceMotion) {
+          if (!targetHref) {
             return
           }
 
-          event.preventDefault()
-          document.documentElement.classList.add('page-leaving')
-          window.setTimeout(() => {
-            window.location.assign(targetHref)
-          }, PAGE_TRANSITION_MS)
+          if (navigateClientSide(targetHref)) {
+            event.preventDefault()
+            return
+          }
+
+          if (navigateDocumentWithOverlay(targetHref)) {
+            event.preventDefault()
+          }
         }}
         {...rest}
       >
