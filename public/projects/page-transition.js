@@ -1,9 +1,5 @@
 (() => {
-  const html = document.documentElement
-
-  window.addEventListener('pageshow', () => {
-    html.classList.remove('page-leaving')
-  })
+  const transitionMs = 70
 
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     return
@@ -52,10 +48,14 @@
       }
 
       event.preventDefault()
-      html.classList.add('page-leaving')
+      const overlay = document.createElement('div')
+      overlay.className = 'article-route-overlay'
+      overlay.setAttribute('aria-hidden', 'true')
+      document.body.append(overlay)
+
       window.setTimeout(() => {
         window.location.assign(nextUrl.href)
-      }, 220)
+      }, transitionMs)
     },
     { capture: true },
   )

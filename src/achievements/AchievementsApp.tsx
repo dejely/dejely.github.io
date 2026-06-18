@@ -1,4 +1,6 @@
+import type { MouseEvent } from 'react'
 import { CustomCursor, PixelButton, PixelCard } from '../components'
+import { navigateClientSide } from '../lib/clientNavigation'
 import { ACHIEVEMENTS, type Achievement } from '../lib/constants'
 import '../styles'
 
@@ -16,6 +18,22 @@ function groupAchievementsByYear(achievements: readonly Achievement[]) {
 
 export default function AchievementsApp() {
   const achievementsByYear = groupAchievementsByYear(ACHIEVEMENTS)
+  const handleHomeClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (
+      event.defaultPrevented ||
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey
+    ) {
+      return
+    }
+
+    if (navigateClientSide(event.currentTarget.href)) {
+      event.preventDefault()
+    }
+  }
 
   return (
     <div className="pixel-root pixel-texture achievements-page">
@@ -23,7 +41,11 @@ export default function AchievementsApp() {
 
       <header className="achievements-header">
         <div className="achievements-header__inner">
-          <a className="pixel-text-heading achievements-header__logo" href="/">
+          <a
+            className="pixel-text-heading achievements-header__logo"
+            href="/"
+            onClick={handleHomeClick}
+          >
             {'<DEV/>'}
           </a>
           <PixelButton href="/" variant="secondary" size="sm">

@@ -1,4 +1,8 @@
 import { useEffect, useRef, useState, type MouseEvent } from 'react'
+import {
+  navigateClientSide,
+  navigateDocumentWithOverlay,
+} from '../lib/clientNavigation'
 
 type NavItem = {
   label: string
@@ -118,18 +122,20 @@ export function PixelNav({ items, logo = '<DEV/>' }: PixelNavProps) {
       event.metaKey ||
       event.ctrlKey ||
       event.shiftKey ||
-      event.altKey ||
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      event.altKey
     ) {
       return
     }
 
-    event.preventDefault()
     const targetHref = event.currentTarget.href
-    document.documentElement.classList.add('page-leaving')
-    window.setTimeout(() => {
-      window.location.assign(targetHref)
-    }, 220)
+    if (navigateClientSide(targetHref)) {
+      event.preventDefault()
+      return
+    }
+
+    if (navigateDocumentWithOverlay(targetHref)) {
+      event.preventDefault()
+    }
   }
 
   const renderNavItem = (item: NavItem) =>
