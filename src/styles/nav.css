@@ -27,11 +27,16 @@
 }
 
 .pixel-nav__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 2px solid transparent;
   background: transparent;
   padding: 0.45rem 0.7rem;
   font-size: 0.65rem;
   cursor: pointer;
+  color: inherit;
+  text-decoration: none;
   text-transform: uppercase;
   transition: border-color 120ms steps(2), background-color 120ms steps(2), transform 120ms steps(2);
 }

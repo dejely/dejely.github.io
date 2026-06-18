@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type MouseEvent } from 'react'
 
 type NavItem = {
   label: string
   href: string
+  kind?: 'section' | 'page'
 }
 
 type PixelNavProps = {
@@ -22,6 +23,7 @@ export function PixelNav({ items, logo = '<DEV/>' }: PixelNavProps) {
   useEffect(() => {
     const getSectionItems = () =>
       items
+      .filter((item) => item.kind !== 'page' && item.href.startsWith('#'))
       .map((item) => {
         const section = document.querySelector(item.href)
         return section instanceof HTMLElement ? { label: item.label, section } : null
@@ -107,23 +109,58 @@ export function PixelNav({ items, logo = '<DEV/>' }: PixelNavProps) {
     scrollToSection()
   }
 
+  const handlePageClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    setIsOpen(false)
+
+    if (
+      event.defaultPrevented ||
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    ) {
+      return
+    }
+
+    event.preventDefault()
+    const targetHref = event.currentTarget.href
+    document.documentElement.classList.add('page-leaving')
+    window.setTimeout(() => {
+      window.location.assign(targetHref)
+    }, 220)
+  }
+
+  const renderNavItem = (item: NavItem) =>
+    item.kind === 'page' ? (
+      <a
+        key={item.label}
+        href={item.href}
+        onClick={handlePageClick}
+        className="pixel-nav__item pixel-text-label"
+      >
+        {item.label}
+      </a>
+    ) : (
+      <button
+        key={item.label}
+        type="button"
+        onClick={() => handleNavClick(item)}
+        className="pixel-nav__item pixel-text-label"
+        data-active={active === item.label}
+      >
+        {item.label}
+      </button>
+    )
+
   return (
     <nav className="pixel-nav">
       <div className="pixel-nav__inner">
         <div className="pixel-nav__logo pixel-text-heading">{logo}</div>
 
         <div className="pixel-nav__links">
-          {items.map((item) => (
-            <button
-              key={item.label}
-              type="button"
-              onClick={() => handleNavClick(item)}
-              className="pixel-nav__item pixel-text-label"
-              data-active={active === item.label}
-            >
-              {item.label}
-            </button>
-          ))}
+          {items.map(renderNavItem)}
         </div>
 
         <button
@@ -138,17 +175,7 @@ export function PixelNav({ items, logo = '<DEV/>' }: PixelNavProps) {
 
       {isOpen ? (
         <div className="pixel-nav__mobile">
-          {items.map((item) => (
-            <button
-              key={item.label}
-              type="button"
-              onClick={() => handleNavClick(item)}
-              className="pixel-nav__item pixel-text-label"
-              data-active={active === item.label}
-            >
-              {item.label}
-            </button>
-          ))}
+          {items.map(renderNavItem)}
         </div>
       ) : null}
     </nav>

@@ -1,9 +1,10 @@
 export const NAV_ITEMS = [
-  { label: 'Home', href: '#hero' },
-  { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Tech Stack', href: '#tech-stack' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '#hero', kind: 'section' },
+  { label: 'About', href: '#about', kind: 'section' },
+  { label: 'Projects', href: '#projects', kind: 'section' },
+  { label: 'Achievements', href: '/achievements/', kind: 'page' },
+  { label: 'Tech Stack', href: '#tech-stack', kind: 'section' },
+  { label: 'Contact', href: '#contact', kind: 'section' },
 ] as const
 
 export const HERO_CONTENT = {
