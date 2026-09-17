@@ -17,6 +17,11 @@ cv:
       - "Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based development, API integration, cybersecurity labs, and systems-oriented software engineering."
 
     achievements:
+      - name: "Quantum and Cybersecurity CTF Hackathon 2026"
+        date: "2026"
+        highlights:
+          - "Solved quantum problems that involved investigating qubit behavior."
+          - "Solved cryptography questions that involved quantum mechanics."
       - name: "Manobela Hackathon"
         date: "2025"
         highlights:

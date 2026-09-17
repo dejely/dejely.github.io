@@ -1,0 +1,126 @@
+cv:
+  name: "Dejel Cyrus De Asis"
+  website: "https://dejel.me"
+  email: "deasisdejel08@gmail.com"
+
+  social_networks:
+    - network: "LinkedIn"
+      username: "Dejel-Cyrus-De-Asis"
+    - network: "GitHub"
+      username: "dejely"
+
+  sections:
+    cover:
+      - "Dejel Cyrus De Asis"
+      - "BS Computer Science - University of the Philippines Visayas"
+      - "Technology and Mathematics Portfolio"
+
+    about_me:
+      - label: "Interests"
+        details: "Quantum computing, cybersecurity, applied mathematics, computer vision, privacy-preserving systems, emergency-response software, and full-stack product engineering."
+      - label: "Mission"
+        details: "I build software that turns technical ideas into practical systems for safety, learning, public service, and operational decision-making."
+      - label: "Key Skills"
+        details: "Python, TypeScript, JavaScript, React, Expo, FastAPI, Supabase, PostgreSQL, C/C++, Java, Solidity, Linux, Git, cloud deployment, API integration, and cybersecurity tooling."
+      - label: "Current Focus"
+        details: "BS Computer Science coursework, CTF practice, real-time monitoring systems, AI-assisted workflows, and portfolio-ready project documentation."
+
+    major_achievements:
+      - name: "Champion - Quantum Computing & Cybersecurity CTF"
+        date: "2026"
+        highlights:
+          - "Won Champion in the Philippines' quantum-themed cybersecurity CTF competition."
+          - "Solved challenges involving quantum computing concepts, cryptography, circuit reasoning, cybersecurity, and problem-solving under time pressure."
+          - "Portfolio evidence: include an award photo, certificate, challenge summary, and short reflection on how quantum concepts connected with cybersecurity practice."
+      - name: "Champion - TrackTech Hackathon 2026"
+        date: "2026"
+        highlights:
+          - "Won champion in CPU TrackTech Hackathon with the theme about track technology."
+          - "Applied Computer Vision along with mobile-to-cloud computing optimizations."
+          - "Applied lightweight telemetry for a smooth user experience."
+      - name: "1st Runner-Up - Hack4Gov"
+        date: "2025"
+        highlights:
+          - "Earned 1st runner-up and top-performing participant recognition in the Hack4Gov 2025 cybersecurity competition."
+          - "Competed in network analysis, digital forensics, cryptography, web exploitation, and Linux-based investigation workflows."
+          - "Portfolio evidence: include event photos, certificate or award proof, challenge categories, key tools used, and a reflection on public-sector cybersecurity readiness."
+
+      - name: "DOST Scholar"
+        highlights:
+          - "Recognized as a DOST scholar while pursuing BS Computer Science."
+          - "Connects academic work in science, technology, engineering, and mathematics with applied software projects and public-interest technology."
+          - "Portfolio evidence: include scholarship proof or certificate and a short note on how the scholarship supports continued technology and mathematics work."
+
+    projects:
+      - name: "[Manobela](https://manobela.dev)"
+        highlights:
+          - "Problem: Driver fatigue and distraction can be difficult to detect early, especially without expensive in-vehicle hardware."
+          - "Solution: Built a real-time driver monitoring system using mobile camera input, facial landmark telemetry, and cloud-assisted processing."
+          - "Architecture and screenshots: [project site](https://github.com/popcorn-prophets/manobela), [project article](https://dejel.me/projects/manobela/index.html), [monitor screenshot](https://dejel.me/projects/manobela/images/manobela-monitor-annotated.png), [insights screenshot](https://dejel.me/projects/manobela/images/manobela-insights.png), and [session details screenshot](https://dejel.me/projects/manobela/images/manobela-session-details.png)."
+          - "Impact: Demonstrates how computer vision, mobile development, and cloud services can support safer driving workflows for commuters, delivery drivers, and long-haul drivers."
+
+      - name: "[Project HERMES](https://project-hermes-drrm.vercel.app)"
+        highlights:
+          - "Problem: Emergency reports often arrive as unstructured messages, making it harder for responders to classify incidents, monitor status, and coordinate action."
+          - "Solution: Built a Hazard and Emergency Reporting, Monitoring, and Evaluation System for real-time disaster communication workflows."
+          - "System screenshots and concept: [project article](https://dejely.github.io/projects/hermes/index.html), live dashboard concept, report intake flow, role-based access control, and Supabase-backed incident monitoring."
+          - "Impact: Shows how emergency-reporting software can convert citizen or chat-based reports into structured operational information for responders and coordinators."
+
+      - name: "[PrivMotion](https://github.com/dejely/privmotion)"
+        highlights:
+          - "Problem: Motion-analysis workflows often depend on identity-bearing images or video, creating privacy and retention concerns for research and health-oriented settings."
+          - "Solution: Built a privacy-preserving motion analytics prototype that converts visual input into skeleton keypoints, silhouettes, depth-like surrogates, and kinematic features."
+          - "Privacy and architecture evidence: [project article](https://dejely.github.io/projects/privmotion/index.html), [GitHub repository](https://github.com/dejely/privmotion), anonymized output pipeline, metadata records, optional feature encryption, and audit-oriented design notes."
+          - "HIPAA-oriented design: Supports aggregate/de-identification-oriented workflows for qualified review, while clearly separating prototype behavior from formal HIPAA certification."
+          - "Use cases: Research motion analysis, privacy-aware video preprocessing, kinematic feature extraction, and safer sharing of derived movement data."
+
+    community:
+      - name: "NSTP Web Dev 101"
+        highlights:
+          - "Community teaching activity focused on introducing web development fundamentals through beginner-friendly examples and hands-on outputs."
+          - "Portfolio evidence: include teaching photos, participant work, sample outputs, slides, lesson materials, or before-and-after project screenshots."
+          - "Reflection: Highlights the value of making technical skills accessible to students and community learners."
+
+      - name: "BERDE"
+        highlights:
+          - "Spearheaded a community-driven project for a sustainable garden for malnourished children."
+          - "Project grant of PHP 50,000, granted by 3-Zero Club"
+          - "An ongoing project still being built at Negros Occidental, Cadiz City"
+      - name: "Y4B"
+        highlights:
+          - "Community project for a ramsar site development."
+          - "Project grant of PHP 100,000"
+          - "An ongoing project still being conducted in Negros Occidental, Cadiz City."
+
+    certificates:
+      - name: "[NAISC Certificate](https://certificates.aisingapore.org/certificate-verification/36D9D57-36D9CF8-35E0DBC)"
+        location: "Singapore (Online)"
+        date: "2025"
+        highlights:
+          - "Completed training related to AI, LLMs, and AWS-based implementation."
+
+      - name: "[Introduction to Cloud 101](https://www.credly.com/badges/8dc5198b-69e0-46e7-b61f-6a9f401bb483/linked_in_profile)"
+        highlights:
+          - "Completed foundational training in AWS Cloud infrastructure, cloud services, and cloud computing concepts."
+
+      - name: "[Introduction to AWS Security](https://www.credly.com/badges/b215a3f2-99bd-4a5e-b3c9-cffeaf025bdb/linked_in_profile)"
+        highlights:
+          - "Completed foundational training in AWS cloud security, including IAM and SIEM concepts."
+
+      - name: "[ISC2 Candidate](https://www.credly.com/badges/e55b29ad-0b10-498a-8e92-db6f7b4f8df9/linked_in_profile)"
+        highlights:
+          - "Pursuing a cybersecurity Certificate to a COMPTIA Security+ transition certification."
+
+      - name: "[Software Architecture & System Design Foundations](https://www.linkedin.com/posts/dejel-cyrus-de-asis-9567172b0_im-happy-to-share-that-ive-obtained-a-new-activity-7459197931393368064-QHMg?utm_source=share&utm_medium=member_desktop&rcm=ACoAAErbWZIB_EGM2r85zRMA7_PSOjcokZk88Hw)"
+        highlights:
+          - "Completed training in software architecture and system design foundations."
+
+    links:
+      - label: "Portfolio Site"
+        details: "https://dejely.github.io"
+      - label: "GitHub"
+        details: "https://github.com/dejely"
+      - label: "LinkedIn"
+        details: "https://www.linkedin.com/in/dejel-cyrus-de-asis-9567172b0"
+      - label: "Contact"
+        details: "deasisdejel08@gmail.com"
