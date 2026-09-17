@@ -1,12 +1,14 @@
 // Import the rendercv function and all the refactored components
-#import "@preview/rendercv:0.1.0": *
+#import "@preview/rendercv:0.3.0": *
 
 // Apply the rendercv template with custom configuration
 #show: rendercv.with(
   name: "Dejel Cyrus De Asis",
+  title: "Dejel Cyrus De Asis - CV",
   footer: context { [#emph[Dejel Cyrus De Asis -- #str(here().page())\/#str(counter(page).final().first())]] },
-  top-note: [ #emph[Last updated in June 2026] ],
+  top-note: [ #emph[Last updated in Sept 2026] ],
   locale-catalog-language: "en",
+  text-direction: ltr,
   page-size: "us-letter",
   page-top-margin: 0.7in,
   page-bottom-margin: 0.7in,
@@ -67,6 +69,7 @@
   entries-space-between-columns: 0.1cm,
   entries-allow-page-break: false,
   entries-short-second-row: true,
+  entries-degree-width: 1cm,
   entries-summary-space-left: 0cm,
   entries-summary-space-above: 0cm,
   entries-highlights-bullet:  "•" ,
@@ -77,8 +80,8 @@
   entries-highlights-space-between-bullet-and-text: 0.5em,
   date: datetime(
     year: 2026,
-    month: 6,
-    day: 3,
+    month: 9,
+    day: 17,
   ),
 )
 
@@ -104,6 +107,21 @@ Built open source projects involving computer vision, cybersecurity, blockchain 
 Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based development, API integration, cybersecurity labs, and systems-oriented software engineering.
 
 == Achievements
+
+#regular-entry(
+  [
+    #strong[Quantum and Cybersecurity CTF Hackathon 2026]
+
+    - Solved quantum problems that involved investigating qubit behavior.
+
+    - Solved cryptography questions that involved quantum mechanics.
+
+  ],
+  [
+    Jan 2026
+
+  ],
+)
 
 #regular-entry(
   [
@@ -311,7 +329,9 @@ Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based 
   [
     Jan 2018 – present
 
-    8 years 6 months
+    
+
+    8 years 9 months
 
   ],
 )
@@ -330,7 +350,9 @@ Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based 
   [
     Jan 2024 – present
 
-    2 years 6 months
+    
+
+    2 years 9 months
 
   ],
 )
