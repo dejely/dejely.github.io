@@ -16,6 +16,16 @@ Built open source projects involving computer vision, cybersecurity, blockchain 
 Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based development, API integration, cybersecurity labs, and systems-oriented software engineering.
 
 # Achievements
+## **AI SUMMIT Reed Elsevier PH Hackathon 2026**
+
+Jan 2026
+
+- 1st runner-up with team Popcorn Prophets in the Reed Elsevier Philippines AI Summit hackathon.
+
+- Led DevOps and deployment, shipping the project to production within a 4-hour development window.
+
+
+
 ## **Quantum and Cybersecurity CTF Hackathon 2026**
 
 Jan 2026
@@ -84,9 +94,7 @@ Jan 2025
 
 **BS**
 
-
 Miagao, Iloilo
-
 
 Aug 2024 – present
 
@@ -96,9 +104,7 @@ Aug 2024 – present
 
 **SHS**
 
-
 Cadiz, Negros Occidental
-
 
 Dec 2022 – June 2024
 
@@ -161,7 +167,7 @@ Jan 2018 – present
 
 
 
-8 years 9 months
+8 years 10 months
 
 - Built web, mobile, and systems-oriented projects using React, TypeScript, JavaScript, Python, Java, C/C++, Expo, Supabase, PostgreSQL, Firebase, and cloud platforms.
 
@@ -177,7 +183,7 @@ Jan 2024 – present
 
 
 
-2 years 9 months
+2 years 10 months
 
 - Participated in cybersecurity competitions and hands-on labs involving network analysis, digital forensics, cryptography, web exploitation, and Linux-based security workflows.
 

@@ -10,13 +10,14 @@ export type Achievement = {
 }
 
 export const ACHIEVEMENTS: readonly Achievement[] = [
-  { name: 'AI SUMMIT Reed Elsevier Hackathon',
+  {
+    name: 'AI SUMMIT Reed Elsevier PH Hackathon',
     year: 2026,
-    result: '1st Runner Up',
+    result: '1st Runner-Up',
     category: 'Hackathon',
     highlights: [
-      "Another podium finisher for the team Popcorn Prophets.",
-      'Leaded the deployment in a 4 hour-constrained development.',
+      'Placed 1st runner-up with team Popcorn Prophets in the Reed Elsevier Philippines AI Summit hackathon.',
+      'Led DevOps and deployment, shipping the project to production within a 4-hour development window.',
     ],
     tone: 'primary',
   },
