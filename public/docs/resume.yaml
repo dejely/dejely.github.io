@@ -17,6 +17,12 @@ cv:
       - "Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based development, API integration, cybersecurity labs, and systems-oriented software engineering."
 
     achievements:
+      - name: "AI SUMMIT Reed Elsevier PH Hackathon 2026"
+        date: "2026"
+        highlights:
+          - "1st runner-up with team Popcorn Prophets in the Reed Elsevier Philippines AI Summit hackathon."
+          - "Led DevOps and deployment, shipping the project to production within a 4-hour development window."
+
       - name: "Quantum and Cybersecurity CTF Hackathon 2026"
         date: "2026"
         highlights:
