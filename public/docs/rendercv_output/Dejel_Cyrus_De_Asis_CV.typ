@@ -78,7 +78,7 @@
   date: datetime(
     year: 2026,
     month: 10,
-    day: 18,
+    day: 21,
   ),
 )
 
@@ -95,13 +95,13 @@
 
 == Summary
 
-Computer Science student at the University of the Philippines building full-stack, AI-assisted, and real-time software systems focused on operational workflows, monitoring platforms, and automation.
+Computer Science student at the University of the Philippines building full-stack, AI-assisted systems that turn operational workflows into automated, dashboard-driven platforms.
 
-contributed to improving digital safety in UPV by responsibly auditing exposed web systems, documenting security risks, and reporting findings to help protect student data and other platforms.
+Built HERMES, a Supabase-backed reporting and monitoring platform that ingests chat-based reports through the Meta Messenger API and routes them into centralized role-based dashboards.
 
-Built open source projects involving computer vision, cybersecurity, blockchain systems, dashboards, and mobile-to-cloud communication pipelines.
+Experienced with API integrations, LLM workflows on AWS, real-time data pipelines, and cloud deployment; led DevOps and production shipping for a hackathon AI product within a 4-hour window.
 
-Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based development, API integration, cybersecurity labs, and systems-oriented software engineering.
+Hackathon champion and runner-up who works independently or in teams, documents systems clearly, and designs for process consistency and scalability.
 
 == Achievements
 
@@ -111,11 +111,11 @@ Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based 
 
     - 1st runner-up with team Popcorn Prophets in the Reed Elsevier Philippines AI Summit hackathon.
 
-    - Led DevOps and deployment, shipping the project to production within a 4-hour development window.
+    - Led DevOps and deployment, shipping an AI-powered product to production within a 4-hour development window.
 
   ],
   [
-    Jan 2026
+    October 2026
 
   ],
 )
@@ -124,22 +124,24 @@ Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based 
   [
     #strong[Quantum and Cybersecurity CTF Hackathon 2026]
 
+    - Champion of the quantum-themed cybersecurity CTF.
+
     - Solved quantum problems that involved investigating qubit behavior.
 
     - Solved cryptography questions that involved quantum mechanics.
 
   ],
   [
-    Jan 2026
+    July 2026
 
   ],
 )
 
 #regular-entry(
   [
-    #strong[Manobela Hackathon]
+    #strong[TrackTech CSS Hackathon]
 
-    - Champion for developing Manobela, a real-time driver monitoring system focused on drowsiness and distraction detection using computer-vision signals.
+    - Champion for building Manobela, a real-time driver monitoring system focused on drowsiness and distraction detection using computer-vision signals.
 
     - Designed and implemented a mobile-to-cloud monitoring pipeline using lightweight telemetry transmission and cloud-assisted processing.
 
@@ -169,15 +171,15 @@ Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based 
 
 #regular-entry(
   [
-    #strong[#link("https://manobela.vercel.app")[Manobela]]
+    #strong[#link("https://project-hermes-drrm.vercel.app")[HERMES]]
 
-    - Developed a real-time driver monitoring pipeline processing facial landmark telemetry at approximately 15 FPS using computer-vision signals.
+    - Built an internal-style operations platform with centralized dashboards for real-time incident intake, monitoring, and evaluation.
 
-    - Built lightweight mobile-to-cloud communication workflows to reduce bandwidth usage and device-side processing overhead.
+    - Automated the intake workflow by converting unstructured Messenger chat reports into structured records via API integration, reducing manual triage.
 
-    - Integrated Microsoft Azure cloud-assisted computation for scalable real-time monitoring and analytics.
+    - Designed the Supabase\/PostgreSQL data model and role-based access for coordinators and responders, with status tracking across the report lifecycle.
 
-    - Implemented drowsiness and distraction detection using facial landmark analysis and real-time feedback systems.
+    - Enabled low-connectivity communication through Meta Messenger for areas with limited telco infrastructure.
 
   ],
   [
@@ -186,13 +188,28 @@ Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based 
 
 #regular-entry(
   [
-    #strong[#link("https://project-hermes-drrm.vercel.app")[HERMES]]
+    #strong[#link("https://sackto.vercel.app")[SACKTO IRPC]]
 
-    - Built a Hazard and Emergency Reporting, Monitoring, and Evaluation System for real-time disaster communication workflows.
+    - Built an operations platform for the Iloilo Rice Processing Complex covering online booking of drying and milling, palay selling with quotes, and rice purchasing with live pricing.
 
-    - Designed structured reporting pipelines capable of organizing incoming chat-based emergency reports into centralized monitoring dashboards.
+    - Added an SMS command interface (book, check status, get prices and quotes, cancel) so farmers without mobile data can use the same workflows.
 
-    - Implemented low-connectivity communication support using Meta Messenger integration for areas with limited telco infrastructure.
+    - Provided staff sign-in for internal operations, supporting scheduling and customer transactions in one system.
+
+  ],
+  [
+  ],
+)
+
+#regular-entry(
+  [
+    #strong[#link("https://manobela.vercel.app")[Manobela]]
+
+    - Architected a mobile-to-cloud pipeline processing facial landmark telemetry at \~15 FPS, with lightweight transmission to cut bandwidth and device load.
+
+    - Built FastAPI services and Azure-backed processing for real-time drowsiness and distraction detection with live feedback and session insights dashboards.
+
+    - Champion project of the TrackTech CSS Hackathon.
 
   ],
   [
@@ -203,11 +220,9 @@ Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based 
   [
     #strong[#link("https://github.com/dejely/Scan-a-Delegate")[Scan a Delegate]]
 
-    - Developed a blockchain-based voting platform focused on transparency and tamper-resistant vote tracking.
+    - Developed a blockchain-based voting platform with tamper-resistant vote tracking and transparent record management.
 
-    - Implemented Solidity smart contracts and deployed testing workflows on the Ethereum Sepolia test network.
-
-    - Explored decentralized identity verification and transparent election record management concepts.
+    - Implemented Solidity smart contracts and test workflows on the Ethereum Sepolia network.
 
   ],
   [
@@ -252,17 +267,17 @@ Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based 
 
 == Skills
 
+#strong[AI & Automation:] LLM workflows (AWS), prompt-based applications, API-driven automation, GitHub Actions, Messenger API bots
+
+#strong[Backend, APIs & Data:] Supabase, PostgreSQL, Firebase, Node.js, FastAPI, REST APIs, webhooks, database design
+
+#strong[Frontend & Dashboards:] React, TypeScript, Expo \/ React Native, HTML, CSS
+
+#strong[Cloud & DevOps:] AWS, Microsoft Azure, Docker, Vercel, CI\/CD
+
 #strong[Languages:] Python, TypeScript, JavaScript, Java, C\/C++, SQL, Solidity
 
-#strong[Frontend:] React, Expo, HTML, CSS
-
-#strong[Backend & Databases:] Node.js, PostgreSQL, Supabase, Firebase, REST APIs
-
-#strong[Cloud & DevOps:] AWS, Microsoft Azure, Docker, GitHub Actions
-
-#strong[Cybersecurity:] Wireshark, Burp Suite, Nmap, Gobuster, Kali Linux, Autopsy, John the Ripper
-
-#strong[Tools:] Git, GitHub, Linux, VS Code, API Testing
+#strong[Tools:] Git, GitHub, Linux, API Testing, technical documentation
 
 == Certificates
 
@@ -331,36 +346,17 @@ Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based 
   [
     #strong[Independent Software Developer]
 
-    - Built web, mobile, and systems-oriented projects using React, TypeScript, JavaScript, Python, Java, C\/C++, Expo, Supabase, PostgreSQL, Firebase, and cloud platforms.
+    - Built internal-style web and mobile tools (dashboards, budgeting, reporting, monitoring) with React, TypeScript, Python, Expo, Supabase, PostgreSQL, and Firebase.
 
-    - Designed projects involving computer vision, blockchain voting, budgeting tools, AI\/LLM implementation, cybersecurity, automation, dashboards, and full-stack development.
+    - Integrated third-party APIs and cloud services, designed relational schemas, and automated repetitive workflows end to end.
 
-    - Worked with Git, GitHub, Linux environments, API integration, database design, debugging, and technical documentation.
+    - Wrote clear technical documentation and structured processes so projects could be handed off and extended.
 
   ],
   [
     Jan 2018 – present
 
     8 years 10 months
-
-  ],
-)
-
-#regular-entry(
-  [
-    #strong[CTF Player and Cybersecurity Learner]
-
-    - Participated in cybersecurity competitions and hands-on labs involving network analysis, digital forensics, cryptography, web exploitation, and Linux-based security workflows.
-
-    - Conducted authorized reconnaissance and responsible security assessment activities under the guidance\/permission, documenting exposed risks and reporting findings through proper channels to help improve the security of web systems.
-
-    - Developed practical understanding of vulnerability discovery, responsible testing, and defensive security concepts.
-
-  ],
-  [
-    Jan 2024 – present
-
-    2 years 10 months
 
   ],
 )
@@ -375,5 +371,22 @@ Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based 
 
   ],
   [
+  ],
+)
+
+#regular-entry(
+  [
+    #strong[CTF Player and Cybersecurity Learner]
+
+    - Competed in cybersecurity competitions covering network analysis, forensics, cryptography, and web exploitation.
+
+    - Conducted authorized security assessments of web systems, documenting risks and reporting through proper channels; this security-minded approach carries into safe API and data handling.
+
+  ],
+  [
+    Jan 2024 – present
+
+    2 years 10 months
+
   ],
 )

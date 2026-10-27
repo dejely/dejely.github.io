@@ -11,6 +11,17 @@ export type Achievement = {
 
 export const ACHIEVEMENTS: readonly Achievement[] = [
   {
+    name: 'HackForGov 5',
+    year: 2026,
+    result: '1st Runner-Up (Team) · 3rd Runner-Up (Individual)',
+    category: 'CTF - Jeopardy',
+    highlights: [
+      'Placed 1st runner-up in the team category at HackForGov 5.',
+      'Earned 3rd runner-up in the individual category.',
+    ],
+    tone: 'warning',
+  },
+  {
     name: 'AI SUMMIT Reed Elsevier PH Hackathon',
     year: 2026,
     result: '1st Runner-Up',

@@ -7,28 +7,30 @@
 
 
 # Summary
-Computer Science student at the University of the Philippines building full-stack, AI-assisted, and real-time software systems focused on operational workflows, monitoring platforms, and automation.
+Computer Science student at the University of the Philippines building full-stack, AI-assisted systems that turn operational workflows into automated, dashboard-driven platforms.
 
-contributed to improving digital safety in UPV by responsibly auditing exposed web systems, documenting security risks, and reporting findings to help protect student data and other platforms.
+Built HERMES, a Supabase-backed reporting and monitoring platform that ingests chat-based reports through the Meta Messenger API and routes them into centralized role-based dashboards.
 
-Built open source projects involving computer vision, cybersecurity, blockchain systems, dashboards, and mobile-to-cloud communication pipelines.
+Experienced with API integrations, LLM workflows on AWS, real-time data pipelines, and cloud deployment; led DevOps and production shipping for a hackathon AI product within a 4-hour window.
 
-Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based development, API integration, cybersecurity labs, and systems-oriented software engineering.
+Hackathon champion and runner-up who works independently or in teams, documents systems clearly, and designs for process consistency and scalability.
 
 # Achievements
 ## **AI SUMMIT Reed Elsevier PH Hackathon 2026**
 
-Jan 2026
+October 2026
 
 - 1st runner-up with team Popcorn Prophets in the Reed Elsevier Philippines AI Summit hackathon.
 
-- Led DevOps and deployment, shipping the project to production within a 4-hour development window.
+- Led DevOps and deployment, shipping an AI-powered product to production within a 4-hour development window.
 
 
 
 ## **Quantum and Cybersecurity CTF Hackathon 2026**
 
-Jan 2026
+July 2026
+
+- Champion of the quantum-themed cybersecurity CTF.
 
 - Solved quantum problems that involved investigating qubit behavior.
 
@@ -36,11 +38,11 @@ Jan 2026
 
 
 
-## **Manobela Hackathon**
+## **TrackTech CSS Hackathon**
 
 Jan 2025
 
-- Champion for developing Manobela, a real-time driver monitoring system focused on drowsiness and distraction detection using computer-vision signals.
+- Champion for building Manobela, a real-time driver monitoring system focused on drowsiness and distraction detection using computer-vision signals.
 
 - Designed and implemented a mobile-to-cloud monitoring pipeline using lightweight telemetry transmission and cloud-assisted processing.
 
@@ -57,35 +59,43 @@ Jan 2025
 
 
 # Projects
-## **[Manobela](https://manobela.vercel.app)**
-
-- Developed a real-time driver monitoring pipeline processing facial landmark telemetry at approximately 15 FPS using computer-vision signals.
-
-- Built lightweight mobile-to-cloud communication workflows to reduce bandwidth usage and device-side processing overhead.
-
-- Integrated Microsoft Azure cloud-assisted computation for scalable real-time monitoring and analytics.
-
-- Implemented drowsiness and distraction detection using facial landmark analysis and real-time feedback systems.
-
-
-
 ## **[HERMES](https://project-hermes-drrm.vercel.app)**
 
-- Built a Hazard and Emergency Reporting, Monitoring, and Evaluation System for real-time disaster communication workflows.
+- Built an internal-style operations platform with centralized dashboards for real-time incident intake, monitoring, and evaluation.
 
-- Designed structured reporting pipelines capable of organizing incoming chat-based emergency reports into centralized monitoring dashboards.
+- Automated the intake workflow by converting unstructured Messenger chat reports into structured records via API integration, reducing manual triage.
 
-- Implemented low-connectivity communication support using Meta Messenger integration for areas with limited telco infrastructure.
+- Designed the Supabase/PostgreSQL data model and role-based access for coordinators and responders, with status tracking across the report lifecycle.
+
+- Enabled low-connectivity communication through Meta Messenger for areas with limited telco infrastructure.
+
+
+
+## **[SACKTO IRPC](https://sackto.vercel.app)**
+
+- Built an operations platform for the Iloilo Rice Processing Complex covering online booking of drying and milling, palay selling with quotes, and rice purchasing with live pricing.
+
+- Added an SMS command interface (book, check status, get prices and quotes, cancel) so farmers without mobile data can use the same workflows.
+
+- Provided staff sign-in for internal operations, supporting scheduling and customer transactions in one system.
+
+
+
+## **[Manobela](https://manobela.vercel.app)**
+
+- Architected a mobile-to-cloud pipeline processing facial landmark telemetry at ~15 FPS, with lightweight transmission to cut bandwidth and device load.
+
+- Built FastAPI services and Azure-backed processing for real-time drowsiness and distraction detection with live feedback and session insights dashboards.
+
+- Champion project of the TrackTech CSS Hackathon.
 
 
 
 ## **[Scan a Delegate](https://github.com/dejely/Scan-a-Delegate)**
 
-- Developed a blockchain-based voting platform focused on transparency and tamper-resistant vote tracking.
+- Developed a blockchain-based voting platform with tamper-resistant vote tracking and transparent record management.
 
-- Implemented Solidity smart contracts and deployed testing workflows on the Ethereum Sepolia test network.
-
-- Explored decentralized identity verification and transparent election record management concepts.
+- Implemented Solidity smart contracts and test workflows on the Ethereum Sepolia network.
 
 
 
@@ -113,17 +123,17 @@ Dec 2022 – June 2024
 
 
 # Skills
+**AI & Automation:** LLM workflows (AWS), prompt-based applications, API-driven automation, GitHub Actions, Messenger API bots
+
+**Backend, APIs & Data:** Supabase, PostgreSQL, Firebase, Node.js, FastAPI, REST APIs, webhooks, database design
+
+**Frontend & Dashboards:** React, TypeScript, Expo / React Native, HTML, CSS
+
+**Cloud & DevOps:** AWS, Microsoft Azure, Docker, Vercel, CI/CD
+
 **Languages:** Python, TypeScript, JavaScript, Java, C/C++, SQL, Solidity
 
-**Frontend:** React, Expo, HTML, CSS
-
-**Backend & Databases:** Node.js, PostgreSQL, Supabase, Firebase, REST APIs
-
-**Cloud & DevOps:** AWS, Microsoft Azure, Docker, GitHub Actions
-
-**Cybersecurity:** Wireshark, Burp Suite, Nmap, Gobuster, Kali Linux, Autopsy, John the Ripper
-
-**Tools:** Git, GitHub, Linux, VS Code, API Testing
+**Tools:** Git, GitHub, Linux, API Testing, technical documentation
 
 # Certificates
 ## **[NAISC Certificate](https://certificates.aisingapore.org/certificate-verification/36D9D57-36D9CF8-35E0DBC)**
@@ -169,11 +179,19 @@ Jan 2018 – present
 
 8 years 10 months
 
-- Built web, mobile, and systems-oriented projects using React, TypeScript, JavaScript, Python, Java, C/C++, Expo, Supabase, PostgreSQL, Firebase, and cloud platforms.
+- Built internal-style web and mobile tools (dashboards, budgeting, reporting, monitoring) with React, TypeScript, Python, Expo, Supabase, PostgreSQL, and Firebase.
 
-- Designed projects involving computer vision, blockchain voting, budgeting tools, AI/LLM implementation, cybersecurity, automation, dashboards, and full-stack development.
+- Integrated third-party APIs and cloud services, designed relational schemas, and automated repetitive workflows end to end.
 
-- Worked with Git, GitHub, Linux environments, API integration, database design, debugging, and technical documentation.
+- Wrote clear technical documentation and structured processes so projects could be handed off and extended.
+
+
+
+## **National AI Student Challenge 2025 - AWS Regional LLM League**
+
+- Implemented and deployed LLM-supported workflows using AWS-based tools and cloud infrastructure.
+
+- Built foundational knowledge in AI systems, prompt-based applications, and cloud-supported LLM workflows.
 
 
 
@@ -185,18 +203,8 @@ Jan 2024 – present
 
 2 years 10 months
 
-- Participated in cybersecurity competitions and hands-on labs involving network analysis, digital forensics, cryptography, web exploitation, and Linux-based security workflows.
+- Competed in cybersecurity competitions covering network analysis, forensics, cryptography, and web exploitation.
 
-- Conducted authorized reconnaissance and responsible security assessment activities under the guidance/permission, documenting exposed risks and reporting findings through proper channels to help improve the security of web systems.
-
-- Developed practical understanding of vulnerability discovery, responsible testing, and defensive security concepts.
-
-
-
-## **National AI Student Challenge 2025 - AWS Regional LLM League**
-
-- Implemented and deployed LLM-supported workflows using AWS-based tools and cloud infrastructure.
-
-- Built foundational knowledge in AI systems, prompt-based applications, and cloud-supported LLM workflows.
+- Conducted authorized security assessments of web systems, documenting risks and reporting through proper channels; this security-minded approach carries into safe API and data handling.
 
 

@@ -11,27 +11,28 @@ cv:
 
   sections:
     summary:
-      - "Computer Science student at the University of the Philippines building full-stack, AI-assisted, and real-time software systems focused on operational workflows, monitoring platforms, and automation."
-      - "contributed to improving digital safety in UPV by responsibly auditing exposed web systems, documenting security risks, and reporting findings to help protect student data and other platforms."
-      - "Built open source projects involving computer vision, cybersecurity, blockchain systems, dashboards, and mobile-to-cloud communication pipelines."
-      - "Hackathon champion and Hack4Gov awardee with hands-on experience in Linux-based development, API integration, cybersecurity labs, and systems-oriented software engineering."
+      - "Computer Science student at the University of the Philippines building full-stack, AI-assisted systems that turn operational workflows into automated, dashboard-driven platforms."
+      - "Built HERMES, a Supabase-backed reporting and monitoring platform that ingests chat-based reports through the Meta Messenger API and routes them into centralized role-based dashboards."
+      - "Experienced with API integrations, LLM workflows on AWS, real-time data pipelines, and cloud deployment; led DevOps and production shipping for a hackathon AI product within a 4-hour window."
+      - "Hackathon champion and runner-up who works independently or in teams, documents systems clearly, and designs for process consistency and scalability."
 
     achievements:
       - name: "AI SUMMIT Reed Elsevier PH Hackathon 2026"
-        date: "2026"
+        date: "October 2026"
         highlights:
           - "1st runner-up with team Popcorn Prophets in the Reed Elsevier Philippines AI Summit hackathon."
-          - "Led DevOps and deployment, shipping the project to production within a 4-hour development window."
+          - "Led DevOps and deployment, shipping an AI-powered product to production within a 4-hour development window."
 
       - name: "Quantum and Cybersecurity CTF Hackathon 2026"
-        date: "2026"
+        date: "July 2026"
         highlights:
+          - "Champion of the quantum-themed cybersecurity CTF."
           - "Solved quantum problems that involved investigating qubit behavior."
           - "Solved cryptography questions that involved quantum mechanics."
-      - name: "Manobela Hackathon"
+      - name: "TrackTech CSS Hackathon"
         date: "2025"
         highlights:
-          - "Champion for developing Manobela, a real-time driver monitoring system focused on drowsiness and distraction detection using computer-vision signals."
+          - "Champion for building Manobela, a real-time driver monitoring system focused on drowsiness and distraction detection using computer-vision signals."
           - "Designed and implemented a mobile-to-cloud monitoring pipeline using lightweight telemetry transmission and cloud-assisted processing."
 
       - name: "Hack4Gov"
@@ -40,29 +41,35 @@ cv:
           - "1st runner-up and top-performing participant in Hack4Gov 2025 cybersecurity competition."
           - "Competed in cybersecurity challenges involving network analysis, digital forensics, cryptography, web exploitation, and Linux-based investigation workflows."
     projects:
+      - name: "[HERMES](https://project-hermes-drrm.vercel.app)"
+        technologies: "React, Supabase, PostgreSQL, Meta Messenger API"
+        highlights:
+          - "Built an internal-style operations platform with centralized dashboards for real-time incident intake, monitoring, and evaluation."
+          - "Automated the intake workflow by converting unstructured Messenger chat reports into structured records via API integration, reducing manual triage."
+          - "Designed the Supabase/PostgreSQL data model and role-based access for coordinators and responders, with status tracking across the report lifecycle."
+          - "Enabled low-connectivity communication through Meta Messenger for areas with limited telco infrastructure."
+
+      - name: "[SACKTO IRPC](https://sackto.vercel.app)"
+        technologies: "Web app, SMS interface, Vercel"
+        highlights:
+          - "Built an operations platform for the Iloilo Rice Processing Complex covering online booking of drying and milling, palay selling with quotes, and rice purchasing with live pricing."
+          - "Added an SMS command interface (book, check status, get prices and quotes, cancel) so farmers without mobile data can use the same workflows."
+          - "Provided staff sign-in for internal operations, supporting scheduling and customer transactions in one system."
+
       - name: "[Manobela](https://manobela.vercel.app)"
         url: "https://manobela.vercel.app"
         technologies: "Expo, React Native, Python, FastAPI, MediaPipe, Microsoft Azure"
         highlights:
-          - "Developed a real-time driver monitoring pipeline processing facial landmark telemetry at approximately 15 FPS using computer-vision signals."
-          - "Built lightweight mobile-to-cloud communication workflows to reduce bandwidth usage and device-side processing overhead."
-          - "Integrated Microsoft Azure cloud-assisted computation for scalable real-time monitoring and analytics."
-          - "Implemented drowsiness and distraction detection using facial landmark analysis and real-time feedback systems."
-
-      - name: "[HERMES](https://project-hermes-drrm.vercel.app)"
-        technologies: "React, Supabase, PostgreSQL, Meta Messenger API"
-        highlights:
-          - "Built a Hazard and Emergency Reporting, Monitoring, and Evaluation System for real-time disaster communication workflows."
-          - "Designed structured reporting pipelines capable of organizing incoming chat-based emergency reports into centralized monitoring dashboards."
-          - "Implemented low-connectivity communication support using Meta Messenger integration for areas with limited telco infrastructure."
+          - "Architected a mobile-to-cloud pipeline processing facial landmark telemetry at ~15 FPS, with lightweight transmission to cut bandwidth and device load."
+          - "Built FastAPI services and Azure-backed processing for real-time drowsiness and distraction detection with live feedback and session insights dashboards."
+          - "Champion project of the TrackTech CSS Hackathon."
 
       - name: "[Scan a Delegate](https://github.com/dejely/Scan-a-Delegate)"
         technologies: "Solidity, Ethereum Sepolia, Web3, JavaScript"
         highlights:
-          - "Developed a blockchain-based voting platform focused on transparency and tamper-resistant vote tracking."
-          - "Implemented Solidity smart contracts and deployed testing workflows on the Ethereum Sepolia test network."
-          - "Explored decentralized identity verification and transparent election record management concepts."
-          
+          - "Developed a blockchain-based voting platform with tamper-resistant vote tracking and transparent record management."
+          - "Implemented Solidity smart contracts and test workflows on the Ethereum Sepolia network."
+
     education:
       - institution: "University of the Philippines"
         area: "Computer Science"
@@ -80,23 +87,23 @@ cv:
           - "Conducted research on a semi-autonomous multi-sensory waste segregation robot capable of classifying hazardous, recyclable, biodegradable, and non-biodegradable waste."
 
     skills:
+      - label: "AI & Automation"
+        details: "LLM workflows (AWS), prompt-based applications, API-driven automation, GitHub Actions, Messenger API bots"
+
+      - label: "Backend, APIs & Data"
+        details: "Supabase, PostgreSQL, Firebase, Node.js, FastAPI, REST APIs, webhooks, database design"
+
+      - label: "Frontend & Dashboards"
+        details: "React, TypeScript, Expo / React Native, HTML, CSS"
+
+      - label: "Cloud & DevOps"
+        details: "AWS, Microsoft Azure, Docker, Vercel, CI/CD"
+
       - label: "Languages"
         details: "Python, TypeScript, JavaScript, Java, C/C++, SQL, Solidity"
 
-      - label: "Frontend"
-        details: "React, Expo, HTML, CSS"
-
-      - label: "Backend & Databases"
-        details: "Node.js, PostgreSQL, Supabase, Firebase, REST APIs"
-
-      - label: "Cloud & DevOps"
-        details: "AWS, Microsoft Azure, Docker, GitHub Actions"
-
-      - label: "Cybersecurity"
-        details: "Wireshark, Burp Suite, Nmap, Gobuster, Kali Linux, Autopsy, John the Ripper"
-
       - label: "Tools"
-        details: "Git, GitHub, Linux, VS Code, API Testing"
+        details: "Git, GitHub, Linux, API Testing, technical documentation"
 
     certificates:
       - name: "[NAISC Certificate](https://certificates.aisingapore.org/certificate-verification/36D9D57-36D9CF8-35E0DBC)"
@@ -125,19 +132,17 @@ cv:
       - name: "Independent Software Developer"
         start_date: "2018"
         highlights:
-          - "Built web, mobile, and systems-oriented projects using React, TypeScript, JavaScript, Python, Java, C/C++, Expo, Supabase, PostgreSQL, Firebase, and cloud platforms."
-          - "Designed projects involving computer vision, blockchain voting, budgeting tools, AI/LLM implementation, cybersecurity, automation, dashboards, and full-stack development."
-          - "Worked with Git, GitHub, Linux environments, API integration, database design, debugging, and technical documentation."
-
-      - name: "CTF Player and Cybersecurity Learner"
-        start_date: "2024"
-        highlights:
-          - "Participated in cybersecurity competitions and hands-on labs involving network analysis, digital forensics, cryptography, web exploitation, and Linux-based security workflows."
-          - "Conducted authorized reconnaissance and responsible security assessment activities under the guidance/permission, documenting exposed risks and reporting findings through proper channels to help improve the security of web systems."
-          - "Developed practical understanding of vulnerability discovery, responsible testing, and defensive security concepts."
+          - "Built internal-style web and mobile tools (dashboards, budgeting, reporting, monitoring) with React, TypeScript, Python, Expo, Supabase, PostgreSQL, and Firebase."
+          - "Integrated third-party APIs and cloud services, designed relational schemas, and automated repetitive workflows end to end."
+          - "Wrote clear technical documentation and structured processes so projects could be handed off and extended."
 
       - name: "National AI Student Challenge 2025 - AWS Regional LLM League"
         highlights:
           - "Implemented and deployed LLM-supported workflows using AWS-based tools and cloud infrastructure."
           - "Built foundational knowledge in AI systems, prompt-based applications, and cloud-supported LLM workflows."
 
+      - name: "CTF Player and Cybersecurity Learner"
+        start_date: "2024"
+        highlights:
+          - "Competed in cybersecurity competitions covering network analysis, forensics, cryptography, and web exploitation."
+          - "Conducted authorized security assessments of web systems, documenting risks and reporting through proper channels; this security-minded approach carries into safe API and data handling."
