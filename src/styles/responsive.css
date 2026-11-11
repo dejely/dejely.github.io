@@ -28,20 +28,12 @@
 
   .pixel-hero {
     --hero-nav-height: 4.2rem;
-    --hero-gap-width: clamp(72px, 11vw, 108px);
-    --hero-ground-height: clamp(50px, 8vh, 72px);
-    --hero-scene-opacity: 0.4;
-    --hero-runner-scale: 1;
-    --hero-block-flight: clamp(96px, 20vw, 190px);
-    --hero-build-width: clamp(118px, 20vw, 190px);
-    --hero-build-bottom: calc(var(--hero-ground-height) + 6px);
     min-height: calc(100svh - var(--hero-nav-height));
-    padding: 2.8rem 1rem 5rem;
+    padding: 2.8rem 1rem 1rem;
   }
 
   .pixel-hero__inner {
     max-width: 640px;
-    transform: translateY(-0.75rem);
   }
 
   .pixel-hero__title {
@@ -76,6 +68,9 @@
 }
 
 @media (max-width: 600px) {
+  /* Leave room for a classic scrollbar at a 320px viewport. */
+  body:has(.workshop) { min-width: 0; }
+
   .pixel-nav {
     border-bottom-width: 3px;
   }
@@ -104,17 +99,12 @@
 
   .pixel-hero {
     --hero-nav-height: 4rem;
-    --hero-gap-width: 56px;
-    --hero-ground-height: 38px;
-    --hero-scene-opacity: 0.3;
-    --hero-runner-scale: 0.72;
     min-height: calc(100svh - var(--hero-nav-height));
-    padding: 2.2rem 0.85rem 3.4rem;
+    padding: 2.2rem 0.85rem 1rem;
   }
 
   .pixel-hero__inner {
     max-width: 100%;
-    transform: translateY(-0.35rem);
   }
 
   .pixel-hero__icon {
@@ -167,43 +157,11 @@
     height: 12px;
   }
 
-  .hero-bg__stars .hero-bg__star:nth-child(n + 7) {
-    display: none;
-  }
-
-  .hero-bg__haze {
-    opacity: 0.85;
-  }
-
-  .hero-build {
-    height: 50px;
-  }
-
-  .hero-build__terminal {
-    width: 62px;
-    height: 26px;
-    bottom: 20px;
-  }
-
-  .hero-build__terminal-bar {
-    top: 5px;
-    width: 46px;
-  }
-
-  .hero-build__terminal-line {
-    top: 14px;
-    width: 28px;
-  }
-
-  .hero-build__terminal-line--wide {
-    top: 20px;
-    width: 40px;
-  }
-
-  .hero-code-block {
-    width: 22px;
-    height: 17px;
-    font-size: 0.3rem;
+  .workshop__stage { width: 320px; height: 192px; }
+  .workshop__stage::before {
+    left: calc((320px - 100vw) / 2);
+    height: 32px;
+    border-top-width: 2px;
   }
 
   .pixel-section {
@@ -440,9 +398,6 @@
   }
 
   .pixel-hero {
-    --hero-block-flight: clamp(72px, 25vw, 104px);
-    --hero-build-width: clamp(92px, 38vw, 126px);
-    --hero-build-bottom: calc(var(--hero-ground-height) + 4px);
     padding-inline: 0.65rem;
   }
 
@@ -476,43 +431,4 @@
     animation: none;
   }
 
-  .hero-bg__star,
-  .hero-char,
-  .hero-char__sprite,
-  .hero-char__arm--front,
-  .hero-char__leg,
-  .hero-char__antenna::after,
-  .hero-code-block,
-  .hero-build__beam,
-  .hero-build__segment,
-  .hero-build__terminal,
-  .hero-build__spark,
-  .hero-data-stream__pixel {
-    animation: none;
-  }
-
-  .hero-code-block,
-  .hero-build__spark,
-  .hero-data-stream__pixel {
-    opacity: 0;
-  }
-
-  .hero-build__beam,
-  .hero-build__segment,
-  .hero-build__terminal {
-    opacity: 1;
-  }
-
-  .hero-build__beam,
-  .hero-build__segment {
-    transform: none;
-  }
-
-  .hero-build__terminal {
-    transform: translateX(-50%);
-  }
-
-  .pixel-hero__scene {
-    opacity: 0.24;
-  }
 }
