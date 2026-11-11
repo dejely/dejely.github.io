@@ -1,0 +1,234 @@
+{
+  "palette": [
+    "#0a0d12",
+    "#0f1218",
+    "#131c2b",
+    "#223349",
+    "#2c3b4c",
+    "#c7d0dd",
+    "#5aa6f2",
+    "#7ed26a",
+    "#f0b43c",
+    "#ef5b78",
+    "#d6a77a",
+    "#8c5b47"
+  ],
+  "loopMs": 14000,
+  "props": {
+    "wall": {
+      "x": 0,
+      "y": 0,
+      "w": 16,
+      "h": 16
+    },
+    "floor": {
+      "x": 16,
+      "y": 0,
+      "w": 16,
+      "h": 16
+    },
+    "workstation": {
+      "x": 32,
+      "y": 0,
+      "w": 64,
+      "h": 48
+    },
+    "dispenser": {
+      "x": 96,
+      "y": 0,
+      "w": 32,
+      "h": 48
+    },
+    "hatch": {
+      "x": 128,
+      "y": 0,
+      "w": 48,
+      "h": 32
+    },
+    "window": {
+      "x": 176,
+      "y": 0,
+      "w": 64,
+      "h": 48
+    },
+    "shelf": {
+      "x": 0,
+      "y": 48,
+      "w": 64,
+      "h": 32
+    },
+    "tools": {
+      "x": 64,
+      "y": 48,
+      "w": 48,
+      "h": 32
+    },
+    "cables": {
+      "x": 112,
+      "y": 48,
+      "w": 64,
+      "h": 16
+    },
+    "toolbox": {
+      "x": 176,
+      "y": 48,
+      "w": 32,
+      "h": 16
+    },
+    "chassis": {
+      "x": 208,
+      "y": 48,
+      "w": 16,
+      "h": 16
+    },
+    "screen": {
+      "x": 224,
+      "y": 48,
+      "w": 16,
+      "h": 16
+    },
+    "monitor0": {
+      "x": 0,
+      "y": 80,
+      "w": 16,
+      "h": 16
+    },
+    "monitor1": {
+      "x": 16,
+      "y": 80,
+      "w": 16,
+      "h": 16
+    },
+    "monitor2": {
+      "x": 32,
+      "y": 80,
+      "w": 16,
+      "h": 16
+    },
+    "monitor3": {
+      "x": 48,
+      "y": 80,
+      "w": 16,
+      "h": 16
+    }
+  },
+  "monitor": {
+    "frames": 4,
+    "frameMs": 250
+  },
+  "sheets": {
+    "developer": {
+      "cell": 48,
+      "states": {
+        "typing": {
+          "row": 0,
+          "frames": 8,
+          "frameMs": 125
+        },
+        "enter": {
+          "row": 1,
+          "frames": 4,
+          "frameMs": 125
+        },
+        "watch": {
+          "row": 2,
+          "frames": 2,
+          "frameMs": 250
+        },
+        "nod": {
+          "row": 3,
+          "frames": 4,
+          "frameMs": 125
+        }
+      }
+    },
+    "robot": {
+      "cell": 32,
+      "states": {
+        "idle": {
+          "row": 0,
+          "frames": 4,
+          "frameMs": 250
+        },
+        "pickup": {
+          "row": 1,
+          "frames": 8,
+          "frameMs": 125
+        },
+        "loaded": {
+          "row": 2,
+          "frames": 8,
+          "frameMs": 125
+        },
+        "unload": {
+          "row": 3,
+          "frames": 8,
+          "frameMs": 125
+        },
+        "turn": {
+          "row": 4,
+          "frames": 4,
+          "frameMs": 125
+        },
+        "walk": {
+          "row": 5,
+          "frames": 8,
+          "frameMs": 125
+        }
+      }
+    },
+    "project": {
+      "cell": 64,
+      "states": {
+        "seating": {
+          "row": 0,
+          "frames": 4,
+          "frameMs": 125
+        },
+        "boot": {
+          "row": 1,
+          "frames": 8,
+          "frameMs": 125
+        },
+        "ready": {
+          "row": 2,
+          "frames": 4,
+          "frameMs": 125
+        },
+        "shipping": {
+          "row": 3,
+          "frames": 8,
+          "frameMs": 125
+        }
+      }
+    }
+  },
+  "anchors": {
+    "developer": {
+      "seat": [
+        20,
+        36
+      ],
+      "foot": [
+        30,
+        45
+      ]
+    },
+    "robot": {
+      "foot": [
+        16,
+        31
+      ],
+      "cargo": [
+        24,
+        12
+      ]
+    },
+    "project": {
+      "tray": [
+        24,
+        48
+      ]
+    }
+  }
+}

@@ -1,155 +1,144 @@
-import type { CSSProperties } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { drawWorkshop, workshopLayout } from '../lib/workshopScene'
+import type { WorkshopAssets, WorkshopManifest } from '../lib/workshopScene'
 
-const STAR_POINTS = [
-  { x: '6%', y: '14%', delay: '0s' },
-  { x: '16%', y: '21%', delay: '0.4s' },
-  { x: '27%', y: '12%', delay: '0.8s' },
-  { x: '35%', y: '24%', delay: '1.2s' },
-  { x: '46%', y: '11%', delay: '0.3s' },
-  { x: '54%', y: '19%', delay: '1.4s' },
-  { x: '62%', y: '13%', delay: '0.9s' },
-  { x: '73%', y: '22%', delay: '1.8s' },
-  { x: '82%', y: '10%', delay: '0.6s' },
-  { x: '91%', y: '18%', delay: '1.1s' },
-] as const
-
-const CODE_BLOCKS = [
-  { side: 'left', label: '{}', delay: '0s', y: '0px', color: 'var(--pixel-primary)' },
-  { side: 'right', label: '<>', delay: '1.25s', y: '-8px', color: 'var(--pixel-accent)' },
-  { side: 'left', label: '01', delay: '2.5s', y: '8px', color: 'var(--pixel-success)' },
-  { side: 'right', label: '//', delay: '3.75s', y: '2px', color: 'var(--pixel-warning)' },
-  { side: 'left', label: '=>', delay: '5s', y: '-5px', color: 'var(--pixel-primary)' },
-  { side: 'right', label: '++', delay: '6.25s', y: '7px', color: 'var(--pixel-success)' },
-] as const
-
-const DATA_PIXELS = [
-  { x: '18%', y: '48%', delay: '0.2s', color: 'var(--pixel-primary)' },
-  { x: '29%', y: '38%', delay: '1.6s', color: 'var(--pixel-success)' },
-  { x: '41%', y: '54%', delay: '2.7s', color: 'var(--pixel-warning)' },
-  { x: '59%', y: '40%', delay: '0.9s', color: 'var(--pixel-accent)' },
-  { x: '70%', y: '52%', delay: '2.1s', color: 'var(--pixel-primary)' },
-  { x: '82%', y: '42%', delay: '3.2s', color: 'var(--pixel-success)' },
-] as const
-
-const BUILD_SEGMENTS = ['primary', 'accent', 'success', 'warning', 'primary'] as const
+const ART = `${import.meta.env.BASE_URL}workshop/`
 
 export function HeroBackgroundScene() {
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+  const stageRef = useRef<HTMLDivElement>(null)
+  const pausedRef = useRef(false)
+  const syncRef = useRef<() => void>(() => {})
+  const [paused, setPaused] = useState(false)
+  const [status, setStatus] = useState<'poster' | 'ready' | 'reduced' | 'failed'>(() =>
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'reduced' : 'poster')
+
+  useEffect(() => {
+    const canvas = canvasRef.current
+    const stage = stageRef.current
+    const ctx = canvas?.getContext('2d', { alpha: false })
+    if (!canvas || !stage || !ctx) return
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)')
+    let reducedMotion = motion.matches
+    const mobile = window.matchMedia('(max-width: 600px)')
+    const finePointer = window.matchMedia('(min-width: 901px) and (hover: hover) and (pointer: fine)')
+    const controller = new AbortController()
+    let disposed = false
+    let visible = false
+    let assets: WorkshopAssets | null = null
+    let failed = false
+    let elapsed = 0
+    let last: number | null = null
+    let lastDraw = -Infinity
+    let raf = 0
+    let parallax = 0
+    let layout = workshopLayout(mobile.matches)
+
+    const render = () => {
+      if (assets) drawWorkshop(ctx, assets, elapsed, layout, parallax)
+    }
+    const allowed = () => !disposed && assets && visible && !document.hidden && !reducedMotion && !pausedRef.current
+    const tick = (now: number) => {
+      raf = 0
+      if (!allowed()) return
+      if (last !== null) elapsed += now - last
+      last = now
+      if (now - lastDraw >= 1000 / 30) {
+        render()
+        lastDraw = now
+      }
+      raf = requestAnimationFrame(tick)
+    }
+    const sync = () => {
+      if (raf) cancelAnimationFrame(raf)
+      raf = 0
+      last = null
+      lastDraw = -Infinity
+      if (allowed()) raf = requestAnimationFrame(tick)
+    }
+    syncRef.current = sync
+    const resize = () => {
+      if (!finePointer.matches) parallax = 0
+      layout = workshopLayout(mobile.matches)
+      canvas.width = layout.width
+      canvas.height = layout.height
+      render()
+    }
+    const preference = (event: MediaQueryListEvent) => {
+      reducedMotion = event.matches
+      parallax = 0
+      setStatus(reducedMotion ? 'reduced' : assets ? 'ready' : failed ? 'failed' : 'poster')
+      sync()
+    }
+    const pointer = (event: PointerEvent) => {
+      if (finePointer.matches && !reducedMotion && !pausedRef.current) {
+        parallax = Math.max(-1, Math.min(1, (event.clientX / window.innerWidth - 0.5) * 2))
+      }
+    }
+    const observer = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting
+      sync()
+    })
+    observer.observe(stage)
+    motion.addEventListener('change', preference)
+    mobile.addEventListener('change', resize)
+    document.addEventListener('visibilitychange', sync)
+    window.addEventListener('pointermove', pointer, { passive: true })
+    resize()
+    // Posters are ordinary eager images; motion preference never delays content.
+    const load = async (name: string) => {
+      const img = new Image()
+      img.src = `${ART}${name}.png`
+      await img.decode()
+      return img
+    }
+    Promise.all([
+      fetch(`${ART}manifest.json`, { signal: controller.signal }).then(response => {
+        if (!response.ok) throw new Error('Workshop atlas unavailable')
+        return response.json() as Promise<WorkshopManifest>
+      }),
+      load('developer'), load('robot'), load('project'), load('props'),
+    ]).then(([manifest, developer, robot, project, props]) => {
+      if (disposed) return
+      assets = { manifest, developer, robot, project, props }
+      render()
+      setStatus(reducedMotion ? 'reduced' : 'ready')
+      sync()
+    }).catch(() => {
+      failed = true
+      if (!disposed) setStatus(reducedMotion ? 'reduced' : 'failed')
+    })
+    return () => {
+      disposed = true
+      controller.abort()
+      cancelAnimationFrame(raf)
+      observer.disconnect()
+      motion.removeEventListener('change', preference)
+      mobile.removeEventListener('change', resize)
+      document.removeEventListener('visibilitychange', sync)
+      window.removeEventListener('pointermove', pointer)
+      syncRef.current = () => {}
+    }
+  }, [])
+
+  const togglePause = () => {
+    pausedRef.current = !pausedRef.current
+    setPaused(pausedRef.current)
+    syncRef.current()
+  }
   return (
-    <div className="pixel-hero__scene" aria-hidden="true">
-      <div className="hero-bg">
-        <div className="hero-bg__haze" />
-
-        <div className="hero-bg__stars">
-          {STAR_POINTS.map((point, index) => (
-            <span
-              key={`${point.x}-${point.y}`}
-              className="hero-bg__star"
-              style={
-                {
-                  '--star-x': point.x,
-                  '--star-y': point.y,
-                  '--star-delay': point.delay,
-                  '--star-size': index % 3 === 0 ? '3px' : '2px',
-                } as CSSProperties
-              }
-            />
-          ))}
-        </div>
-
-        <div className="hero-bg__platform hero-bg__platform--left">
-          <span className="hero-bg__grass" />
-        </div>
-        <div className="hero-bg__platform hero-bg__platform--right">
-          <span className="hero-bg__grass" />
-        </div>
-        <div className="hero-bg__void" />
-
-        <div className="hero-data-stream">
-          {DATA_PIXELS.map((pixel) => (
-            <span
-              key={`${pixel.x}-${pixel.y}`}
-              className="hero-data-stream__pixel"
-              style={
-                {
-                  '--data-x': pixel.x,
-                  '--data-y': pixel.y,
-                  '--data-delay': pixel.delay,
-                  '--data-color': pixel.color,
-                } as CSSProperties
-              }
-            />
-          ))}
-        </div>
-
-        <div className="hero-build">
-          <span className="hero-build__beam" />
-          <div className="hero-build__segments">
-            {BUILD_SEGMENTS.map((tone, index) => (
-              <span
-                key={`${tone}-${index}`}
-                className={`hero-build__segment hero-build__segment--${tone}`}
-                style={{ '--segment-delay': `${index * 0.22}s` } as CSSProperties}
-              />
-            ))}
-          </div>
-          <div className="hero-build__terminal">
-            <span className="hero-build__terminal-bar" />
-            <span className="hero-build__terminal-line hero-build__terminal-line--wide" />
-            <span className="hero-build__terminal-line" />
-          </div>
-          <span className="hero-build__spark hero-build__spark--left" />
-          <span className="hero-build__spark hero-build__spark--right" />
-        </div>
-
-        <div className="hero-code-blocks">
-          {CODE_BLOCKS.map((block) => (
-            <span
-              key={`${block.side}-${block.label}-${block.delay}`}
-              className={`hero-code-block hero-code-block--from-${block.side}`}
-              style={
-                {
-                  '--block-delay': block.delay,
-                  '--block-y': block.y,
-                  '--block-color': block.color,
-                } as CSSProperties
-              }
-            >
-              {block.label}
-            </span>
-          ))}
-        </div>
-
-        <div className="hero-char hero-char--pilot">
-          <span className="hero-char__shadow" />
-          <span className="hero-char__sprite">
-            <span className="hero-char__head">
-              <span className="hero-char__hair" />
-              <span className="hero-char__eye hero-char__eye--left" />
-              <span className="hero-char__eye hero-char__eye--right" />
-            </span>
-            <span className="hero-char__torso" />
-            <span className="hero-char__arm hero-char__arm--front" />
-            <span className="hero-char__arm hero-char__arm--back" />
-            <span className="hero-char__leg hero-char__leg--left" />
-            <span className="hero-char__leg hero-char__leg--right" />
-          </span>
-        </div>
-
-        <div className="hero-char hero-char--sentinel">
-          <span className="hero-char__shadow" />
-          <span className="hero-char__sprite">
-            <span className="hero-char__head">
-              <span className="hero-char__visor" />
-            </span>
-            <span className="hero-char__torso" />
-            <span className="hero-char__arm hero-char__arm--front" />
-            <span className="hero-char__arm hero-char__arm--back" />
-            <span className="hero-char__leg hero-char__leg--left" />
-            <span className="hero-char__leg hero-char__leg--right" />
-            <span className="hero-char__antenna" />
-          </span>
-        </div>
+    <div className="workshop" data-status={status}>
+      <div ref={stageRef} className="workshop__stage" aria-hidden="true">
+        <picture>
+          <source media="(max-width: 600px)" srcSet={`${ART}poster-mobile.png`} />
+          <img className="workshop__poster" src={`${ART}poster-desktop.png`} width="480" height="128" alt="" fetchPriority="high" />
+        </picture>
+        <canvas ref={canvasRef} className="workshop__canvas" hidden={status !== 'ready'} />
       </div>
+      <button className="workshop__control" type="button" onClick={togglePause}
+        aria-pressed={paused} disabled={status !== 'ready'}>
+        {status === 'reduced' || status === 'failed' ? 'Static background' : paused ? 'Resume background' : 'Pause background'}
+      </button>
     </div>
   )
 }
